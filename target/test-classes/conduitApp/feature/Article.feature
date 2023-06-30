@@ -2,7 +2,6 @@ Feature: Articales
 Background: Define URL 
   Given url apiUrl
 
-@ignore
 Scenario: Create a new article 
   Given path 'articles'
   And request {article: {"tagList":[], "title": "First Test Creating", "description": "It is about Karate framework", "body": "How to test code using Karate"}}

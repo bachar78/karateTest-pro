@@ -1,4 +1,3 @@
-@debug
 Feature: Test for the home page
 Background: Define URL 
   Given url apiUrl
