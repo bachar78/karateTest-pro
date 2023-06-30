@@ -2,7 +2,7 @@ Feature: Articales
 Background: Define URL 
   Given url apiUrl
 
-
+@ignore
 Scenario: Create a new article 
   Given path 'articles'
   And request {article: {"tagList":[], "title": "First Test Creating", "description": "It is about Karate framework", "body": "How to test code using Karate"}}
@@ -10,7 +10,6 @@ Scenario: Create a new article
   Then status 200
   And match response.article.title == "First Test Creating"
 
-@debug
 Scenario: Create and delete article 
   Given path 'articles'
   And request {article: {"tagList":[], "title": "Test Create & Delete", "description": "It is about deleting Scenarios", "body": "How to Create and delete account using Karate"}}

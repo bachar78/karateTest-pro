@@ -1,3 +1,4 @@
+@debug
 Feature: Test for the home page
 Background: Define URL 
   Given url apiUrl
@@ -8,9 +9,12 @@ Scenario: Get all tags
   When method Get
   Then status 200
   And match response.tags contains ['codebaseShow', 'welcome']
-  And match response.tags !contains 'car'
+  And match each response.tags !contains 'car'
   And match response.tags == "#array"
+  And match response.tags contains any ['bla bla', 'implementations', 'blou blou']
+  And match response.tags contains only ["implementations", "welcome", "introduction", "codebaseShow", "ipsum", "qui", "cupiditate", "et", "quia","deserunt"]
   And match each response.tags == "#string"
+  And match response == {"tags":'#array'}
 
 Scenario: Get 10 articles from the page
   Given params {limit:10, offset: 0}
@@ -19,5 +23,16 @@ Scenario: Get 10 articles from the page
   Then status 200
   And match response.articles == "#[10]"
   And match each response.articles == "#object"
+  And match each response..tagList == "#array"
+  And match each response.articles..following == false
+  And match each response.articles..following != true
+  And match each response.articles..following == "#boolean"
   And match response.articles == '#array'
   And match response.articlesCount == 197
+  And match response.articlesCount != 196
+  And match response.articles[0].createdAt contains '2022'
+  And match response.articles[0].createdAt !contains '2021'
+  And match response.articles[*].title contains 'Use the auxiliary EXE monitor, then you can hack the haptic port!'
+  And match each response.articles..bio == "##string"
+
+ 
