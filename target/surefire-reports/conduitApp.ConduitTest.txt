@@ -1,18 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: conduitApp.ConduitTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.725 s <<< FAILURE! - in conduitApp.ConduitTest
-testParallel  Time elapsed: 2.721 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: 
-match failed: EACH_EQUALS
-  $ | match each failed at index 0 (LIST:STRING)
-  [null,null,null,null,null,null,null,null,null,null]
-  '#string'
-
-    $[0] | not a string (NULL:STRING)
-    null
-    '#string'
-
-classpath:conduitApp/feature/HomePage.feature:36 ==> expected: <0> but was: <1>
-	at conduitApp.ConduitTest.testParallel(ConduitTest.java:16)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.703 s - in conduitApp.ConduitTest
