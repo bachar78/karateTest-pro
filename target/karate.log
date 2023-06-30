@@ -5213,3 +5213,1399 @@ classpath:conduitApp/feature/Article.feature:4
 {"errors":{"article":["not found"]}}
 
 14:34:24.668 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:40:08.428 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:40:08.464 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': dev
+14:40:08.715 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:40:08.719 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128808718
+14:40:08.721 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:40:09.060 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: dev 
+14:40:09.077 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/CreateToken.feature')
+14:40:09.193 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+14:40:09.723 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 525
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:40:09 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-Y6J21m4LCmM79kHfQYsf92VpPro"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=p2xEtky%2BWhgP2kIvwly5EdaZ4Xp7yMMEM5GYbq8GqCzQ%2BH7lEgk4rffoKwZUTWHJCloIoJjDyMxNB8lHtUqeiyoBEwHYl4Fa%2BR7FJ9PcUPdRvXwv5hKm%2BQ%2FsdW6g%2FRQ7misT"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df679e24e10b6f3-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgxMjg4MDksImV4cCI6MTY5MzMxMjgwOX0.GFctBuwlXoZqw521x_XCnJE6RDzROBmv9LCBLlZc8EQ"}}
+
+14:40:09.729 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:helpers/CreateToken.feature')
+14:40:09.737 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgxMjg4MDksImV4cCI6MTY5MzMxMjgwOX0.GFctBuwlXoZqw521x_XCnJE6RDzROBmv9LCBLlZc8EQ
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:40:10.183 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 444
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:40:10 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b4-3TSUpFX6Yf0RzoQAN0FuZ2D32EE"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FOhQm8Qip%2BZF7jI4itocRohgxiGbMV%2B3o3aG2ZHqC9VDrraBYet5ePaXJ53LwIbBGrkbpcEzxSzrvk4h9oViQOGXoSKSkmx7N02vLsvOc0UEhSzI6kcYacL97rml5W27pQE%2F"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df679e52c330a4c-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196364","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:40:09.937Z","updatedAt":"2023-06-30T12:40:09.937Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:40:10.205 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196364
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:40:10.684 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 477
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:40:10 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b4-3TSUpFX6Yf0RzoQAN0FuZ2D32EE"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DgwD5A6bxJ09S4XzAczPSYgxNWqnj8PmpK%2FebDsOMOFoYZYkf8h6cn0jBFz2S34dzbaDN8AInyCtqxWRNT7THQPdlsSHI72HXr7zzFpmpctwvTqdaTPQyywiLjpVRXbaC0CQ"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df679e819150b04-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196364","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:40:09.937Z","updatedAt":"2023-06-30T12:40:09.937Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:40:10.690 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196364
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgxMjg4MDksImV4cCI6MTY5MzMxMjgwOX0.GFctBuwlXoZqw521x_XCnJE6RDzROBmv9LCBLlZc8EQ
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:40:10.942 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 251
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:40:10 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BsC1SitcoJYAPLJ5WHiOyJovibkNyg5mWh%2BYcpkar9x%2Br7hj5tKrZwrC4JiISt0a8echap6GiQWPIQmCNn7A3uODDznwiegEr%2B%2BLJ5RUQvO2mv%2FclWexZ8r7RSEN5c7dAHmk"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df679eb1db8b719-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:40:10.945 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196364
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:40:11.189 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 243
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:40:11 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FROGrpyPpLNuqK%2FSqqNCYuP6FxfHbJSAmAKs3G7YB3RUPYYDo6Rb32WzBk7p1ewOfEayN0ncqVpNqej6N0uDMLY8ZlgvfXgvj4JAv%2B%2B93yDYAyYb4R6eBf4GeNKcDD2%2F%2BJxj"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df679eca9a70ea4-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:40:11.461 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:40:27.338 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:40:27.373 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': tst
+14:40:27.626 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:40:27.631 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128827629
+14:40:27.633 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:40:27.943 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: tst 
+14:40:27.956 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/CreateToken.feature')
+14:40:28.069 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:40:28.564 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 490
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:40:28 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-eQ4cJJ8NVWUjcrLlEptIDyI6ymM"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=p0ch6JgX9OMSPI3fk5cKMpV2XrdH8%2Bu6g7%2BdNo19su08Y8m4TmYzsSkj1fc4BfH7rJS5MaqKkPPtE8J56KgP4NppGolbKmLiRO9Nu2Omw1S5eAus0wsYQ%2FKN44IPfxuVNzmb"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df67a581c850c05-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4ODI4LCJleHAiOjE2OTMzMTI4Mjh9.2lC5F0-OVwyVX570xnG0zVjnIQCDZ6sOCVU7sUfbL4w"}}
+
+14:40:28.573 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:helpers/CreateToken.feature')
+14:40:28.580 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4ODI4LCJleHAiOjE2OTMzMTI4Mjh9.2lC5F0-OVwyVX570xnG0zVjnIQCDZ6sOCVU7sUfbL4w
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:40:28.855 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 274
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:40:28 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-YPQ/AcFy4nLrYR4epCo8Wm0hnZw"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CwgPJse8LRJRN6gkFFuKDmBn5Q4ZOglCzdsk6uxFiq5HyiuGDpEvMboITzIkKzaHkHKsJ2LQYUlQoqr9NaC3M3Q9ypx1E2QdTLqYHi6xcHr0609BMw4YSGsRUagF7yZLZtHa"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df67a5aeeca0bab-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:40:28.776Z","updatedAt":"2023-06-30T12:40:28.776Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:40:28.870 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:40:29.340 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 468
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:40:29 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-YPQ/AcFy4nLrYR4epCo8Wm0hnZw"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wNTUL9ZWFJAjUm6oas81o%2BQa4Pj5fpd0%2FYvBKBinaUJoOQGs3kac5YOhvKbdZkyKllWiINP4p5CA%2F4eJWAqIk9wB2RjY8F6ijLOv%2Bw56p4O1NOQKKp9ngBGbeSbh%2BCgTM9yI"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df67a5cb89e0b4a-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:40:28.776Z","updatedAt":"2023-06-30T12:40:28.776Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:40:29.347 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4ODI4LCJleHAiOjE2OTMzMTI4Mjh9.2lC5F0-OVwyVX570xnG0zVjnIQCDZ6sOCVU7sUfbL4w
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:40:29.599 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 250
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:40:29 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YHWNOPQlR45xoxXfBtZpN%2FoSOZF46cS9ZO7uiIpSbciu7gRyl7fI33aZEYpaDiCIdJmgani6D1sRa%2BssuILBa9aG88v6eVj1xdtwtB%2FptAw35BJvgbVhrCGN5YgG6By7F3w5"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df67a5fb8680ead-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:40:29.602 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:40:29.846 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 241
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:40:29 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=E1OsRm0DMKEawHQfNQw4I1VXzUhdpKWNP1v0Ed9eKxIhFmYtOaHAQuW%2BrDMD29iGbSN3JqtsuJxXQ6EcAu5OLoBkSZRhv5j2%2BCzmeeSU9EXejDTxmq9mUsoG1zL7Up2Qh9Mc"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df67a614db0d0cd-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:40:30.134 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:52:13.986 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:52:14.021 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': tst
+14:52:14.294 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:52:14.299 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688129534297
+14:52:14.301 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:52:14.643 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: tst 
+14:52:14.646 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+14:52:14.776 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:52:15.216 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 434
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:52:15 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-9XG94PhwQq4I8kJ5CJQ0Yw+uG0M"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9ne5R9x23580vUDOtqSWtT4viscVe5odIbVZ%2Fgw%2BD0L1neymLI%2BjrUUB2GDtM3BzTgudhnewAJtdLp%2BeeolyXr3VUkgQWdanaNV1tLFFj1OUkSbg5Q2%2BHf8XifYkaS2iOMA5"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df68b993cca0e48-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTM1LCJleHAiOjE2OTMzMTM1MzV9.juo5R0ukAeAJTAdf3ZcVn0lHl0450WyLLEPP0FcSehY"}}
+
+14:52:15.222 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+14:52:15.229 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTM1LCJleHAiOjE2OTMzMTM1MzV9.juo5R0ukAeAJTAdf3ZcVn0lHl0450WyLLEPP0FcSehY
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:52:15.508 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 278
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:52:15 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-umIOvpbhCY3JVjTvrlpnxI4zbkQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iHUw8R8OBI2RLHix6He8PHTapCQcXrJQinOQG5x2CnpUphtQU6aPnzGAyfMhniBuJTtEONIdO%2Bk4T%2FhAVQtGzt4B%2FgjX%2BKkTbkpkBAv%2BtELGhP%2FX1ITHrqjkZCyLqRWBo3QJ"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df68b9b8f880b05-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:52:15.434Z","updatedAt":"2023-06-30T12:52:15.434Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:52:15.523 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTM1LCJleHAiOjE2OTMzMTM1MzV9.juo5R0ukAeAJTAdf3ZcVn0lHl0450WyLLEPP0FcSehY
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:52:15.984 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 459
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:52:15 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-umIOvpbhCY3JVjTvrlpnxI4zbkQ"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=e2EN0msJKqdEqKC%2FoGxauzp00Nf%2FUfmlsUQ5V%2FXb3DyMxnRYxKbdMfQrQ0BwxyiB%2FJycXYgMBzp%2FuK4KdG5eQh9BNLE3YNIDXdFJMWEGuTuWOqgnLCBvc0Wq6E7sqfWJ%2FbxA"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df68b9d5f610b89-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:52:15.434Z","updatedAt":"2023-06-30T12:52:15.434Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:52:15.990 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTM1LCJleHAiOjE2OTMzMTM1MzV9.juo5R0ukAeAJTAdf3ZcVn0lHl0450WyLLEPP0FcSehY
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:52:16.243 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 251
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:52:16 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7AlEGUQv1LCPLz4dyDlIFpcwFEGiZmXkw7JVocJ%2BjPMme7YTyGwOB6SQWzZTOeqO2J8wvn42jK3LJwrl9vnH1U9o8BL8WYc5lz9061xFtbELD7rcPPaqcijDZcitREESFQ3P"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df68ba04f1506c2-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:52:16.246 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTM1LCJleHAiOjE2OTMzMTM1MzV9.juo5R0ukAeAJTAdf3ZcVn0lHl0450WyLLEPP0FcSehY
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:52:16.488 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 240
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:52:16 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=82EL0RxoIjGWbH3sfNcQxuTtBZMclfwZ6gTPgw6Q3tRSOPYrhErNi4BtJ0IRG8mV%2FPJl7W%2FlOAyybYx6hZphBcJnn6xHXIR%2F1ja01EjdVw0V2lSeazjGju6LRukg0auaJe3p"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df68ba1eea4d0d1-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:52:16.767 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:52:54.951 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': tst
+14:52:55.216 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:52:55.221 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688129575219
+14:52:55.223 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:52:55.579 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: tst 
+14:52:55.583 [pool-1-thread-4] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+14:52:55.723 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:52:56.179 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 451
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:52:56 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-4cSlwuhsBjFjl0Ef/F0f96iBzT4"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=re1LSe9IK5Va4g2oX30aL026UQ%2Bf6xL43BsDiZDMshYflsZiWeX%2BrHtjKNgHzVrgTrE%2B7nrXNSC0AGXzFNY4yf6uKzz6FRhUOQGVHjP%2BuuBLlUF%2F57VeQrWQooy%2FH%2BEe0xCT"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df68c990ee50e3d-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE"}}
+
+14:52:56.187 [pool-1-thread-4] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+14:52:56.192 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: tst 
+14:52:56.194 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:52:56.194 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: tst 
+14:52:56.196 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:52:56.197 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: tst 
+14:52:56.198 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/tags
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:52:56.201 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 132
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Karate","description":"It is about Karate framework","body":"How to test code using Karate"}}
+
+14:52:56.446 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 244
+1 < 422
+1 < Date: Fri, 30 Jun 2023 12:52:56 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 39
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kdR5jU572YAo5j9DYPW%2FDvfFX3i7FbY3deAgsfqKYUwrnU12olZGUN0GqnUQqOBB6uK2hhHiv4OENI9qH%2FQ21xbxCluz83K%2FNQMfPANkPjgZye%2Boty28kCGUnKvlAm%2FJk6%2FI"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df68c9b9b3fb89c-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+14:52:56.452 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:10
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 244, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/feature/Article.feature:10
+14:52:56.470 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 273
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:52:56 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-JnO67hMYx3SY3Iql8eA39MyPYiY"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=guqI9KI8dcSeFv3sIAXNo38F4YJaAPSTICsm%2FHhA%2BN1V0FCrRyz%2BlKkAftgi8%2BPmc4vys8MXxsYZMpE81tebUqdAhfd4RJmnk1qY1Rtp4zAFy%2BQoOTg1Gsabw9hFMqyKuvGZ"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df68c9b9980b980-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:52:56.411Z","updatedAt":"2023-06-30T12:52:56.411Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:52:56.482 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:52:56.776 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 577
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:52:56 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"76-zd6ecbLVqNlXjhuPH81y6YOfYKo"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YIOD2u6BLcvZH8J9EKjvoe6GAw0DNHzHkpywY7hoGWJijOZfNhlv29O0EUpYheF1AR7UR6rSadv0Bb8a9bxilI1esvEXCnFQR1%2BoRskJuuVMSIOIm6jUVr5UZIXcgmmV%2Bfrk"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df68c9b9fcf0e7f-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow","ipsum","qui","cupiditate","et","quia","deserunt"]}
+
+14:52:56.968 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 484
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:52:56 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-JnO67hMYx3SY3Iql8eA39MyPYiY"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wCONAWuyQv%2FG0nMyGtEOGSjs7P54nBWsMgUdaUoGve8GhNMyqqSYxXW%2Bn2jMJhjy%2FZpdkMHsT2njUIhMXdRsDwxV2U6NlVjZQJedOWOjGpmsibjCLboq9a3SJTdtWuEvV2dG"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df68c9d5d20b969-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:52:56.411Z","updatedAt":"2023-06-30T12:52:56.411Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:52:56.974 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:52:57.182 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 985
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:52:57 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"494d-K4H9dbz9+42Vhb0dHf6OsIjHneU"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=isgbvOwqS02h54Ns5CBLlHgJfOf%2FQqY1U%2Fsm3Ot4j82pqYnQmFjIN%2B9n70%2FaDRtcJpAUGn7%2BqJx2d%2FakJcs33KDKoY7L%2BuLBAuNazxv0cANvyaB%2B1VotgWzOgolVUvJqJzFG"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df68c9b8b330ead-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"articles":[{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:52:56.411Z","updatedAt":"2023-06-30T12:52:56.411Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"Test-Karate-196105","title":"Test Karate","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-06-30T11:20:47.658Z","updatedAt":"2023-06-30T11:20:47.658Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"Try-to-transmit-the-HTTP-card-maybe-it-will-override-the-multi-byte-hard-drive!-120863","title":"Try to transmit the HTTP card, maybe it will override the multi-byte hard drive!","description":"Assumenda molestiae laboriosam enim ipsum quaerat enim officia vel quo. Earum odit rem natus totam atque cumque. Sint dolorem facere non.","body":"Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Voluptate et quasi optio eos et eveniet culpa et nobis.\\nSint aut sint sequi possimus reiciendis nisi.\\nRerum et omnis et sit doloribus corporis voluptas error.\\nIusto molestiae tenetur necessitatibus dolorem omnis. Libero sed ut architecto.\\nEx itaque et modi aut voluptatem alias quae.\\nModi dolor cupiditate sit.\\nDelectus consectetur nobis aliquid deserunt sint ut et voluptas.\\nCorrupti in labore laborum quod. Ipsa laudantium deserunt. Ut atque harum inventore natus facere sed molestiae.\\nQuia aliquid ut.\\nAnimi sunt rem et sit ullam dolorem ab consequatur modi. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Et fuga repellendus magnam dignissimos eius aspernatur rerum. Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Ad voluptate vel.\\nAut aut dolor. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et.","tagList":["voluptate","rerum","ducimus","hic"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1199,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863","title":"If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!","description":"Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut cupiditate est facere omnis possimus. Tenetur similique nemo illo soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem soluta vel est omnis.","body":"Quia quo iste et aperiam voluptas consectetur a omnis et.\\nDolores et earum consequuntur sunt et.\\nEa nulla ab voluptatem dicta vel. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\\nAspernatur cumque labore voluptates mollitia deleniti et. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Voluptatum tempora voluptas est odio iure odio dolorem.\\nVoluptatum est deleniti explicabo explicabo harum provident quis molestiae. Sed dolores nostrum quis. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Facere beatae delectus ut.\\nPossimus voluptas perspiciatis voluptatem nihil sint praesentium.\\nSint est nihil voluptates nesciunt voluptatibus temporibus blanditiis.\\nOfficiis voluptatem earum sed. Deserunt ab porro similique est accusamus id enim aut suscipit.\\nSoluta reprehenderit error nesciunt odit veniam sed.\\nDolore optio qui aut ab.\\nAut minima provident eius repudiandae a quibusdam in nisi quam.","tagList":["rerum","maiores","omnis","quae"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1488,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-bypass-the-SAS-card-maybe-it-will-transmit-the-solid-state-system!-120863","title":"Try to bypass the SAS card, maybe it will transmit the solid state system!","description":"Est iste totam accusamus dolorem est. Quis non sit impedit similique incidunt odio aspernatur aut rem. Architecto est eum.","body":"Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Sapiente vitae culpa ut voluptatem incidunt excepturi voluptates exercitationem.\\nSed doloribus alias consectetur omnis occaecati ad placeat labore.\\nVoluptate consequatur expedita nemo recusandae sint assumenda.\\nQui vel totam quia fugit saepe suscipit autem quasi qui.\\nEt eum vel ut delectus ut nesciunt animi. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ipsa laudantium deserunt. Totam ab necessitatibus quidem non. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Molestias non debitis quibusdam quis quod.\\nSaepe ab et hic unde et sed.\\nMagni voluptatem est.\\nEt similique quo porro et.","tagList":["dolores","aut","consectetur","ullam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":221,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"We-need-to-calculate-the-bluetooth-JBOD-bus!-120863","title":"We need to calculate the bluetooth JBOD bus!","description":"Ipsa nemo eos sequi nulla id accusamus nam ratione dolore. Omnis sint quisquam accusamus rem rem nihil. Non minus animi cum dolorem earum odit sequi. Rem non inventore sed dicta atque modi. Sed dolorem iste molestiae. Sed eum iste aliquid aliquid.","body":"Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Qui soluta veritatis autem repellat et inventore occaecati. Reprehenderit quae quas quos sapiente ullam ut.\\nVoluptates non ut. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Quia harum nulla et quos sint voluptates exercitationem corrupti. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Eveniet sit ipsa officiis laborum.\\nIn vel est omnis sed impedit quod magni.\\nDignissimos quis illum qui atque aut ut quasi sequi. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Nemo tempore dolor maiores blanditiis quia qui qui voluptatem non.\\nNisi dolores animi laboriosam aliquam qui adipisci voluptates atque dignissimos.\\nLibero sit quibusdam corporis aut inventore natus libero.\\nPraesentium omnis dolorum temporibus repellendus qui.\\nNon nostrum doloribus occaecati dolores sit ut.","tagList":["nostrum","quia","quaerat","numquam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":200,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"quantifying-the-microchip-wont-do-anything-we-need-to-index-the-online-SQL-hard-drive!-120863","title":"quantifying the microchip wont do anything, we need to index the online SQL hard drive!","description":"Minima soluta sed sed et optio explicabo at distinctio repudiandae. Magnam deleniti a ea. Non velit accusamus veniam qui. Necessitatibus velit ad aut officiis in officiis quasi. Sunt nulla dolores voluptatem esse magnam ut.","body":"Ab rerum eos ipsa accusantium nihil voluptatem.\\nEum minus alias.\\nIure commodi at harum.\\nNostrum non occaecati omnis quisquam. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Cum vitae aliquam neque consequatur quia id dicta ipsam.\\nExercitationem ab eum exercitationem non alias numquam qui.\\nItaque rerum ut nobis est nam vitae exercitationem minima fugiat.\\nEst sit non tempora soluta consequatur eveniet.\\nCorporis nisi dolorem architecto voluptatem. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident.","tagList":["possimus","voluptatem","cupiditate"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":356,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-generate-the-TCP-bus-maybe-it-will-override-the-neural-bandwidth!-120863","title":"Try to generate the TCP bus, maybe it will override the neural bandwidth!","description":"Pariatur ut dolor repellendus dolores ut debitis. Est iusto neque dicta voluptatibus quia nulla consequatur. Omnis aut sed dolores qui laborum a amet.","body":"Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Qui soluta veritatis autem repellat et inventore occaecati. Doloribus consequatur et labore suscipit deserunt tempore ad quasi sed.\\nQuam cupiditate modi dolor et eos et culpa qui.\\nDelectus molestias ea id.\\nIllum ea unde sapiente non non non.\\nDolorem ut sed magni. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Placeat sequi quaerat sapiente aspernatur autem sunt molestiae voluptatem.\\nAccusamus unde libero accusamus omnis totam et temporibus. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Laborum est maxime enim accusantium magnam.\\nRerum dolorum minus laudantium delectus eligendi necessitatibus quia.\\nDeleniti consequatur explicabo aut nobis est vero tempore.\\nExcepturi earum quo quod voluptatem quo iure vel sapiente occaecati.\\nConsectetur consequatur corporis doloribus omnis harum voluptas esse amet. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit.","tagList":["dicta","rerum","omnis","blanditiis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":213,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"You-cant-transmit-the-firewall-without-copying-the-1080p-SDD-interface!-120863","title":"You cant transmit the firewall without copying the 1080p SDD interface!","description":"Est sed deserunt eligendi in velit saepe. Dolorem quis illo vero qui ut recusandae occaecati dolores quae. Voluptatem vero aliquam alias adipisci reiciendis odit nobis est. Vel laboriosam quia commodi rerum. Voluptatum et sed et nesciunt iure ipsum iste aut enim.","body":"Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Temporibus quod quidem placeat porro.\\nUnde ipsam vel explicabo. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Ducimus dolores recusandae.\\nEa aut aperiam et aut eos inventore.\\nQuia cum ducimus autem iste.\\nQuos consequuntur est delectus temporibus autem. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Autem reiciendis provident iure possimus.\\nOccaecati soluta quibusdam libero tenetur minus vel sit illo.\\nCulpa optio dolorem eos similique voluptatem voluptatibus error accusantium. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Et sed dicta eveniet accusamus consequatur.\\nUllam voluptas consequatur aut eos ducimus.\\nId officia est ut dicta provident beatae ipsa.","tagList":["possimus","maiores","facilis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":177,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Use-the-auxiliary-EXE-monitor-then-you-can-hack-the-haptic-port!-120863","title":"Use the auxiliary EXE monitor, then you can hack the haptic port!","description":"Et id harum unde et ratione minima non. Suscipit ipsum rem. Sed asperiores quaerat dolorum autem nihil voluptatem et hic ut. Molestiae rerum autem. Dolores nam soluta officia pariatur debitis.","body":"Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Dolores accusamus ducimus suscipit neque fugit quo aliquam.\\nOdit eum eum sint accusamus.\\nQuod ipsum sed placeat.\\nEt culpa voluptas et quod atque a.\\nVoluptatibus rerum nihil quia cupiditate nihil facere beatae dolor. Fugit harum mollitia.\\nMagni eos asperiores assumenda ad. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Quia consequatur voluptatibus et.\\nVoluptatibus aspernatur et.\\nDicta architecto qui dignissimos.\\nVeritatis facilis voluptatem inventore aliquid cum.\\nNumquam odio quis porro sunt adipisci culpa.","tagList":["necessitatibus","vitae","repellat","labore"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":165,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":198}
+
+14:52:57.203 [pool-1-thread-4] ERROR com.intuit.karate - classpath:conduitApp/feature/HomePage.feature:23
+And match response.articlesCount == 197
+match failed: EQUALS
+  $ | not equal (NUMBER:NUMBER)
+  198
+  197
+
+classpath:conduitApp/feature/HomePage.feature:23
+14:52:57.240 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 266
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:52:57 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zeJFNFf2MxCoA3PJ%2BSh2LGymYEF12mfyboTiuFyjAKzTSTEKR35bAX8sSl7B6886hZ7JSPLpLhCT0B26jUjvDrxrLN02v7E9eK78UDmTy09yGcDUA1aCbPKVrpD9qJ8O%2FNKM"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df68ca07c43b957-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:52:57.242 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NTc2LCJleHAiOjE2OTMzMTM1NzZ9.mFswNDDFH6VyIHm1MiEXX4GEDklP2IH0T-Jq6cWQkqE
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:52:57.482 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 240
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:52:57 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jSXPhTRaPY0gCUOhVUXZbOf7kEiH%2F8Ns53BxI0QkmC3nyXwRavV1iJxtBaVXZh28sZnPlgmf8nsc%2BAt6FeecExXWeJsTM0v3fQaifqL6L8oSpINUJPYYPJQI81VYL%2FJRZkx2"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df68ca21bfb1c8f-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:52:57.751 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:52:57.823 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:conduitApp/feature/HomePage.feature
+14:55:43.751 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': tst
+14:55:44.019 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:55:44.023 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688129744022
+14:55:44.025 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:55:44.394 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: tst 
+14:55:44.397 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+14:55:44.542 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:55:45.033 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 486
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:55:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-9wcJWMRn46K7dWpHNck1u6bP5bI"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LP7yiDqQcKiijfrE2VzVoNP%2BDZhIbRRzhq8d4KSUP2y7yjPUsi6eDi%2BvlEZYHTdUnJmLSgQVLtGST6LQRl4Gvxgu801nQwhBT4YLlPu6bOALZtnXKsautzWibCjrA5WhdW9J"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df690b83c320ea8-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY"}}
+
+14:55:45.041 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+14:55:45.045 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: tst 
+14:55:45.047 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"}}
+
+14:55:45.048 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: tst 
+14:55:45.049 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/tags
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:55:45.050 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: tst 
+14:55:45.051 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:55:45.054 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:55:45.325 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 277
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:55:45 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"19b-LecfSbGqHAo8rs74mgbjfFxpdLg"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GzkFgx6%2FZ2Ek7M9QoSc8a%2Bm%2FWpG3n4HZPm2fl1%2Fo2wPEnlaTxN291ZRwwJ48PR7IXAEHv5%2BkhMtYezbpws0cymDEka9v7iyrNVmGYYi%2BbAcKzNmkC0y%2BvYc2aL1qODsm6AS%2F"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df690baec2a1b03-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"First-Test-Creating-196105","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-06-30T12:55:45.266Z","updatedAt":"2023-06-30T12:55:45.266Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:55:45.336 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:11
+And match response.article.title == "Test Karate"
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'First Test Creating'
+  'Test Karate'
+
+classpath:conduitApp/feature/Article.feature:11
+14:55:45.337 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 284
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:55:45 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-r3hYxaNBBdYTML848Kbt2G9mCc4"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2Aga45f2kQN04A0IhtfE6Fj2oinujP5N9mQOudi%2FTClxe80MKwZ0jn8e3PnbX%2BCYfYSoDYjtIUmcpf2gj1YHUm5qC1naY8Lom0sm5TtpgYcNqkqxp9DViceAZkBR5tSSV9RY"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df690baf9541c18-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:55:45.269Z","updatedAt":"2023-06-30T12:55:45.269Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:55:45.343 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:55:45.780 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 730
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:55:45 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"76-zd6ecbLVqNlXjhuPH81y6YOfYKo"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=czSdkjvMgUEGRdNFG4qSl7w6b%2B9e%2FQVTTkI%2B9%2B%2BvViapaOilmPsPiPvXNHPGlfFM5r3vFT%2FPTXyHLPIyrfk2ywIcycjHoJEG2GbSxM5XN0TJa2Y%2FRfNE%2B%2BT%2Fwxx2jB4DOz0B"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df690baed9cb88b-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow","ipsum","qui","cupiditate","et","quia","deserunt"]}
+
+14:55:45.850 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 506
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:55:45 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-r3hYxaNBBdYTML848Kbt2G9mCc4"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Am9GUjJS5rLnFnN6gQL71RsSS7sCEHmb38FDyA%2F%2F%2B%2F32X5InL5iRPr5YddZBywntV%2BSwLMG%2FrWVtjzil9aqd6JBLQtsusb0uq53%2BxWQn0AyPZsgSK05NQiXa4wfaZfZMBLHr"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df690bcbdd01b03-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:55:45.269Z","updatedAt":"2023-06-30T12:55:45.269Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:55:45.852 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:55:46.103 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 250
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:55:46 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=O0UFwZqGL9exHC0l3%2BGXJra1tH6nb7lwfJzPVuAN1iuSxTl3%2FKPaCaUVNTG03JvZoOnfkGlfFsYdJzv9B6qHYWj9wgX8Bb1xw4H%2B5Snj%2FGpQ2JyvETZsJpivSS56GoJHUYOW"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df690bfeeb60bc8-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:55:46.105 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5NzQ0LCJleHAiOjE2OTMzMTM3NDR9.W1dPmbY8t_Jcemyu4uxeoTiVT_D3NEJP5ct1CqDRjaY
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:55:46.150 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 1095
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:55:46 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"495d-2FOPY+qonkIcnrygS0xP/TNi8JQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LICXsnff9iWM4Tr9saDnrKtUJ8QXyAjBfFGQ4qA4oiYWQrv%2B3jMnSsOUaHpCuEKnbe6gZigUAL8WtJtcfro8xh6ELOdv2SEUcOjkvIof%2FJ6crQJ1jn%2Bdg%2FfQXvM9Yvgni7%2F5"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df690bafd21fa30-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"articles":[{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:55:45.269Z","updatedAt":"2023-06-30T12:55:45.269Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"First-Test-Creating-196105","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-06-30T12:55:45.266Z","updatedAt":"2023-06-30T12:55:45.266Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"Try-to-transmit-the-HTTP-card-maybe-it-will-override-the-multi-byte-hard-drive!-120863","title":"Try to transmit the HTTP card, maybe it will override the multi-byte hard drive!","description":"Assumenda molestiae laboriosam enim ipsum quaerat enim officia vel quo. Earum odit rem natus totam atque cumque. Sint dolorem facere non.","body":"Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Voluptate et quasi optio eos et eveniet culpa et nobis.\\nSint aut sint sequi possimus reiciendis nisi.\\nRerum et omnis et sit doloribus corporis voluptas error.\\nIusto molestiae tenetur necessitatibus dolorem omnis. Libero sed ut architecto.\\nEx itaque et modi aut voluptatem alias quae.\\nModi dolor cupiditate sit.\\nDelectus consectetur nobis aliquid deserunt sint ut et voluptas.\\nCorrupti in labore laborum quod. Ipsa laudantium deserunt. Ut atque harum inventore natus facere sed molestiae.\\nQuia aliquid ut.\\nAnimi sunt rem et sit ullam dolorem ab consequatur modi. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Et fuga repellendus magnam dignissimos eius aspernatur rerum. Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Ad voluptate vel.\\nAut aut dolor. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et.","tagList":["voluptate","rerum","ducimus","hic"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1199,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863","title":"If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!","description":"Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut cupiditate est facere omnis possimus. Tenetur similique nemo illo soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem soluta vel est omnis.","body":"Quia quo iste et aperiam voluptas consectetur a omnis et.\\nDolores et earum consequuntur sunt et.\\nEa nulla ab voluptatem dicta vel. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\\nAspernatur cumque labore voluptates mollitia deleniti et. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Voluptatum tempora voluptas est odio iure odio dolorem.\\nVoluptatum est deleniti explicabo explicabo harum provident quis molestiae. Sed dolores nostrum quis. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Facere beatae delectus ut.\\nPossimus voluptas perspiciatis voluptatem nihil sint praesentium.\\nSint est nihil voluptates nesciunt voluptatibus temporibus blanditiis.\\nOfficiis voluptatem earum sed. Deserunt ab porro similique est accusamus id enim aut suscipit.\\nSoluta reprehenderit error nesciunt odit veniam sed.\\nDolore optio qui aut ab.\\nAut minima provident eius repudiandae a quibusdam in nisi quam.","tagList":["rerum","maiores","omnis","quae"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1488,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-bypass-the-SAS-card-maybe-it-will-transmit-the-solid-state-system!-120863","title":"Try to bypass the SAS card, maybe it will transmit the solid state system!","description":"Est iste totam accusamus dolorem est. Quis non sit impedit similique incidunt odio aspernatur aut rem. Architecto est eum.","body":"Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Sapiente vitae culpa ut voluptatem incidunt excepturi voluptates exercitationem.\\nSed doloribus alias consectetur omnis occaecati ad placeat labore.\\nVoluptate consequatur expedita nemo recusandae sint assumenda.\\nQui vel totam quia fugit saepe suscipit autem quasi qui.\\nEt eum vel ut delectus ut nesciunt animi. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ipsa laudantium deserunt. Totam ab necessitatibus quidem non. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Molestias non debitis quibusdam quis quod.\\nSaepe ab et hic unde et sed.\\nMagni voluptatem est.\\nEt similique quo porro et.","tagList":["dolores","aut","consectetur","ullam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":221,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"We-need-to-calculate-the-bluetooth-JBOD-bus!-120863","title":"We need to calculate the bluetooth JBOD bus!","description":"Ipsa nemo eos sequi nulla id accusamus nam ratione dolore. Omnis sint quisquam accusamus rem rem nihil. Non minus animi cum dolorem earum odit sequi. Rem non inventore sed dicta atque modi. Sed dolorem iste molestiae. Sed eum iste aliquid aliquid.","body":"Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Qui soluta veritatis autem repellat et inventore occaecati. Reprehenderit quae quas quos sapiente ullam ut.\\nVoluptates non ut. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Quia harum nulla et quos sint voluptates exercitationem corrupti. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Eveniet sit ipsa officiis laborum.\\nIn vel est omnis sed impedit quod magni.\\nDignissimos quis illum qui atque aut ut quasi sequi. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Nemo tempore dolor maiores blanditiis quia qui qui voluptatem non.\\nNisi dolores animi laboriosam aliquam qui adipisci voluptates atque dignissimos.\\nLibero sit quibusdam corporis aut inventore natus libero.\\nPraesentium omnis dolorum temporibus repellendus qui.\\nNon nostrum doloribus occaecati dolores sit ut.","tagList":["nostrum","quia","quaerat","numquam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":200,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"quantifying-the-microchip-wont-do-anything-we-need-to-index-the-online-SQL-hard-drive!-120863","title":"quantifying the microchip wont do anything, we need to index the online SQL hard drive!","description":"Minima soluta sed sed et optio explicabo at distinctio repudiandae. Magnam deleniti a ea. Non velit accusamus veniam qui. Necessitatibus velit ad aut officiis in officiis quasi. Sunt nulla dolores voluptatem esse magnam ut.","body":"Ab rerum eos ipsa accusantium nihil voluptatem.\\nEum minus alias.\\nIure commodi at harum.\\nNostrum non occaecati omnis quisquam. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Cum vitae aliquam neque consequatur quia id dicta ipsam.\\nExercitationem ab eum exercitationem non alias numquam qui.\\nItaque rerum ut nobis est nam vitae exercitationem minima fugiat.\\nEst sit non tempora soluta consequatur eveniet.\\nCorporis nisi dolorem architecto voluptatem. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident.","tagList":["possimus","voluptatem","cupiditate"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":356,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-generate-the-TCP-bus-maybe-it-will-override-the-neural-bandwidth!-120863","title":"Try to generate the TCP bus, maybe it will override the neural bandwidth!","description":"Pariatur ut dolor repellendus dolores ut debitis. Est iusto neque dicta voluptatibus quia nulla consequatur. Omnis aut sed dolores qui laborum a amet.","body":"Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Qui soluta veritatis autem repellat et inventore occaecati. Doloribus consequatur et labore suscipit deserunt tempore ad quasi sed.\\nQuam cupiditate modi dolor et eos et culpa qui.\\nDelectus molestias ea id.\\nIllum ea unde sapiente non non non.\\nDolorem ut sed magni. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Placeat sequi quaerat sapiente aspernatur autem sunt molestiae voluptatem.\\nAccusamus unde libero accusamus omnis totam et temporibus. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Laborum est maxime enim accusantium magnam.\\nRerum dolorum minus laudantium delectus eligendi necessitatibus quia.\\nDeleniti consequatur explicabo aut nobis est vero tempore.\\nExcepturi earum quo quod voluptatem quo iure vel sapiente occaecati.\\nConsectetur consequatur corporis doloribus omnis harum voluptas esse amet. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit.","tagList":["dicta","rerum","omnis","blanditiis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":213,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"You-cant-transmit-the-firewall-without-copying-the-1080p-SDD-interface!-120863","title":"You cant transmit the firewall without copying the 1080p SDD interface!","description":"Est sed deserunt eligendi in velit saepe. Dolorem quis illo vero qui ut recusandae occaecati dolores quae. Voluptatem vero aliquam alias adipisci reiciendis odit nobis est. Vel laboriosam quia commodi rerum. Voluptatum et sed et nesciunt iure ipsum iste aut enim.","body":"Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Temporibus quod quidem placeat porro.\\nUnde ipsam vel explicabo. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Ducimus dolores recusandae.\\nEa aut aperiam et aut eos inventore.\\nQuia cum ducimus autem iste.\\nQuos consequuntur est delectus temporibus autem. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Autem reiciendis provident iure possimus.\\nOccaecati soluta quibusdam libero tenetur minus vel sit illo.\\nCulpa optio dolorem eos similique voluptatem voluptatibus error accusantium. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Et sed dicta eveniet accusamus consequatur.\\nUllam voluptas consequatur aut eos ducimus.\\nId officia est ut dicta provident beatae ipsa.","tagList":["possimus","maiores","facilis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":177,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Use-the-auxiliary-EXE-monitor-then-you-can-hack-the-haptic-port!-120863","title":"Use the auxiliary EXE monitor, then you can hack the haptic port!","description":"Et id harum unde et ratione minima non. Suscipit ipsum rem. Sed asperiores quaerat dolorum autem nihil voluptatem et hic ut. Molestiae rerum autem. Dolores nam soluta officia pariatur debitis.","body":"Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Dolores accusamus ducimus suscipit neque fugit quo aliquam.\\nOdit eum eum sint accusamus.\\nQuod ipsum sed placeat.\\nEt culpa voluptas et quod atque a.\\nVoluptatibus rerum nihil quia cupiditate nihil facere beatae dolor. Fugit harum mollitia.\\nMagni eos asperiores assumenda ad. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Quia consequatur voluptatibus et.\\nVoluptatibus aspernatur et.\\nDicta architecto qui dignissimos.\\nVeritatis facilis voluptatem inventore aliquid cum.\\nNumquam odio quis porro sunt adipisci culpa.","tagList":["necessitatibus","vitae","repellat","labore"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":165,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":197}
+
+14:55:46.349 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 242
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:55:46 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LhW6WlWSvNq3QJLbgEsZvSur7L2I131qZ2%2BS4fPyrSQGdd7IiJ3o7Cb%2FYtHKzXvbZFexeOHdlIpw4iSzc6Xrm8OVMWvJ7ErcGZCQdaEEJYyApcyuRpqaB32ZSJmYbDBd83LE"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df690c17b510ba8-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:55:46.626 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:55:46.675 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:conduitApp/feature/HomePage.feature
+14:56:25.439 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': tst
+14:56:25.706 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:56:25.711 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688129785709
+14:56:25.713 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:56:26.068 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: tst 
+14:56:26.071 [pool-1-thread-2] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+14:56:26.204 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:56:26.711 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 502
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:56:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-qgv2bxBM0JVEtBO9CNdaVVejJWQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Tdg2bsZbKx4dZN%2BmzA4YPMct1g4hrIIVg9v%2BkK26CgutYthNx50aNwqzaIRO9OmF2kAVYMDiWllDY26roH6ylIuzeaHA1v8ozE0ul%2B%2B5tnEcgpvMTlCSIz5%2FiOILjgshlpK3"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df691bc9dc7b8ac-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs"}}
+
+14:56:26.717 [pool-1-thread-2] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+14:56:26.722 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: tst 
+14:56:26.724 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:56:26.725 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: tst 
+14:56:26.726 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"}}
+
+14:56:26.728 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: tst 
+14:56:26.729 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:56:26.731 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/tags
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:56:26.990 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 262
+1 < 422
+1 < Date: Fri, 30 Jun 2023 12:56:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 39
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=At86AHKAJJqnxdRYPI%2FZW84trW5z%2B7nrPZ8LnmQf%2FVy2erUu1Tvhme87w16IZu7khiDZn5lcfDlLzOufgU%2BfKlGF4h%2FMomTZLLyjUM517DREDGkURIsHbIWzpFgrBQEpDXTB"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df691bf79930a54-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+14:56:26.992 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 268
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:56:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-1mJZ1MpZupTP4Ry1JYsQq000KyM"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ysSG%2B10ia5cTxv1QPwfQjceZr3Lw63ZlyRL6g2FcmV%2FUZsRPhHlAdgM2jkcTZacS3l%2FW5eCrk2pNQPOxwiCHVwYm6xeHfT3VT%2FkdYq6VGMR%2BhV82ntVW8SderYS6%2BlFhvF0v"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df691bf5df60bce-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:56:26.944Z","updatedAt":"2023-06-30T12:56:26.944Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:56:26.998 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:10
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 262, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/feature/Article.feature:10
+14:56:27.006 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:56:27.487 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 755
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:56:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"76-zd6ecbLVqNlXjhuPH81y6YOfYKo"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HZOqjwoDlFGbQ7Ks3Wh%2FFtABN5pxRzie%2BlKNRUXB%2BGdzf4GlrPB4LAuT3mGxhGhMtpW%2Bgh9hviyBQo1hmok6%2BkC6%2BXzGwNgMg3N%2BDkHgKR1%2BTXj3Czy0KrcSUzgNYCbguwYm"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df691bf6b0f009b-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow","ipsum","qui","cupiditate","et","quia","deserunt"]}
+
+14:56:27.540 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 533
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:56:27 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-1mJZ1MpZupTP4Ry1JYsQq000KyM"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6WdfvEJdFmKuVdxg%2BMO%2BCXk7FuIFKu3Q%2FMGa3KiS1ZOmcflAlsIakmIc5dl019%2F1qhQjdnPCHncmPFeGd%2BPjOJ2lic6e5d0IrD1xO6d%2FOS169W2rQabkBZsyE2%2FetQ%2FMRfKx"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df691c11940b966-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:56:26.944Z","updatedAt":"2023-06-30T12:56:26.944Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:56:27.542 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:56:27.716 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 985
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:56:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"495d-BNeVH2Q+MI159O1E7Ke+rptYuFg"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tcc%2Bsg3utR957Jt%2BHAFjwak1ltX5WLX%2FK%2F4DZkdeDCwfWSaro2InEwZS4mp8Z79zBNE0MduZnDi%2FlLy7pTXRP0%2FpiMcmQ5xTx6kduc%2F8hhq8UgcKxaeu7L6UACmFjMYcoO49"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df691bf69690bcb-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"articles":[{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:56:26.944Z","updatedAt":"2023-06-30T12:56:26.944Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"First-Test-Creating-196105","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-06-30T12:55:45.266Z","updatedAt":"2023-06-30T12:55:45.266Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"Try-to-transmit-the-HTTP-card-maybe-it-will-override-the-multi-byte-hard-drive!-120863","title":"Try to transmit the HTTP card, maybe it will override the multi-byte hard drive!","description":"Assumenda molestiae laboriosam enim ipsum quaerat enim officia vel quo. Earum odit rem natus totam atque cumque. Sint dolorem facere non.","body":"Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Voluptate et quasi optio eos et eveniet culpa et nobis.\\nSint aut sint sequi possimus reiciendis nisi.\\nRerum et omnis et sit doloribus corporis voluptas error.\\nIusto molestiae tenetur necessitatibus dolorem omnis. Libero sed ut architecto.\\nEx itaque et modi aut voluptatem alias quae.\\nModi dolor cupiditate sit.\\nDelectus consectetur nobis aliquid deserunt sint ut et voluptas.\\nCorrupti in labore laborum quod. Ipsa laudantium deserunt. Ut atque harum inventore natus facere sed molestiae.\\nQuia aliquid ut.\\nAnimi sunt rem et sit ullam dolorem ab consequatur modi. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Et fuga repellendus magnam dignissimos eius aspernatur rerum. Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Ad voluptate vel.\\nAut aut dolor. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et.","tagList":["voluptate","rerum","ducimus","hic"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1199,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863","title":"If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!","description":"Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut cupiditate est facere omnis possimus. Tenetur similique nemo illo soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem soluta vel est omnis.","body":"Quia quo iste et aperiam voluptas consectetur a omnis et.\\nDolores et earum consequuntur sunt et.\\nEa nulla ab voluptatem dicta vel. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\\nAspernatur cumque labore voluptates mollitia deleniti et. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Voluptatum tempora voluptas est odio iure odio dolorem.\\nVoluptatum est deleniti explicabo explicabo harum provident quis molestiae. Sed dolores nostrum quis. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Facere beatae delectus ut.\\nPossimus voluptas perspiciatis voluptatem nihil sint praesentium.\\nSint est nihil voluptates nesciunt voluptatibus temporibus blanditiis.\\nOfficiis voluptatem earum sed. Deserunt ab porro similique est accusamus id enim aut suscipit.\\nSoluta reprehenderit error nesciunt odit veniam sed.\\nDolore optio qui aut ab.\\nAut minima provident eius repudiandae a quibusdam in nisi quam.","tagList":["rerum","maiores","omnis","quae"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1488,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-bypass-the-SAS-card-maybe-it-will-transmit-the-solid-state-system!-120863","title":"Try to bypass the SAS card, maybe it will transmit the solid state system!","description":"Est iste totam accusamus dolorem est. Quis non sit impedit similique incidunt odio aspernatur aut rem. Architecto est eum.","body":"Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Sapiente vitae culpa ut voluptatem incidunt excepturi voluptates exercitationem.\\nSed doloribus alias consectetur omnis occaecati ad placeat labore.\\nVoluptate consequatur expedita nemo recusandae sint assumenda.\\nQui vel totam quia fugit saepe suscipit autem quasi qui.\\nEt eum vel ut delectus ut nesciunt animi. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ipsa laudantium deserunt. Totam ab necessitatibus quidem non. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Molestias non debitis quibusdam quis quod.\\nSaepe ab et hic unde et sed.\\nMagni voluptatem est.\\nEt similique quo porro et.","tagList":["dolores","aut","consectetur","ullam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":221,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"We-need-to-calculate-the-bluetooth-JBOD-bus!-120863","title":"We need to calculate the bluetooth JBOD bus!","description":"Ipsa nemo eos sequi nulla id accusamus nam ratione dolore. Omnis sint quisquam accusamus rem rem nihil. Non minus animi cum dolorem earum odit sequi. Rem non inventore sed dicta atque modi. Sed dolorem iste molestiae. Sed eum iste aliquid aliquid.","body":"Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Qui soluta veritatis autem repellat et inventore occaecati. Reprehenderit quae quas quos sapiente ullam ut.\\nVoluptates non ut. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Quia harum nulla et quos sint voluptates exercitationem corrupti. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Eveniet sit ipsa officiis laborum.\\nIn vel est omnis sed impedit quod magni.\\nDignissimos quis illum qui atque aut ut quasi sequi. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Nemo tempore dolor maiores blanditiis quia qui qui voluptatem non.\\nNisi dolores animi laboriosam aliquam qui adipisci voluptates atque dignissimos.\\nLibero sit quibusdam corporis aut inventore natus libero.\\nPraesentium omnis dolorum temporibus repellendus qui.\\nNon nostrum doloribus occaecati dolores sit ut.","tagList":["nostrum","quia","quaerat","numquam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":200,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"quantifying-the-microchip-wont-do-anything-we-need-to-index-the-online-SQL-hard-drive!-120863","title":"quantifying the microchip wont do anything, we need to index the online SQL hard drive!","description":"Minima soluta sed sed et optio explicabo at distinctio repudiandae. Magnam deleniti a ea. Non velit accusamus veniam qui. Necessitatibus velit ad aut officiis in officiis quasi. Sunt nulla dolores voluptatem esse magnam ut.","body":"Ab rerum eos ipsa accusantium nihil voluptatem.\\nEum minus alias.\\nIure commodi at harum.\\nNostrum non occaecati omnis quisquam. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Cum vitae aliquam neque consequatur quia id dicta ipsam.\\nExercitationem ab eum exercitationem non alias numquam qui.\\nItaque rerum ut nobis est nam vitae exercitationem minima fugiat.\\nEst sit non tempora soluta consequatur eveniet.\\nCorporis nisi dolorem architecto voluptatem. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident.","tagList":["possimus","voluptatem","cupiditate"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":356,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-generate-the-TCP-bus-maybe-it-will-override-the-neural-bandwidth!-120863","title":"Try to generate the TCP bus, maybe it will override the neural bandwidth!","description":"Pariatur ut dolor repellendus dolores ut debitis. Est iusto neque dicta voluptatibus quia nulla consequatur. Omnis aut sed dolores qui laborum a amet.","body":"Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Qui soluta veritatis autem repellat et inventore occaecati. Doloribus consequatur et labore suscipit deserunt tempore ad quasi sed.\\nQuam cupiditate modi dolor et eos et culpa qui.\\nDelectus molestias ea id.\\nIllum ea unde sapiente non non non.\\nDolorem ut sed magni. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Placeat sequi quaerat sapiente aspernatur autem sunt molestiae voluptatem.\\nAccusamus unde libero accusamus omnis totam et temporibus. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Laborum est maxime enim accusantium magnam.\\nRerum dolorum minus laudantium delectus eligendi necessitatibus quia.\\nDeleniti consequatur explicabo aut nobis est vero tempore.\\nExcepturi earum quo quod voluptatem quo iure vel sapiente occaecati.\\nConsectetur consequatur corporis doloribus omnis harum voluptas esse amet. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit.","tagList":["dicta","rerum","omnis","blanditiis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":213,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"You-cant-transmit-the-firewall-without-copying-the-1080p-SDD-interface!-120863","title":"You cant transmit the firewall without copying the 1080p SDD interface!","description":"Est sed deserunt eligendi in velit saepe. Dolorem quis illo vero qui ut recusandae occaecati dolores quae. Voluptatem vero aliquam alias adipisci reiciendis odit nobis est. Vel laboriosam quia commodi rerum. Voluptatum et sed et nesciunt iure ipsum iste aut enim.","body":"Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Temporibus quod quidem placeat porro.\\nUnde ipsam vel explicabo. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Ducimus dolores recusandae.\\nEa aut aperiam et aut eos inventore.\\nQuia cum ducimus autem iste.\\nQuos consequuntur est delectus temporibus autem. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Autem reiciendis provident iure possimus.\\nOccaecati soluta quibusdam libero tenetur minus vel sit illo.\\nCulpa optio dolorem eos similique voluptatem voluptatibus error accusantium. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Et sed dicta eveniet accusamus consequatur.\\nUllam voluptas consequatur aut eos ducimus.\\nId officia est ut dicta provident beatae ipsa.","tagList":["possimus","maiores","facilis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":177,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Use-the-auxiliary-EXE-monitor-then-you-can-hack-the-haptic-port!-120863","title":"Use the auxiliary EXE monitor, then you can hack the haptic port!","description":"Et id harum unde et ratione minima non. Suscipit ipsum rem. Sed asperiores quaerat dolorum autem nihil voluptatem et hic ut. Molestiae rerum autem. Dolores nam soluta officia pariatur debitis.","body":"Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Dolores accusamus ducimus suscipit neque fugit quo aliquam.\\nOdit eum eum sint accusamus.\\nQuod ipsum sed placeat.\\nEt culpa voluptas et quod atque a.\\nVoluptatibus rerum nihil quia cupiditate nihil facere beatae dolor. Fugit harum mollitia.\\nMagni eos asperiores assumenda ad. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Quia consequatur voluptatibus et.\\nVoluptatibus aspernatur et.\\nDicta architecto qui dignissimos.\\nVeritatis facilis voluptatem inventore aliquid cum.\\nNumquam odio quis porro sunt adipisci culpa.","tagList":["necessitatibus","vitae","repellat","labore"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":165,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":198}
+
+14:56:27.733 [pool-1-thread-4] ERROR com.intuit.karate - classpath:conduitApp/feature/HomePage.feature:23
+And match response.articlesCount == 197
+match failed: EQUALS
+  $ | not equal (NUMBER:NUMBER)
+  198
+  197
+
+classpath:conduitApp/feature/HomePage.feature:23
+14:56:27.795 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 253
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:56:27 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SYvwVAYqyG2b50s2qzhaZPZhRWe3ls%2BpgQC0lVAgTZY21d286XIn1qhJHnvxVvR61%2BhxUOri5tUYKfnQ%2Fmv1lRw%2BqmlzQ9U3cRKzn0dCSlXm8vRZf1CHgCnIBcBR9%2BdjTKF%2B"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df691c47a7128a1-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:56:27.797 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5Nzg2LCJleHAiOjE2OTMzMTM3ODZ9.cEY2UkkGq3cvvW69lZba2GIgwH_4A8QDrva-d-lShGs
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:56:28.039 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 241
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:56:28 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nkB8ziUke1DcBGaOjE3dajWHcrDTwo8%2FoBVC7sBMO6vvORGkVu7IrvyGnZe%2FsUFQT75eaFIrwVv66PxGVrQmYFgLVnSYc8YLN4g9BfbqI1ToIjhFytsP4SfygI0%2FbkxLrXHN"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df691c61d22b8ae-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:56:28.295 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:56:28.351 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:conduitApp/feature/HomePage.feature
+14:59:25.042 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': tst
+14:59:25.293 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:59:25.297 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688129965296
+14:59:25.299 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:59:25.654 [pool-1-thread-4] INFO  com.intuit.karate - karate.env system property was: tst 
+14:59:25.657 [pool-1-thread-4] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+14:59:25.795 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:59:26.216 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 416
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:59:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-2xb34rMRQQ/8nJd+c/VQXKhYWvM"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NTVSvEF0Ci6wzFitk%2BA9eWx88mHc1roIcOy0Cq%2F0D937PgqRl9BAfMEN9FnOtkPyN77E4BMnXgrUs6rqdZL7r94BrebI4CQacR9zlsUT8PQSXwSBGxW0NhJdUjj9xhQaY6TX"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df6961f1f0e1cb6-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo"}}
+
+14:59:26.223 [pool-1-thread-4] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+14:59:26.229 [pool-1-thread-3] INFO  com.intuit.karate - karate.env system property was: tst 
+14:59:26.231 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/articles?offset=0&limit=10
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:59:26.232 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: tst 
+14:59:26.233 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 > GET https://api.realworld.io/api/tags
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+14:59:26.234 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: tst 
+14:59:26.236 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"}}
+
+14:59:26.238 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:59:26.501 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 265
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:59:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"19b-47drpvL/7ifCBxproyPS/BSCO7c"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=36eqEcycYi835H%2BSfDaWEz8K7bEbe2Czv0m1h0YQqV0e2RvS2Bp%2B1AKbsgNOkNeCof%2BOD0l3Taa8bhjVgi0McKtGLGwySLr1JrrYi8EywuUOW6%2BTNHXsw1ly%2F6ehtpKa%2Fu%2BA"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df696215a020bdc-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"First-Test-Creating-196105","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-06-30T12:59:26.450Z","updatedAt":"2023-06-30T12:59:26.450Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:59:26.512 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 273
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:59:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-5EqOZ3AKRvyLgeCx7XK87+YYzVc"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tmmda2ONs%2FANa95jc0qVXuvb5uHKxqCRiyRccYEsOpe1%2FCQJsiR0DYuOt%2BCq9B%2FX27KXYguyNNvxKuJ65GEZ0Y7eXheXqb3hvv0znuml6c4iSbaToDYLpB96hFuNR8iM9pyt"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df696215f4ab8c4-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:59:26.457Z","updatedAt":"2023-06-30T12:59:26.457Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:59:26.517 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:59:26.865 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 630
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:59:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"76-zd6ecbLVqNlXjhuPH81y6YOfYKo"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=j%2BDFpawfXtCy7At%2Bb2D%2FIAFGwQvhuEYmN%2BOc9MiCpMWmP5puCGnuaIS0ZqtP1fcgaNLSizLIsRbiOa5KlpdunctQHXC3lqt0SB4LmYZOuUHJPj4%2B3NfMuUxoPadWTPDlZ3vw"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df696215b170b36-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"tags":["implementations","welcome","introduction","codebaseShow","ipsum","qui","cupiditate","et","quia","deserunt"]}
+
+14:59:27.045 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 526
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:59:27 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-5EqOZ3AKRvyLgeCx7XK87+YYzVc"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3LFLeVGTui%2B2IxId0zZXlmc%2BNvrI%2B1Owhgq%2FMkCBrjYYmlQMzgPRYw%2FhGpghRNJp5C9J01Odvz26DbHJp6dZ7kzAf7i0Oq0w3lTzG7UMBmzyhwBRn4g6hUFI2NxyCXgdo9cJ"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df696230fb80e08-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:59:26.457Z","updatedAt":"2023-06-30T12:59:26.457Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:59:27.050 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:59:27.242 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 1009
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:59:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"495d-T6pNS3XSx17utxmbLZaXptV04Rw"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WqoG%2FmGYkouxZIjhAAHNC1gXanAxFoeYOYcCv3NjEkKJmfZfol1SxJ1sSxVFE9Bkahi808yv6cOqWlpMKDqQvvJsANqQyEG3FdVTPraAfSfz5z9H2UZ%2BOPLlrQ1IrYIwztF7"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df696214c36b772-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"articles":[{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:59:26.457Z","updatedAt":"2023-06-30T12:59:26.457Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"First-Test-Creating-196105","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-06-30T12:59:26.450Z","updatedAt":"2023-06-30T12:59:26.450Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}},{"slug":"Try-to-transmit-the-HTTP-card-maybe-it-will-override-the-multi-byte-hard-drive!-120863","title":"Try to transmit the HTTP card, maybe it will override the multi-byte hard drive!","description":"Assumenda molestiae laboriosam enim ipsum quaerat enim officia vel quo. Earum odit rem natus totam atque cumque. Sint dolorem facere non.","body":"Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Voluptate et quasi optio eos et eveniet culpa et nobis.\\nSint aut sint sequi possimus reiciendis nisi.\\nRerum et omnis et sit doloribus corporis voluptas error.\\nIusto molestiae tenetur necessitatibus dolorem omnis. Libero sed ut architecto.\\nEx itaque et modi aut voluptatem alias quae.\\nModi dolor cupiditate sit.\\nDelectus consectetur nobis aliquid deserunt sint ut et voluptas.\\nCorrupti in labore laborum quod. Ipsa laudantium deserunt. Ut atque harum inventore natus facere sed molestiae.\\nQuia aliquid ut.\\nAnimi sunt rem et sit ullam dolorem ab consequatur modi. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Et fuga repellendus magnam dignissimos eius aspernatur rerum. Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Ad voluptate vel.\\nAut aut dolor. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et.","tagList":["voluptate","rerum","ducimus","hic"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1199,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863","title":"If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!","description":"Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut cupiditate est facere omnis possimus. Tenetur similique nemo illo soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem soluta vel est omnis.","body":"Quia quo iste et aperiam voluptas consectetur a omnis et.\\nDolores et earum consequuntur sunt et.\\nEa nulla ab voluptatem dicta vel. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\\nAspernatur cumque labore voluptates mollitia deleniti et. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Voluptatum tempora voluptas est odio iure odio dolorem.\\nVoluptatum est deleniti explicabo explicabo harum provident quis molestiae. Sed dolores nostrum quis. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Facere beatae delectus ut.\\nPossimus voluptas perspiciatis voluptatem nihil sint praesentium.\\nSint est nihil voluptates nesciunt voluptatibus temporibus blanditiis.\\nOfficiis voluptatem earum sed. Deserunt ab porro similique est accusamus id enim aut suscipit.\\nSoluta reprehenderit error nesciunt odit veniam sed.\\nDolore optio qui aut ab.\\nAut minima provident eius repudiandae a quibusdam in nisi quam.","tagList":["rerum","maiores","omnis","quae"],"createdAt":"2022-12-09T13:46:24.264Z","updatedAt":"2022-12-09T13:46:24.264Z","favorited":false,"favoritesCount":1488,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-bypass-the-SAS-card-maybe-it-will-transmit-the-solid-state-system!-120863","title":"Try to bypass the SAS card, maybe it will transmit the solid state system!","description":"Est iste totam accusamus dolorem est. Quis non sit impedit similique incidunt odio aspernatur aut rem. Architecto est eum.","body":"Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Sapiente vitae culpa ut voluptatem incidunt excepturi voluptates exercitationem.\\nSed doloribus alias consectetur omnis occaecati ad placeat labore.\\nVoluptate consequatur expedita nemo recusandae sint assumenda.\\nQui vel totam quia fugit saepe suscipit autem quasi qui.\\nEt eum vel ut delectus ut nesciunt animi. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ipsa laudantium deserunt. Totam ab necessitatibus quidem non. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit. Molestias non debitis quibusdam quis quod.\\nSaepe ab et hic unde et sed.\\nMagni voluptatem est.\\nEt similique quo porro et.","tagList":["dolores","aut","consectetur","ullam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":221,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"We-need-to-calculate-the-bluetooth-JBOD-bus!-120863","title":"We need to calculate the bluetooth JBOD bus!","description":"Ipsa nemo eos sequi nulla id accusamus nam ratione dolore. Omnis sint quisquam accusamus rem rem nihil. Non minus animi cum dolorem earum odit sequi. Rem non inventore sed dicta atque modi. Sed dolorem iste molestiae. Sed eum iste aliquid aliquid.","body":"Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Qui soluta veritatis autem repellat et inventore occaecati. Reprehenderit quae quas quos sapiente ullam ut.\\nVoluptates non ut. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Quia harum nulla et quos sint voluptates exercitationem corrupti. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Eveniet sit ipsa officiis laborum.\\nIn vel est omnis sed impedit quod magni.\\nDignissimos quis illum qui atque aut ut quasi sequi. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Nemo tempore dolor maiores blanditiis quia qui qui voluptatem non.\\nNisi dolores animi laboriosam aliquam qui adipisci voluptates atque dignissimos.\\nLibero sit quibusdam corporis aut inventore natus libero.\\nPraesentium omnis dolorum temporibus repellendus qui.\\nNon nostrum doloribus occaecati dolores sit ut.","tagList":["nostrum","quia","quaerat","numquam"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":200,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"quantifying-the-microchip-wont-do-anything-we-need-to-index-the-online-SQL-hard-drive!-120863","title":"quantifying the microchip wont do anything, we need to index the online SQL hard drive!","description":"Minima soluta sed sed et optio explicabo at distinctio repudiandae. Magnam deleniti a ea. Non velit accusamus veniam qui. Necessitatibus velit ad aut officiis in officiis quasi. Sunt nulla dolores voluptatem esse magnam ut.","body":"Ab rerum eos ipsa accusantium nihil voluptatem.\\nEum minus alias.\\nIure commodi at harum.\\nNostrum non occaecati omnis quisquam. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Ipsa cumque ad repellat qui libero quia impedit fugiat.\\nExcepturi ut vitae recusandae eos quisquam et voluptatem.\\nNeque nostrum distinctio provident eius tempore odio aliquid.\\nSaepe ut suscipit architecto. Cum vitae aliquam neque consequatur quia id dicta ipsam.\\nExercitationem ab eum exercitationem non alias numquam qui.\\nItaque rerum ut nobis est nam vitae exercitationem minima fugiat.\\nEst sit non tempora soluta consequatur eveniet.\\nCorporis nisi dolorem architecto voluptatem. Quos pariatur tenetur.\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\nPraesentium quas culpa.\\nEaque occaecati cumque incidunt et. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Ab quis aut earum.\\nVoluptatem sint accusantium sed cupiditate optio.\\nConsequatur in dolores aut enim.\\nNon sunt atque maxime dolores.\\nNam impedit sit. Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident.","tagList":["possimus","voluptatem","cupiditate"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":356,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Try-to-generate-the-TCP-bus-maybe-it-will-override-the-neural-bandwidth!-120863","title":"Try to generate the TCP bus, maybe it will override the neural bandwidth!","description":"Pariatur ut dolor repellendus dolores ut debitis. Est iusto neque dicta voluptatibus quia nulla consequatur. Omnis aut sed dolores qui laborum a amet.","body":"Quo perferendis nesciunt.\\nDolore dolorem porro omnis voluptatibus consequuntur et expedita suscipit et.\\nTempora facere ipsa.\\nDolore accusamus soluta officiis eligendi.\\nEum quaerat neque eum beatae odio. Qui soluta veritatis autem repellat et inventore occaecati. Doloribus consequatur et labore suscipit deserunt tempore ad quasi sed.\\nQuam cupiditate modi dolor et eos et culpa qui.\\nDelectus molestias ea id.\\nIllum ea unde sapiente non non non.\\nDolorem ut sed magni. Provident saepe omnis non molestiae natus et.\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\nMollitia velit id eius mollitia occaecati repudiandae. Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Placeat sequi quaerat sapiente aspernatur autem sunt molestiae voluptatem.\\nAccusamus unde libero accusamus omnis totam et temporibus. Cupiditate officia voluptatum.\\nTenetur facere eum distinctio animi qui laboriosam.\\nQuod sed voluptatem et cumque est eos.\\nSint id provident suscipit harum odio et. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. Laborum est maxime enim accusantium magnam.\\nRerum dolorum minus laudantium delectus eligendi necessitatibus quia.\\nDeleniti consequatur explicabo aut nobis est vero tempore.\\nExcepturi earum quo quod voluptatem quo iure vel sapiente occaecati.\\nConsectetur consequatur corporis doloribus omnis harum voluptas esse amet. Mollitia nostrum exercitationem sunt rem.\\nRem et voluptas consequatur mollitia nostrum.\\nSunt nesciunt et pariatur quam provident impedit.","tagList":["dicta","rerum","omnis","blanditiis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":213,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"You-cant-transmit-the-firewall-without-copying-the-1080p-SDD-interface!-120863","title":"You cant transmit the firewall without copying the 1080p SDD interface!","description":"Est sed deserunt eligendi in velit saepe. Dolorem quis illo vero qui ut recusandae occaecati dolores quae. Voluptatem vero aliquam alias adipisci reiciendis odit nobis est. Vel laboriosam quia commodi rerum. Voluptatum et sed et nesciunt iure ipsum iste aut enim.","body":"Incidunt doloremque enim autem quam et magnam et expedita fuga.\\nPlaceat quia dolor ut.\\nNon dolor amet temporibus quas non hic sed.\\nQui tempore enim mollitia omnis sed ut eos rerum et.\\nQuidem voluptas est vel. Temporibus quod quidem placeat porro.\\nUnde ipsam vel explicabo. Qui et dolorum.\\nEveniet architecto qui accusamus et modi harum facilis a eum.\\nEt vel cumque voluptatem earum minima perferendis. Ducimus dolores recusandae.\\nEa aut aperiam et aut eos inventore.\\nQuia cum ducimus autem iste.\\nQuos consequuntur est delectus temporibus autem. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Autem reiciendis provident iure possimus.\\nOccaecati soluta quibusdam libero tenetur minus vel sit illo.\\nCulpa optio dolorem eos similique voluptatem voluptatibus error accusantium. Officia consectetur quibusdam velit debitis porro quia cumque.\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\nMollitia pariatur distinctio fugit. Quis nesciunt ut est eos.\\nQui reiciendis doloribus.\\nEst quidem ullam reprehenderit.\\nEst omnis eligendi quis quis quo eum officiis asperiores quis. Et sed dicta eveniet accusamus consequatur.\\nUllam voluptas consequatur aut eos ducimus.\\nId officia est ut dicta provident beatae ipsa.","tagList":["possimus","maiores","facilis"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":177,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}},{"slug":"Use-the-auxiliary-EXE-monitor-then-you-can-hack-the-haptic-port!-120863","title":"Use the auxiliary EXE monitor, then you can hack the haptic port!","description":"Et id harum unde et ratione minima non. Suscipit ipsum rem. Sed asperiores quaerat dolorum autem nihil voluptatem et hic ut. Molestiae rerum autem. Dolores nam soluta officia pariatur debitis.","body":"Est est sed itaque necessitatibus vitae officiis.\\nIusto dolores sint eveniet quasi dolore quo laborum esse laboriosam.\\nModi similique aut voluptates animi aut dicta dolorum.\\nSint explicabo autem quidem et.\\nNeque aspernatur assumenda fugit provident. Aut ipsa et qui vel similique sed hic a.\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Dolores accusamus ducimus suscipit neque fugit quo aliquam.\\nOdit eum eum sint accusamus.\\nQuod ipsum sed placeat.\\nEt culpa voluptas et quod atque a.\\nVoluptatibus rerum nihil quia cupiditate nihil facere beatae dolor. Fugit harum mollitia.\\nMagni eos asperiores assumenda ad. Id est non ad temporibus nobis.\\nQuod soluta quae voluptatem quisquam est. Quas ea voluptatem iste iure.\\nEt soluta et doloremque vero quis occaecati et fuga.\\nIncidunt recusandae dignissimos iusto quisquam sed unde at ea incidunt.\\nId voluptate incidunt qui totam autem voluptas maxime atque quaerat.\\nCorporis iste ut molestiae. Illum voluptates ut vel et.\\nUt debitis excepturi suscipit perferendis officia numquam possimus.\\nFacere sit doloremque repudiandae corrupti veniam qui. Sunt excepturi ut dolore fuga.\\nAutem eum maiores aut nihil magnam corporis consectetur sit. Laborum itaque quos provident.\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\nVoluptates assumenda optio est.\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Quia consequatur voluptatibus et.\\nVoluptatibus aspernatur et.\\nDicta architecto qui dignissimos.\\nVeritatis facilis voluptatem inventore aliquid cum.\\nNumquam odio quis porro sunt adipisci culpa.","tagList":["necessitatibus","vitae","repellat","labore"],"createdAt":"2022-12-09T13:46:24.263Z","updatedAt":"2022-12-09T13:46:24.263Z","favorited":false,"favoritesCount":165,"author":{"username":"Anah Benešová","bio":null,"image":"https://api.realworld.io/images/demo-avatar.png","following":false}}],"articlesCount":197}
+
+14:59:27.313 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 263
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:59:27 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YiEcJHFQ951mExiKYk8D2BV5eOvY2wlKjqqSluspSGo6sgPi%2FZZIvUWA%2F6zFOqj7DwpC%2BMR4GbMpAGSWiubnUwk1zyJlHxINCS42ZZrIvf1DHrUBpHHyE8Pzu3UxGZyXpM06"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df696266af20eab-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:59:27.315 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI5OTY2LCJleHAiOjE2OTMzMTM5NjZ9.ZKrTL1J69CSCsb2lPYS-fBqUWXkhJFy_HbbP9r47MFo
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:59:27.554 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 238
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:59:27 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MiQRLiuBvZ9yZxszhofFNDI21PjcGt8sX8iKhu6azyfuRwAyO%2Bbt%2BFaifhdKq%2B39nv5X6K69fw2sBbntEIy2NjkxYTBLdijPAlcQ3xOIafbzoefoA379U%2BAkT3zLXKT6l2V%2B"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df696280d2e0b77-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:59:27.797 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:59:27.859 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:conduitApp/feature/HomePage.feature

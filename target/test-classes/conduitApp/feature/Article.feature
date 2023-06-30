@@ -1,21 +1,17 @@
 Feature: Articales
 Background: Define URL 
   Given url apiUrl
-* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') 
-    * def token = tokenResponse.authToken
 
 
 Scenario: Create a new article 
-  Given header Authorization = 'Token ' + token
   Given path 'articles'
-  And request {article: {"tagList":[], "title": "Test Karate", "description": "It is about Karate framework", "body": "How to test code using Karate"}}
+  And request {article: {"tagList":[], "title": "First Test Creating", "description": "It is about Karate framework", "body": "How to test code using Karate"}}
   When method Post
   Then status 200
-  And match response.article.title == "Test Karate"
+  And match response.article.title == "First Test Creating"
 
 @debug
 Scenario: Create and delete article 
-  Given header Authorization = 'Token ' + token
   Given path 'articles'
   And request {article: {"tagList":[], "title": "Test Create & Delete", "description": "It is about deleting Scenarios", "body": "How to Create and delete account using Karate"}}
   When method Post
@@ -28,7 +24,6 @@ Scenario: Create and delete article
   Then status 200
   And match response.article.title == "Test Create & Delete"
 
-  Given header Authorization = 'Token ' + token
   Given path 'articles',articleId
   When method Delete
   Then status 204
