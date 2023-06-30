@@ -4648,3 +4648,568 @@ classpath:conduitApp/feature/Article.feature:4
 {"errors":{"article":["not found"]}}
 
 14:15:27.510 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:22:26.299 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:22:26.596 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:22:26.598 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688127746597
+14:22:26.600 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:22:26.970 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+14:22:26.989 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:4
+* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') //{"email": "bassam@test.com", "password":"12345678"}
+no such variable: response
+classpath:conduitApp/feature/Article.feature:4
+14:22:27.240 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:24:34.261 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:24:34.564 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:24:34.566 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688127874565
+14:24:34.568 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:24:34.929 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+14:24:34.947 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:4
+* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') //{"email": "bassam@test.com", "password":"12345678"}
+no such variable: response
+classpath:conduitApp/feature/Article.feature:4
+14:24:35.215 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:27:05.579 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:27:05.857 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:27:05.859 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128025858
+14:27:05.862 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:27:06.180 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+14:27:06.197 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:4
+* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') //{"email": "bassam@test.com", "password":"12345678"}
+no such variable: response
+classpath:conduitApp/feature/Article.feature:4
+14:27:06.443 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:30:07.734 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:30:07.771 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': dev
+14:30:08.044 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:30:08.049 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128208047
+14:30:08.051 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:30:08.392 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: dev 
+14:30:08.410 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:4
+* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') //{"email": "bassam@test.com", "password":"12345678"}
+no such variable: response
+classpath:conduitApp/feature/Article.feature:4
+14:30:08.654 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:32:01.728 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:32:01.764 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': dev
+14:32:02.014 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:32:02.019 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128322017
+14:32:02.021 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:32:02.328 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: dev 
+14:32:02.344 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/CreateToken.feature')
+14:32:02.468 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 63
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test@test.com","password":"12345678"}}
+
+14:32:02.810 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 335
+1 < 403
+1 < Date: Fri, 30 Jun 2023 12:32:02 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 47
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"2f-83PWxEwXkLR3WfVjo3wqB0FwKlU"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mdx%2FLxUDjX84cbCCYIN2z9ozINNOhmqV%2BzMJBFfft%2FYCT9MgFlR5D3m0pL3RdSP65CIE7J0nbxWaNHlARSwJGrTTVN7Mvk48fhB1dYNW%2FSQIHcyrrZ2%2FDpf1JRU53Q0aaJZj"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df66e004be6b8a6-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"errors":{"email or password":["is invalid"]}}
+
+14:32:02.820 [pool-1-thread-1] ERROR com.intuit.karate - classpath:helpers/CreateToken.feature:8
+Then status 200
+status code was: 403, expected: 200, response time in milliseconds: 335, url: https://api.realworld.io/api/users/login, response: 
+{"errors":{"email or password":["is invalid"]}}
+classpath:helpers/CreateToken.feature:8
+14:32:02.822 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:4
+* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature')
+status code was: 403, expected: 200, response time in milliseconds: 335, url: https://api.realworld.io/api/users/login, response: 
+{"errors":{"email or password":["is invalid"]}}
+classpath:helpers/CreateToken.feature:8
+classpath:conduitApp/feature/Article.feature:4
+14:32:03.083 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:33:11.195 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:33:11.233 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': dev
+14:33:11.485 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:33:11.490 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128391488
+14:33:11.492 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:33:11.836 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: dev 
+14:33:11.852 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/CreateToken.feature')
+14:33:11.968 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:33:12.441 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 468
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:33:12 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-OIl1+8FSZnWFrjPAJ99ab7r2Mk4"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XYpKUPmFqfhO2wqGhNyqAIGtFlKlrAcIEjiRqoRcscJCxIeO3yz9bKoxMYQkcCegnvTW2n4EJ%2B9brn64FFwuDdrJpCi82vXqX%2FVFFkpT0UOKMymSjKMi6n1%2Fv3nRs63WXvVv"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df66fb28d540b04-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4MzkyLCJleHAiOjE2OTMzMTIzOTJ9.EQ9UVYwU6UeVL703bMPnYRBvcELqzKwMfBK5_RF7oKs"}}
+
+14:33:12.447 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:helpers/CreateToken.feature')
+14:33:12.454 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4MzkyLCJleHAiOjE2OTMzMTIzOTJ9.EQ9UVYwU6UeVL703bMPnYRBvcELqzKwMfBK5_RF7oKs
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:33:12.732 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 277
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:33:12 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-1m3s9Qwovxekmi3b4qQE4tKPqKY"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vrZ%2FtB7oS%2FzdXE%2BhTRnPTVhUz%2Fx56jrmq3TQuX9etcp9N3EyTUiojFTifkXBQBnVqjji1Occf7gUTtjTQJJiYUJyYidaZ%2FjNLP%2FQpvZGLfOHRQy0TC5UKMJt6BQyUVyQkSyk"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df66fb51a351c7a-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:33:12.651Z","updatedAt":"2023-06-30T12:33:12.651Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:33:12.749 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:33:13.301 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 549
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:33:13 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-1m3s9Qwovxekmi3b4qQE4tKPqKY"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=d1R9mPBNicrNUI6UGjvg1uAVlkpSQlobWK0LFEv34g2sYSbf2m8%2FTdJ8FPtU%2FFiC0V%2BqcYEif39Y41Diw8%2FXJqrIGdLTZz%2BAmRK%2F9s9h7G2k%2FlBn9eo1h%2FbjbPodWdVkeCqL"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df66fb6f88fb7b8-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:33:12.651Z","updatedAt":"2023-06-30T12:33:12.651Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:33:13.308 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4MzkyLCJleHAiOjE2OTMzMTIzOTJ9.EQ9UVYwU6UeVL703bMPnYRBvcELqzKwMfBK5_RF7oKs
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:33:13.576 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 267
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:33:13 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jtwC6ZQP5U7PgkEvJzJeA47Yx9TCfGyPS9ycKQehtBtSiERrVFA6UYrLHVAQLtyGYr%2F5LkYiIx0XsRTYTLavf5rppT9C75ud47Px1UQwffbPJsOdMgvWuIMlpY6n%2F%2BGgzt6u"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df66fba794cb926-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:33:13.581 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:33:13.869 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 286
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:33:13 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Z%2FecU5bySNDBHDqZwl5LeNj43MUY0o3W9xPJs1C0iKLWHxc3uZcq8jONo5JrSHUaV87%2BlChWDmzGV65LRjsTJXzaVhjDHxfJiWFt9lm9JhADpjaP4A8UCuriFQexwigYI7pT"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df66fbc2f131c96-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:33:14.148 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:33:39.869 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:33:40.157 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:33:40.159 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128420158
+14:33:40.162 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:33:40.478 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+14:33:40.494 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/CreateToken.feature')
+14:33:40.607 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:33:41.115 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 503
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:33:41 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-XKN8G+8aiGustjvhKvXb3mldXv8"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5sfYHePr14316TA9%2FwIBg%2FSRV0nGjR6oMuIcAVpKRJLFReI9jWDKM8Zo0OUocrOLc1nAUvYzv96Tf49BKU2bGufJsNeCswtQ5H4bq1%2BvbPXX5Y8qROm%2BldG9yeEP9Lgz9ZJd"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df6706599e21c83-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4NDIwLCJleHAiOjE2OTMzMTI0MjB9.umy_jKfr7eT1Jf4Y4P2NRoI0XFUKFjr0WUDuTW0S3uE"}}
+
+14:33:41.122 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:helpers/CreateToken.feature')
+14:33:41.129 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4NDIwLCJleHAiOjE2OTMzMTI0MjB9.umy_jKfr7eT1Jf4Y4P2NRoI0XFUKFjr0WUDuTW0S3uE
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:33:41.404 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 274
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:33:41 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-kvDTvCsdp+DWyxGMspwV1aPET5g"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nJ1uELcO9x0yUX%2FscVx1aV9k0X5xy4Snea1XASgSP7MdZdNmdR9AQFJS0ha15TQjEcCvYKkdPCa8RWsqCzeqjNjA4F%2FXG0benU3yYmMe4IfZZjvcEawf8BirfVDR9C9l3fUh"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df67068588f0a77-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:33:41.323Z","updatedAt":"2023-06-30T12:33:41.323Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:33:41.422 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:33:41.884 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 460
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:33:41 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-kvDTvCsdp+DWyxGMspwV1aPET5g"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FYqMgqPmh9V6DtT6KGtA8pwYMyLo5z9g0uvQeoqqoLR4u0BFx0yq%2FqjRwBtj7zJcZ0JE%2FqNw2mafoPkambpiKmKRT%2Bu0L1VJOqVcwXSoK0dTQGrj3PVnLbcunEV4DQtDjf7K"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df6706a3a3d28aa-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:33:41.323Z","updatedAt":"2023-06-30T12:33:41.323Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:33:41.889 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4NDIwLCJleHAiOjE2OTMzMTI0MjB9.umy_jKfr7eT1Jf4Y4P2NRoI0XFUKFjr0WUDuTW0S3uE
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:33:42.140 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 251
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:33:42 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dcLfkJTdFX4J1H%2FasQsILhkugQRNM%2F0moZeqhM2NesbavcdEwnS0T5LR8DJQgUd3EKv3NPmQBM7xdJFGk%2FMGBow864JyqEvM3R%2Bsl96MHvL9aFXscsQWRw1OksrXEiYNFNHs"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df6706d1d760bc6-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:33:42.143 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:33:42.377 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 233
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:33:42 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wxcVW38T7vPS0Fspbm0DyyiyPRFdG%2FUQk4BT2aLobg0Ze5fA1eeWY%2FhUjGSoGAIx9w1zkGZdCOTmCpryekpJ%2FY5RPKSEe9%2BX1LdXKdqjNdjVIj6GwVSw7WpMZdpKJDHAZ44G"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df6706eac320be1-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:33:42.676 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:34:01.427 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:34:01.722 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:34:01.724 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128441722
+14:34:01.726 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:34:02.043 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+14:34:02.058 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/CreateToken.feature')
+14:34:02.171 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+14:34:02.502 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 326
+1 < 403
+1 < Date: Fri, 30 Jun 2023 12:34:02 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 47
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"2f-83PWxEwXkLR3WfVjo3wqB0FwKlU"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zAjIUrimuzaIHNL8bPdCgqTXtvfxx9%2BPFvJG%2BytlEKUsIrcT3bynLzRnfkyMuvC5G%2B5H2rU7NOFMbJC%2FElppPqNlzpOuwYbexGnk%2F0S%2FZcO0Gpdm7sdgwfZ6YPEJOBDMR81D"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df670ec48d9d0d5-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"errors":{"email or password":["is invalid"]}}
+
+14:34:02.512 [pool-1-thread-1] ERROR com.intuit.karate - classpath:helpers/CreateToken.feature:8
+Then status 200
+status code was: 403, expected: 200, response time in milliseconds: 326, url: https://api.realworld.io/api/users/login, response: 
+{"errors":{"email or password":["is invalid"]}}
+classpath:helpers/CreateToken.feature:8
+14:34:02.514 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:4
+* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature')
+status code was: 403, expected: 200, response time in milliseconds: 326, url: https://api.realworld.io/api/users/login, response: 
+{"errors":{"email or password":["is invalid"]}}
+classpath:helpers/CreateToken.feature:8
+classpath:conduitApp/feature/Article.feature:4
+14:34:02.790 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature
+14:34:21.950 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+14:34:21.987 [main] INFO  com.intuit.karate.Runner - using system property 'karate.env': TST
+14:34:22.232 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+14:34:22.236 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688128462235
+14:34:22.239 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+14:34:22.555 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: TST 
+14:34:22.569 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callonce: read('classpath:helpers/CreateToken.feature')
+14:34:22.685 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 58
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@test.com","password":"12345678"}}
+
+14:34:23.095 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 406
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:34:23 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"147-QcCRIV9oTyThtRP2sRrhDX8Te9I"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uPSL3dYeeQFxhuO%2BHgV7FLc0UKBGDUYEawVBs6y3eIlbtzlk3Qu1RM46sXv6has8F8WlLaTuYkmVfngzwRppb%2FXxLu2lIZi2nh2icPMcoIiw8lMp95WF3al1bxkiSa1TIu%2Bw"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df6716c8830b790-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4NDYzLCJleHAiOjE2OTMzMTI0NjN9.be-bzKQXKFsowCmaVpZpnroUGIORvrOK6OvlSBBtAMY"}}
+
+14:34:23.102 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callonce: read('classpath:helpers/CreateToken.feature')
+14:34:23.108 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4NDYzLCJleHAiOjE2OTMzMTI0NjN9.be-bzKQXKFsowCmaVpZpnroUGIORvrOK6OvlSBBtAMY
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+14:34:23.388 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 280
+1 < 200
+1 < Date: Fri, 30 Jun 2023 12:34:23 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b1-/8d1XJfo26J6taCbIhTiWzvvYuU"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ceE84vDeFuprckRfxc3iyqgvELwfQGDbrAFMMZLZl8akubqN62Bu9ZXvQU03e3Rq%2F4Oo%2FLmk%2FWpXAVFGBpT7kO0EkfbvRGoQoVYWFmhY8JkZTAVCiV23W4%2F3GI%2BE16b6ruVg"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7df6716eb897286d-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:34:23.309Z","updatedAt":"2023-06-30T12:34:23.309Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:34:23.401 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+14:34:23.854 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 452
+2 < 200
+2 < Date: Fri, 30 Jun 2023 12:34:23 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b1-/8d1XJfo26J6taCbIhTiWzvvYuU"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=qY2RueS4d%2FAgSv5WCDIxCsbahA5fR%2FnUWu5OD8yu3BqF%2FRJF%2F9KkVv2OhOWJQusrbS3uT8jy0vnRGMWLlA5cjKgaHUIyfmLnIl%2FFju5oTJT8jIo5HyMFlU%2FwDLygeuzNvUWh"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7df6717089f9b980-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196105","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-06-30T12:34:23.309Z","updatedAt":"2023-06-30T12:34:23.309Z","favorited":false,"favoritesCount":0,"author":{"username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+14:34:23.860 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4MTI4NDYzLCJleHAiOjE2OTMzMTI0NjN9.be-bzKQXKFsowCmaVpZpnroUGIORvrOK6OvlSBBtAMY
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+14:34:24.125 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 263
+3 < 204
+3 < Date: Fri, 30 Jun 2023 12:34:24 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Su6Y5ws4b4P%2FNUsRKWn8a9iWzDQQDRmXEavnqbepnak2dxeXnen5b%2FTVLZa8nxeKRJwBUZiUWxtyM%2F7%2FFnmLyCrR8I2NdJebIyWG5%2BlCus8oVMk9MDVVoIGTQYOtbmRCMJmY"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7df671736ed4d0c1-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+14:34:24.129 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196105
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+14:34:24.386 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 256
+4 < 404
+4 < Date: Fri, 30 Jun 2023 12:34:24 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=szCGsi3jDaGV59Ue9lwtFyeEUMW1sUt61RAkw1SlhdKVSHl%2FAkKLf4K3NWr4AqxXWgvz1X2%2Fyp2ZihO1bfCBOzgpAfz7Iy8yZbf2bEvrud%2Bks%2FEd%2FSjlDSTGXXw6myfDKdUh"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7df6717519510e31-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+14:34:24.668 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (1 remaining) classpath:conduitApp/feature/Article.feature

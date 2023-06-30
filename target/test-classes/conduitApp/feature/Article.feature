@@ -1,7 +1,7 @@
 Feature: Articales
 Background: Define URL 
   Given url apiUrl
-* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') {"email": "bassam@test.com", "password":"12345678"}
+* def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') 
     * def token = tokenResponse.authToken
 
 

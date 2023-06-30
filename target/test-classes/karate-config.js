@@ -6,12 +6,14 @@ function fn() {
   }
   var config = {
     apiUrl: 'https://api.realworld.io/api/'
-    }
+  }
   if (env == 'dev') {
-    // customize
-    // e.g. config.foo = 'bar';
-  } else if (env == 'e2e') {
-    // customize
+    config.userEmail = 'bassam@dev.com'
+    config.userPassword = '12345678'
+  }  
+  if (env == 'TST') {
+    config.userEmail = 'bassam@test.com'
+    config.userPassword = '12345678'
   }
   return config;
 }
