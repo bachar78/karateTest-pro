@@ -5,8 +5,7 @@ function fn() {
     env = 'dev';
   }
   var config = {
-    env: env,
-    myVarName: 'someValue'
+    apiUrl: 'https://api.realworld.io/api/'
   }
   if (env == 'dev') {
     // customize

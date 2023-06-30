@@ -1,6 +1,6 @@
 Feature: Articales
 Background: Define URL 
-  Given url 'https://api.realworld.io/api/'
+  Given url apiUrl
 * def tokenResponse = callonce read('classpath:helpers/CreateToken.feature') {"email": "bassam@test.com", "password":"12345678"}
     * def token = tokenResponse.authToken
 

@@ -1,7 +1,7 @@
 Feature: Creating Toke 
 
 Scenario: Create Token
-  Given url 'https://api.realworld.io/api/'
+  Given url apiUrl
   Given path 'users/login'
 And request { "user": { "email": "#(email)", "password": "#(password)"}}
   When method Post
