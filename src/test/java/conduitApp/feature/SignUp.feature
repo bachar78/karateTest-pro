@@ -1,13 +1,12 @@
 @debug
 Feature: Sign Up new user
-
 Background: Preconditions 
   * def dataGenerator = Java.type('helpers.DataGenerator')
-  Given url apiUrl
-
-Scenario: New User Sign Up
   * def randomEmail = dataGenerator.getRandomEmail()
   * def randomName = dataGenerator.getRandomUserName()
+   Given url apiUrl
+
+Scenario: New User Sign Up
   Given path 'users'
   And request 
   """
@@ -31,3 +30,28 @@ Scenario: New User Sign Up
         "token": "#string"
     }
   """
+
+Scenario Outline: Sign Up Error (UserName or Email is already taken)
+  Given path 'users'
+  And request 
+  """
+    {
+      "user": {
+          "email": <email>,
+          "password": <password>,
+          "username": <username>
+      }
+    }
+  """
+  When method Post
+  Then status 422
+  And match response == <errorMessage>
+  
+  Examples:
+  | email              | password  | username       | errorMessage                                     |
+  |#(randomEmail)      | '12345678'|'Bassam'        |{"errors":{"username":["has already been taken"]}}|
+  |"bassam@test.com"   | '12345678'|#(randomName)   | {"errors":{"email":["has already been taken"]}}|
+  |"bassam47@test.com" | '12345678'|"bassam47"      | {"errors": {"email": ["has already been taken"],"username": ["has already been taken"]}}|
+  |""                  | '12345678'|#(randomName)   | {"errors":{"email": ["can't be blank"]}}|
+  |#(randomEmail)      | '12345678'|""              | {"errors":{"username": ["can't be blank"]}}|
+  |#(randomEmail)      | ''        |#(randomName)   | {"errors":{"password": ["can't be blank"]}}|
