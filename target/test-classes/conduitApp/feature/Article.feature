@@ -14,25 +14,25 @@ Scenario: Create a new article
   Then status 200
   And match response.article.title == articleRequestBody.article.title
 
-# Scenario: Create and delete article 
-#   Given path 'articles'
-#   And request dataGenerator.getRandomArticleValues();
-#   When method Post
-#   Then status 200
-#   And match response.article.title == 
-#   * def articleId = response.article.slug
+Scenario: Create and delete article 
+  Given path 'articles'
+  And request articleRequestBody;
+  When method Post
+  Then status 200
+  And match response.article.title == articleRequestBody.article.title 
+  * def articleId = response.article.slug
 
-#   Given path 'articles',articleId
-#   When method Get
-#   Then status 200
-#   And match response.article.title == "Test Create & Delete"
+  Given path 'articles',articleId
+  When method Get
+  Then status 200
+  And match response.article.title == articleRequestBody.article.title 
 
-#   Given path 'articles',articleId
-#   When method Delete
-#   Then status 204
+  Given path 'articles',articleId
+  When method Delete
+  Then status 204
 
-#   Given path 'articles',articleId
-#   When method Get
-#   Then status 404
-#   And match response.errors.article == "#array"
-#   And match response.errors.article[0] == "not found"
+  Given path 'articles',articleId
+  When method Get
+  Then status 404
+  And match response.errors.article == "#array"
+  And match response.errors.article[0] == "not found"
