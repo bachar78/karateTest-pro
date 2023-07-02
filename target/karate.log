@@ -15540,3 +15540,1295 @@ classpath:conduitApp/feature/SignUp.feature:51
 {"errors":{"username":["can't be blank"]}}
 
 16:57:56.888 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 3 of 3 (0 remaining) classpath:conduitApp/feature/SignUp.feature
+09:34:42.348 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+09:34:42.669 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+09:34:42.672 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688283282670
+09:34:42.675 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+09:34:43.100 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+09:34:43.104 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+09:34:43.247 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+09:34:43.848 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 595
+1 < 200
+1 < Date: Sun, 02 Jul 2023 07:34:43 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-NIKXYd84LI6dtGDHWxdXju9d4PE"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AWvhgpY2fFBEZbzH7saLACWVVxc0OveldwD6zopIk2X1vb7G1zsYIaFQ0Z5UNWSoNIm6R%2B9a1czx1kw01JR%2Fb3laeALvArU472h86pUASYH4FS5s5jSNBMw4s9EaHDi8u6QW"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05353aae3eb90c-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODMyODMsImV4cCI6MTY5MzQ2NzI4M30.UUONQn8IdxOF44QO_LLuPA3oERQQ4h1OsrWKqf9glNU"}}
+
+09:34:43.855 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+09:34:43.861 [pool-1-thread-2] INFO  com.intuit.karate - karate.env system property was: null 
+09:34:43.865 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODMyODMsImV4cCI6MTY5MzQ2NzI4M30.UUONQn8IdxOF44QO_LLuPA3oERQQ4h1OsrWKqf9glNU
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"}}
+
+09:34:43.866 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODMyODMsImV4cCI6MTY5MzQ2NzI4M30.UUONQn8IdxOF44QO_LLuPA3oERQQ4h1OsrWKqf9glNU
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 159
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate"}}
+
+09:34:44.197 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 331
+1 < 200
+1 < Date: Sun, 02 Jul 2023 07:34:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"19e-mqU4QmkvBK8TN7mg65EEQCnTUns"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FPkh%2Fg1YXK4cVjIO4ggeq0vpAb7nsxMtDXGnOTNFdJko3O%2BtYHTI5P4Wqw7%2FUUsaf7mHjW9wLQtXE5gbYkjLidnPpA9XmyRWWJrEj4jeVtyVYwTgwGhnSCrORRn4TEy0Q5aO"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05353d0c92b8e8-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"First-Test-Creating-196364","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-07-02T07:34:44.161Z","updatedAt":"2023-07-02T07:34:44.161Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+09:34:44.197 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 330
+1 < 200
+1 < Date: Sun, 02 Jul 2023 07:34:44 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1b4-x6Vu2PcJzMTGcBcvUcebLH5gnJw"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yf0PWI4rrojaFqMigkEE4t%2FMQwxkb8PXsB5jgccMyve2YiYjVDJ1fEtlJuNOHNH3ecQ0TermUXyEQRhSOqqxFeYy%2F2cVWAIDrkauRFTfxKviaB52LqpVqvuU8MPCbkTBmJvz"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05353d08b4b994-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196364","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-07-02T07:34:44.162Z","updatedAt":"2023-07-02T07:34:44.162Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+09:34:44.217 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+2 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196364
+2 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODMyODMsImV4cCI6MTY5MzQ2NzI4M30.UUONQn8IdxOF44QO_LLuPA3oERQQ4h1OsrWKqf9glNU
+2 > Host: api.realworld.io
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+2 > Accept-Encoding: gzip,deflate
+
+
+09:34:44.684 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 466
+2 < 200
+2 < Date: Sun, 02 Jul 2023 07:34:44 GMT
+2 < Content-Type: application/json; charset=utf-8
+2 < Transfer-Encoding: chunked
+2 < Connection: keep-alive
+2 < X-Powered-By: Express
+2 < Access-Control-Allow-Origin: *
+2 < Etag: W/"1b4-x6Vu2PcJzMTGcBcvUcebLH5gnJw"
+2 < Via: 1.1 vegur
+2 < CF-Cache-Status: DYNAMIC
+2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3ZHpYAHS5F8fnlJByTOYIDi5gY2LXgUpnOmZ1VaaoRLQ6NpzqXUQzktlplg5pKhbR4LYvoI7Nx7Qmwm5kbWtrBz0tegsTCIzq8%2F0L9RzBbvGuwVyJjk36bcwgcSniC0fc%2Byn"}],"group":"cf-nel","max_age":604800}
+2 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 < Server: cloudflare
+2 < CF-RAY: 7e05353f3a50b743-AMS
+2 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Test-Create-and-Delete-196364","title":"Test Create & Delete","description":"It is about deleting Scenarios","body":"How to Create and delete account using Karate","tagList":[],"createdAt":"2023-07-02T07:34:44.162Z","updatedAt":"2023-07-02T07:34:44.162Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+09:34:44.690 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+3 > DELETE https://api.realworld.io/api/articles/Test-Create-and-Delete-196364
+3 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODMyODMsImV4cCI6MTY5MzQ2NzI4M30.UUONQn8IdxOF44QO_LLuPA3oERQQ4h1OsrWKqf9glNU
+3 > Host: api.realworld.io
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+3 > Accept-Encoding: gzip,deflate
+
+
+09:34:44.961 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 269
+3 < 204
+3 < Date: Sun, 02 Jul 2023 07:34:45 GMT
+3 < Content-Length: 0
+3 < Connection: keep-alive
+3 < X-Powered-By: Express
+3 < Access-Control-Allow-Origin: *
+3 < Etag: W/"a-bAsFyilMr4Ra1hIU5PyoyFRunpI"
+3 < Via: 1.1 vegur
+3 < CF-Cache-Status: DYNAMIC
+3 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8hwesAdPTwpuYrvOa9ICZibuBBYlCgwNwkt2cV6SnCanTKOOTzWXajCUx1ib0jMr20olK75l9b%2FaYgjiM7LgE%2Bjf%2BhtxAl1AUOZGrXwnd6nZL%2BtEu74DiL9yRY3FqRfvUdbZ"}],"group":"cf-nel","max_age":604800}
+3 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 < Server: cloudflare
+3 < CF-RAY: 7e05354229290e87-AMS
+3 < alt-svc: h3=":443"; ma=86400
+
+
+09:34:44.966 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+4 > GET https://api.realworld.io/api/articles/Test-Create-and-Delete-196364
+4 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODMyODMsImV4cCI6MTY5MzQ2NzI4M30.UUONQn8IdxOF44QO_LLuPA3oERQQ4h1OsrWKqf9glNU
+4 > Host: api.realworld.io
+4 > Connection: Keep-Alive
+4 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+4 > Accept-Encoding: gzip,deflate
+
+
+09:34:45.218 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 251
+4 < 404
+4 < Date: Sun, 02 Jul 2023 07:34:45 GMT
+4 < Content-Type: application/json; charset=utf-8
+4 < Content-Length: 36
+4 < Connection: keep-alive
+4 < X-Powered-By: Express
+4 < Access-Control-Allow-Origin: *
+4 < Etag: W/"24-WwkKlnN0sbKzUZbyZqRl66DQxQA"
+4 < Via: 1.1 vegur
+4 < CF-Cache-Status: DYNAMIC
+4 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FnWUK%2BeB4DPUcvpAWro4UWEZYdq5LSNmYzWCmcFl9cJWBHJX3v8EerNC6We5EqPczSJ3sCCfeYroeI2wfpv29mN4ZY0F14udm2wwh66mRGYFj3X%2FdledhwkfOhCweU%2FFsi9A"}],"group":"cf-nel","max_age":604800}
+4 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+4 < Server: cloudflare
+4 < CF-RAY: 7e053543eba00a53-AMS
+4 < alt-svc: h3=":443"; ma=86400
+{"errors":{"article":["not found"]}}
+
+09:34:45.522 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:09:26.096 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:09:26.391 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:09:26.393 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285366392
+10:09:26.396 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:09:26.811 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:09:26.816 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:09:26.952 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:09:27.392 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 436
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:09:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-LZX2c04ox+ToKxpcCC50QxI29HA"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JcP5K4lH%2FKnLSHaGntD9zU9gFsrhz2qFlHJuOVLulYe1S7vXnJirSAft%2FOGgmGwxK%2Fb2T1M3wNFANDR6KBK5LIMXX27HG4JX31ATPlURIl%2BOoZZmHFUDrfraaN8tfbvkwSZh"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0568193b420a6f-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODUzNjcsImV4cCI6MTY5MzQ2OTM2N30.exINmHKDAiCQv7Yr3yZKLC-LKGlog5eIK091gi5V5j4"}}
+
+10:09:27.398 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:09:27.460 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODUzNjcsImV4cCI6MTY5MzQ2OTM2N30.exINmHKDAiCQv7Yr3yZKLC-LKGlog5eIK091gi5V5j4
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 111
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"description":"Sar Meel","title":"Gormon Tyrell","body":"When you play a game of thrones you win or you die."}
+
+10:09:27.705 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 244
+1 < 500
+1 < Date: Sun, 02 Jul 2023 08:09:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"37-zU0kEKvSeyFb7Nfrx0H9pJiFWNQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rK43lBNgkRBGPwk13VjI9VRrM7RRm4xjnlhagY26FvERJHSrZ23WfkbasGFKfCG%2BQzV5MBXayYnHchiYqZJP8Uv5wHUp9odZDEbDYpv8H66etwMzH8dtgIdsg9HXlEczRRqU"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05681bbe230a58-AMS
+1 < alt-svc: h3=":443"; ma=86400
+"Cannot read properties of undefined (reading 'title')"
+
+10:09:27.717 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 244, url: https://api.realworld.io/api/articles, response: 
+"Cannot read properties of undefined (reading 'title')"
+classpath:conduitApp/feature/Article.feature:12
+10:09:27.975 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:09:57.926 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:09:58.218 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:09:58.219 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285398218
+10:09:58.222 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:09:58.590 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:09:58.595 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:09:58.734 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:09:59.310 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 571
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:09:59 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-GYp/bfS/x3NFWpeXZJwnPxdXz7Y"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=RH1CIZkjlMz%2FhJy1cs6UfuvygT%2BUClIq5intPR%2BxO5aLE%2F4%2B5XiHW%2BAgU6hLHe%2F39acDAdTLYFixdq6kOasAaKAoywyNtjU0zSjMYbONtdCikLEom77ViI%2BiLv8jNrko%2Bcv%2B"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0568dfbde8b960-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODUzOTksImV4cCI6MTY5MzQ2OTM5OX0.x4kPpsCFyv86jz8fup4JHRyRR064KDaEiAB1nR4vcTY"}}
+
+10:09:59.317 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:09:59.382 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODUzOTksImV4cCI6MTY5MzQ2OTM5OX0.x4kPpsCFyv86jz8fup4JHRyRR064KDaEiAB1nR4vcTY
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 74
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"description":"Lys","title":"Byan Votyris","body":"The North remembers."}
+
+10:09:59.646 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 263
+1 < 500
+1 < Date: Sun, 02 Jul 2023 08:09:59 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"37-zU0kEKvSeyFb7Nfrx0H9pJiFWNQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7XEnVxYZlzJdqYWhSQ%2FDkEQzlMA3nFvItaShY6buVrXcgq01N%2BOl%2B7Mvqhrb9bMITd2LGibGAx7TRdynbPoGGWhGoFYn2EBiHaAXqW6p8BV2XDDT7qjPXdKwoLl14n1YcNC6"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0568e35cc00a61-AMS
+1 < alt-svc: h3=":443"; ma=86400
+"Cannot read properties of undefined (reading 'title')"
+
+10:09:59.659 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 263, url: https://api.realworld.io/api/articles, response: 
+"Cannot read properties of undefined (reading 'title')"
+classpath:conduitApp/feature/Article.feature:12
+10:09:59.919 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:10:59.026 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:10:59.328 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:10:59.330 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285459329
+10:10:59.333 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:10:59.657 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:10:59.661 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:10:59.788 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:11:00.356 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 563
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:11:00 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-EbymlzP9nFnLXp1DqkYGaZ7LKg8"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tYJ%2B6D2sfoKGbZd7JqwwzNwAZ%2F%2Fc7m%2FUeASk9ZkjrJwrsOQWI5%2BbyM04JmDEG5jMyS%2B%2FZFj0dEPVIWeJQS1cmEb9v7FhuUA4Kznl0VzjSm1WoxZUxTmyrsMxlF0RFnxqCwc%2B"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e056a5d4bdeb8ac-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU0NjAsImV4cCI6MTY5MzQ2OTQ2MH0.Sq-Xe8GoEZdpsflCFXpjjOk7vLPa20i-QXnzaQV11MU"}}
+
+10:11:00.363 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:11:00.426 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU0NjAsImV4cCI6MTY5MzQ2OTQ2MH0.Sq-Xe8GoEZdpsflCFXpjjOk7vLPa20i-QXnzaQV11MU
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 127
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"description":"Old Ghis","title":"Gariss","body":"Things are not always as they seemed, much that may seem evil can be good."}
+
+10:11:00.836 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 407
+1 < 500
+1 < Date: Sun, 02 Jul 2023 08:11:00 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"37-zU0kEKvSeyFb7Nfrx0H9pJiFWNQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SBtve79jkf3Sn%2B0jdmim8QRKuP4TtKyOsk7OgdscWix%2BWpIWW%2FXuhLAyVMTRhvkp9H7KT0js9wuR73L8Bj5KJoBxHdb2uOZ0fdEzROSo0MGKAbxqs%2F47bX9R4FHdEDKg1BWz"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e056a60ce82b796-AMS
+1 < alt-svc: h3=":443"; ma=86400
+"Cannot read properties of undefined (reading 'title')"
+
+10:11:00.845 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 407, url: https://api.realworld.io/api/articles, response: 
+"Cannot read properties of undefined (reading 'title')"
+classpath:conduitApp/feature/Article.feature:12
+10:11:01.109 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:12:39.763 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:12:40.052 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:12:40.054 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285560053
+10:12:40.057 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:12:40.377 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:12:40.380 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:12:40.508 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:12:41.118 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 603
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:12:41 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-wRBntleXcGmYuaTAAP/tohEnda0"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VxhilZvDbn0VsjT2B31ndnsBUxoJcS2o%2BSUluIIkffE2YE3PCLoD4Hw%2BWXoFlS%2FCLG2LVv%2FARM4sRrSCKy6md6cX4yoQ85TVpDbL8Hvu8KPIBpscIUbCpVwmheqVkz1UbsxO"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e056cd2db29286b-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU1NjAsImV4cCI6MTY5MzQ2OTU2MH0.Hj2K1i8k0mQpm9dyTcgycmB732zqYg8xCBKit5sG7JU"}}
+
+10:12:41.125 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:12:41.191 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU1NjAsImV4cCI6MTY5MzQ2OTU2MH0.Hj2K1i8k0mQpm9dyTcgycmB732zqYg8xCBKit5sG7JU
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 109
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"description":"Elyria","title":"Steffon Seaworth","body":"There are no heroes...in life, the monsters win."}
+
+10:12:41.592 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 400
+1 < 500
+1 < Date: Sun, 02 Jul 2023 08:12:41 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"37-zU0kEKvSeyFb7Nfrx0H9pJiFWNQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WW%2Fe4zpzq%2B1hLpH5Ig88OxLfr43AJqnfENzd9O58Pq9bxkSPQvM8Sf4oo1D9bSubmsBst5zdn7hZF%2FD%2Bmh8HXbogxVEirIDYcdhbtVZJ1XNm3VzM6OAY9RUma99u1nuTLdpb"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e056cd69ef5b939-AMS
+1 < alt-svc: h3=":443"; ma=86400
+"Cannot read properties of undefined (reading 'title')"
+
+10:12:41.600 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 400, url: https://api.realworld.io/api/articles, response: 
+"Cannot read properties of undefined (reading 'title')"
+classpath:conduitApp/feature/Article.feature:12
+10:12:41.862 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:16:05.151 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:16:05.444 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:16:05.446 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285765444
+10:16:05.448 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:16:05.775 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:16:05.778 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:16:05.902 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:16:06.351 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 444
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:16:06 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-kKp+dz5dk7xJwHIXbMPX4MtmaWE"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eRUSVmNguFnGEHdqZZ5dKOXZFMbM0bj3p2LGvnPsPQjbqJutRxGlZIwEYl7oiQZg5j7kmQwX2VSzUHXizE2HJoCXHEk9Q1I6m9qjAiIy0v9BL3Fa15VFcZvVPGTu%2FmRyeod0"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0571d6ae81b706-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU3NjYsImV4cCI6MTY5MzQ2OTc2Nn0.0dUjn-KKdi_GCUjNQr4Zuvn7QwAky4q9L5_t0LKk0XM"}}
+
+10:16:06.358 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:16:06.422 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU3NjYsImV4cCI6MTY5MzQ2OTc2Nn0.0dUjn-KKdi_GCUjNQr4Zuvn7QwAky4q9L5_t0LKk0XM
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 105
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"description":"Mantarys","title":"Malcolm","body":"Summer will end soon enough, and childhood as well."}
+
+10:16:06.670 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 247
+1 < 500
+1 < Date: Sun, 02 Jul 2023 08:16:06 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"37-zU0kEKvSeyFb7Nfrx0H9pJiFWNQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=96Omp9zlak%2BNuVP%2Bk%2BIBj7apB6ITN1oXY%2F7TCRN3Ey8E4R9W2o0374xS3442q1LaIdD7%2BAoZd7ZWysWObE%2FptWf%2FYEzuMSnrioRFt%2FvekL85SbOLK6UhXpk3p%2FwPkRvqjvna"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0571d95fba0b66-AMS
+1 < alt-svc: h3=":443"; ma=86400
+"Cannot read properties of undefined (reading 'title')"
+
+10:16:06.683 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 247, url: https://api.realworld.io/api/articles, response: 
+"Cannot read properties of undefined (reading 'title')"
+classpath:conduitApp/feature/Article.feature:12
+10:16:06.931 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:17:11.906 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:17:12.194 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:17:12.196 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285832194
+10:17:12.198 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:17:12.518 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:17:12.521 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:17:12.652 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:17:13.220 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 563
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:17:13 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-XWAvi8EqoGeuG0mtPgdning0shY"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HuCC5%2BMErjnnCDSeeqowdChUz%2BBSMtXsela%2FN3edBlLv%2F5OuzILrFHp6QZFPBtgxNqZW3RWvelRYTwHFnJ6PD%2FtXpnHYIRJJPb064%2Bn9PhubJHlVJNDVyAGcEZCcmDjHTL7B"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e057377bdf5b954-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU4MzMsImV4cCI6MTY5MzQ2OTgzM30.xQQGrISp_LsDWugqVz4SfKHob2_CZLdMqNq-lCTZlmQ"}}
+
+10:17:13.227 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:17:13.289 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU4MzMsImV4cCI6MTY5MzQ2OTgzM30.xQQGrISp_LsDWugqVz4SfKHob2_CZLdMqNq-lCTZlmQ
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 103
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"description":"Sunspear","title":"Brogg","body":"When you play a game of thrones you win or you die."}
+
+10:17:13.697 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 406
+1 < 500
+1 < Date: Sun, 02 Jul 2023 08:17:13 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"37-zU0kEKvSeyFb7Nfrx0H9pJiFWNQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gx8GGMIEgA9ucGOl3A3Hn7znKH8peseTYSW3S4EdcD2YIhSm81%2FYI9J7E0AQYzsVyyrgNWGnmeYZpAFsX8gIoCz0H9SyLM8ar3LrzonHenvGlpwvJPaFYLLbyUtr2FxHPXLK"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05737b4d4b0c11-AMS
+1 < alt-svc: h3=":443"; ma=86400
+"Cannot read properties of undefined (reading 'title')"
+
+10:17:13.708 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 406, url: https://api.realworld.io/api/articles, response: 
+"Cannot read properties of undefined (reading 'title')"
+classpath:conduitApp/feature/Article.feature:12
+10:17:13.983 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:17:35.264 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:17:35.557 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:17:35.559 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285855557
+10:17:35.561 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:17:35.895 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:17:35.898 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:17:36.030 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:17:36.614 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 579
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:17:36 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-RhEi1pyhYYy4cuNGpOxrbEB2pVg"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vM6bSc%2B%2F8yd%2Boeut8JgjZVHWxz4dtmKmXbNYx6FB0faBUOm2mIsKmD%2Fuh30RmEO7k8VcwxzAHZ39vsYttS3leTcG3HMmW1vSSEFhQ6xMwZEOaCbLVmznLLOTHBOyqDrrS9BB"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e057409d973b76d-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU4NTYsImV4cCI6MTY5MzQ2OTg1Nn0.De6-2kDX6J9XTzlfLRYMJfAX1Akx7Ov7vDr6vb_EfFM"}}
+
+10:17:36.623 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:17:36.689 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU4NTYsImV4cCI6MTY5MzQ2OTg1Nn0.De6-2kDX6J9XTzlfLRYMJfAX1Akx7Ov7vDr6vb_EfFM
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 147
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"description":"Lannisport","title":"Tothmure","body":"Give me honorable enemies rather than ambitious ones, and I'll sleep more easily by night."}
+
+10:17:37.088 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 399
+1 < 500
+1 < Date: Sun, 02 Jul 2023 08:17:37 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 55
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"37-zU0kEKvSeyFb7Nfrx0H9pJiFWNQ"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LNwZ2psLyx%2FgHXN2KDKHh%2B7jcCbCz%2FI5VEIOP2%2FCmw%2BCfx%2Bw2ZO1qoXzBxBORhcETMBbaLcGWY36wzdpSHrKhsUKlYUtIYQF5e0pki2Tzf4aOROJCo91azSeJVyuQJ8tt3nR"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05740d78f60a58-AMS
+1 < alt-svc: h3=":443"; ma=86400
+"Cannot read properties of undefined (reading 'title')"
+
+10:17:37.093 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 399, url: https://api.realworld.io/api/articles, response: 
+"Cannot read properties of undefined (reading 'title')"
+classpath:conduitApp/feature/Article.feature:12
+10:17:37.330 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:18:12.144 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:18:12.447 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:18:12.449 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285892447
+10:18:12.451 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:18:12.776 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:18:12.779 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:18:12.908 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:18:13.321 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 407
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:18:13 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-hecuN5ZG/Py091xl6hCpyG1wXAc"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Lts9BU8S012FVANayChh%2FKD%2FSi0qcbaynnxHUUDxltxrb0BSwEzqcZXkoYepYsg1KSkTHOqXRwHj3nAcJYUJppSqDLB8xsct182r1zWmShfvvhbO%2FZIul4MhcgsB%2BWQ2dIL5"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0574f04cf8b8fc-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU4OTMsImV4cCI6MTY5MzQ2OTg5M30.bsyMABKivw-g6Rt0jwnYKug1fdQcIk11nGbp3J2V3sA"}}
+
+10:18:13.329 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:18:13.341 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU4OTMsImV4cCI6MTY5MzQ2OTg5M30.bsyMABKivw-g6Rt0jwnYKug1fdQcIk11nGbp3J2V3sA
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"}}
+
+10:18:13.760 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 417
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:18:13 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"19e-kFdU6SVvKaIV1+e2BdS6fqCi7to"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zK8P9uSFg9Qg%2BibQvqzxo0DMr6QA626XLGqCNgMWfQXgrzRn1y%2FuGwgFTrX2Rnoe9mRZt%2Bem9AzLrLPdsfYKaQKaHx8zYHXrN0p%2FD9IfFt4gCLemVBnGDRxWuNTz7Wrr%2B0z%2F"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0574f299edb72e-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"First-Test-Creating-196364","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-07-02T08:18:13.685Z","updatedAt":"2023-07-02T08:18:13.685Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+10:18:14.020 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:18:26.651 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:18:26.959 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:18:26.962 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688285906960
+10:18:26.964 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:18:27.285 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:18:27.289 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:18:27.417 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:18:28.028 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 605
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:18:27 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-YqFHQCNPlk5B95kFhI1K1/QN4ck"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TQNF05OHCXGt8mQaZALZm%2BmCHpyBswwed5IzrVw%2FFzmbmZ8trQxZdrE6aOH2gMFIZ%2BlbBZ4WIrqfqRslQ3UXdFb2DsqCIDB00zPHy6zpMXVOJIzI1Q03snCvnMJP9zwa1hZF"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05754afd5c1cd2-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU5MDcsImV4cCI6MTY5MzQ2OTkwN30.qvfso3BvmOuxFUx4DBatxXhYwq70bfDK5eSNtCOuKWU"}}
+
+10:18:28.034 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:18:28.047 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODU5MDcsImV4cCI6MTY5MzQ2OTkwN30.qvfso3BvmOuxFUx4DBatxXhYwq70bfDK5eSNtCOuKWU
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 140
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"}}
+
+10:18:28.502 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 454
+1 < 422
+1 < Date: Sun, 02 Jul 2023 08:18:28 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 39
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SX%2B01W2iVq0tXLM9k0KRInMn7TCxGyHX7Hmoxr8TeHbxfsjnWwlOq%2B45sqOc4DbUrIny4ce2GIhcDPDWw42nbYZLYHlfG3kH9XEDGlkaKDDZNwqCJmYW2eRgK9oT%2BUdyLqjj"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05754e9d48b758-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+10:18:28.511 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:12
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 454, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/feature/Article.feature:12
+10:18:28.773 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:28:32.219 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:28:32.519 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:28:32.522 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688286512520
+10:28:32.524 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:28:32.881 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:28:32.884 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:28:33.022 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:28:33.755 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 729
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:28:33 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-UkS06gNJWeSIL/NWWbgMKjK3q2Q"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YQ9RPSiGgpsVor5KNdaqMdhi2Gyd0uJw0FelO405kJtqU%2BFPMmS%2FTaPnRG%2BXfp0trM77B1zbro83SxyBRvDwfT2XgPATQgjaZnaTLJ48s%2B6We5b8N%2FFh6k3Mme12XTwhGbzN"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058414ac30b8f4-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY1MTMsImV4cCI6MTY5MzQ3MDUxM30.gF9N5MkkwH9NYQkyfImtgxD0IF4pIiu6HXo7eLzTqQU"}}
+
+10:28:33.758 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:28:33.830 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY1MTMsImV4cCI6MTY5MzQ3MDUxM30.gF9N5MkkwH9NYQkyfImtgxD0IF4pIiu6HXo7eLzTqQU
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 213
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"},"title":"Arya Stark","description":"Vaes Dothrak","body":"Hodor? Hodor."}
+
+10:28:34.105 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 275
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:28:34 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"19e-bliW7IjwdrUDFXWd00Agbs0eSiU"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DvU6Td3whVQNfUMNKAPXsSR%2BsKjz2DfecEPR3xAKvNOmNJD2D2s0sarZOxmJB98KIoaQ9wDfiY1%2FMTMTgwjjoxF74Ydi8WrOSHXtOTYqKhkskTXl%2FG8tiQpUXsYF%2BAQ473%2Fc"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0584181a4a1cb1-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"First-Test-Creating-196364","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-07-02T08:28:34.085Z","updatedAt":"2023-07-02T08:28:34.085Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+10:28:34.119 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:16
+And match response.article.title == articleRequestBody.title
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'First Test Creating'
+  'Arya Stark'
+
+classpath:conduitApp/feature/Article.feature:16
+10:28:34.359 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:31:59.552 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:31:59.866 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:31:59.868 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688286719867
+10:31:59.871 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:32:00.212 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:32:00.216 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:32:00.347 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:32:00.887 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 536
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:32:00 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-OeIbPhsP8RV2YIrrvO91gsTOVy0"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YZHo2e5JWTHubCfwW4KyO%2FU22zTGnIDcdJrXAYzFMY27E%2FDTuNAayM63yy3077bHWkGRHNnJmbbkswxpqZKtEYq197Q9sWmSd4KjFaXb8P%2BgfV8G6vGLY1ohngjY7lxnXLH5"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05892349131cb3-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY3MjAsImV4cCI6MTY5MzQ3MDcyMH0.S6W6Cs7sr2NT7R43OZrzl2Zf-HZhGFJVAekr9wUn1uQ"}}
+
+10:32:00.892 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:32:00.975 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY3MjAsImV4cCI6MTY5MzQ3MDcyMH0.S6W6Cs7sr2NT7R43OZrzl2Zf-HZhGFJVAekr9wUn1uQ
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 222
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"},"title":"Brienne of Tarth","description":"Gulltown","body":"The North remembers."}
+
+10:32:01.368 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 393
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:32:01 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"19e-LAU/w6jTA1XchGt+a39SnZ5fhOY"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wERUHqcx%2BjS6Pu78oPaq0WYCSWH8hwcAEg8pU2YcE6BoNdnb54HFzxW7fSDOblgPIQqavM0LqOcR5pK8XXWKS2dT1BsaqDasItkqYgYCqegra9FBPOGQY1HjcEnNEFThHCSk"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058926caae06da-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"First-Test-Creating-196364","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-07-02T08:32:01.240Z","updatedAt":"2023-07-02T08:32:01.240Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+10:32:01.379 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:16
+And match response.article.title == articleRequestBody.title
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'First Test Creating'
+  'Brienne of Tarth'
+
+classpath:conduitApp/feature/Article.feature:16
+10:32:01.644 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:32:06.262 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:32:06.565 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:32:06.567 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688286726565
+10:32:06.569 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:32:06.904 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:32:06.908 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:32:07.038 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:32:07.577 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 533
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:32:07 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-WNdL86FVedNlZWltxg6tedCANjs"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=T8N24NiqktM2uT2OCqGQuOAetJSOzGMZJpb545JehmkJhkV02QV0qyq%2BF1h5EIuUmlWw%2BR54UwcOEINhzqbOwP0%2Bv2ReJ%2F1r7bPpTHJ954k%2F8Xm%2FuIqdO9gYiWE6j70uWgXv"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e05894d297e0eb2-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY3MjcsImV4cCI6MTY5MzQ3MDcyN30.xp07e7DMl7PJ_47xZuZbgtn_Mu1EE8_6PePWCeNX0TE"}}
+
+10:32:07.583 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:32:07.670 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY3MjcsImV4cCI6MTY5MzQ3MDcyN30.xp07e7DMl7PJ_47xZuZbgtn_Mu1EE8_6PePWCeNX0TE
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 236
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"},"title":"Lord Commander Qorgyle","description":"New Ghis","body":"Nothing burns like the cold."}
+
+10:32:08.053 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 383
+1 < 422
+1 < Date: Sun, 02 Jul 2023 08:32:07 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Content-Length: 39
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=qhWTNmTQxS4RUrhklmarCccp4Vc2VrRA%2FR4EpcYDEstf6S8Hp2cFjprsrxhjc8yyqSPu4pj7yifhBrpyxltjrW65KeKbpQSu1W4a2TKR4nifSFcDqlSpKR62sE%2BwYgoba9Az"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058950982f0ea8-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"errors":{"title":["must be unique"]}}
+
+10:32:08.061 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:15
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 383, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/feature/Article.feature:15
+10:32:08.312 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:32:24.883 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:32:25.183 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:32:25.185 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688286745184
+10:32:25.187 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:32:25.506 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:32:25.509 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:32:25.638 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:32:26.255 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 611
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:32:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-MqGIW4w2Pw1YpPmZyKFu5itiYD8"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eZgY%2F3nGUCWTHBbuQ2lXMh4b6HoepgMRGHvbwgEQDqdCN825DqFBgmE6pyr3kv%2FJ4aKRG%2BL6ilXF385nw2I3LMxo38AoTHx%2Bh74CbpysdJIf35UTHiEX1GPTvNpA%2Ba%2FRLr5K"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0589c15d270bc0-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY3NDYsImV4cCI6MTY5MzQ3MDc0Nn0.-MqGvkymJDpzmmMP4fZCmYaFQlXVIEmby_P4Ox13GUg"}}
+
+10:32:26.262 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:32:26.347 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY3NDYsImV4cCI6MTY5MzQ3MDc0Nn0.-MqGvkymJDpzmmMP4fZCmYaFQlXVIEmby_P4Ox13GUg
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 230
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate"},"title":"Galladon of Morne","description":"Volantis","body":"Laughter is poison to fear."}
+
+10:32:26.673 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 325
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:32:26 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"19e-qBHAibnTbB3UimBTAUVIYpEfF1c"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jrsS5WuKUNSrJt0UDNOF8lDfU8O1sCDb6mC%2BbyY1EV4OeGdvkjJcV%2F%2Bv5JK%2Fh2W5HxKpyufKqC2TpKUC96KXfY4Mo82UNWYOwWYM0Zs%2FNKdeD883z320NzgIjF4GrILfGAmZ"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e0589c55811b72e-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"First-Test-Creating-196364","title":"First Test Creating","description":"It is about Karate framework","body":"How to test code using Karate","tagList":[],"createdAt":"2023-07-02T08:32:26.602Z","updatedAt":"2023-07-02T08:32:26.602Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+10:32:26.681 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:16
+And match response.article.title == articleRequestBody.title
+match failed: EQUALS
+  $ | not equal (STRING:STRING)
+  'First Test Creating'
+  'Galladon of Morne'
+
+classpath:conduitApp/feature/Article.feature:16
+10:32:26.931 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:34:15.481 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:34:15.796 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:34:15.798 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688286855797
+10:34:15.801 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:34:16.142 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:34:16.145 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:34:16.278 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:34:16.849 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 566
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:34:16 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-73sz/Viv2dl02V+KrHZ34+JS44c"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QLVmHeWe%2FKQVEDcXYiGwAmHfANZ15Yo6TaYE7G%2FGyC8rvMUVyMFayt34KH5%2FEiZruNNKUalfRZMKCpU%2Fi%2Bkn01jW7peQJpAjNhpYZnF8k1B553y2O3dxjbmlOlDOy0RdOYJB"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058c74dbf10eb4-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY4NTYsImV4cCI6MTY5MzQ3MDg1Nn0.Sll5P4QMxO4linMvNpw7PG31gRpUfJcmjWgCbvrYYGQ"}}
+
+10:34:16.856 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:34:16.944 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY4NTYsImV4cCI6MTY5MzQ3MDg1Nn0.Sll5P4QMxO4linMvNpw7PG31gRpUfJcmjWgCbvrYYGQ
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 109
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Jon Snow","description":"Chroyane","body":"Fear cuts deeper than swords."}}
+
+10:34:17.325 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 380
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:34:17 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"174-cPq/3KpmbT6wZEpnCAAslYi7Ocs"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gG48MkRoMFOdQnGI063D0t9LfTlm8gS6JqPWr3RHcl2FpGEbIm3TgopjHIkxy%2FfSHgnYfIGt5oRnJKZgqbcJRVifGmrPtncrbErJbwRX1BJHqjVLKVkSBdQlpz8HtBJ1Myd2"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058c789917b920-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Jon-Snow-196364","title":"Jon Snow","description":"Chroyane","body":"Fear cuts deeper than swords.","tagList":[],"createdAt":"2023-07-02T08:34:17.201Z","updatedAt":"2023-07-02T08:34:17.201Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+10:34:17.340 [pool-1-thread-1] ERROR com.intuit.karate - classpath:conduitApp/feature/Article.feature:16
+And match response.article.title == articleRequestBody.title
+match failed: EQUALS
+  $ | data types don't match (STRING:NULL)
+  'Jon Snow'
+  null
+
+classpath:conduitApp/feature/Article.feature:16
+10:34:17.586 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:35:13.794 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:35:14.098 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:35:14.100 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688286914099
+10:35:14.102 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:35:14.440 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:35:14.444 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:35:14.577 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:35:15.232 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 652
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:35:15 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-GfHeBOlV1RHI2DkqmFE5zqnLiXg"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Z3nUG3XNj5wy83yo4OKF%2FmYS66FWTKEpaYAshwwb7R%2F3FfvRWvNbTaZOhQ9xeeXeswZ5bXVPnToQ2Qecmm58uJtss3o3jC5F9oUwQ0u56HfMY6TC74lJ%2FhaJ7kK5Mk8vpNbi"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058de189481cae-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY5MTUsImV4cCI6MTY5MzQ3MDkxNX0.jue9gVhQpAXAQ_zZaRYPRlTCbY5tQ6AAFafYduE31Gw"}}
+
+10:35:15.238 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:35:15.319 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY5MTUsImV4cCI6MTY5MzQ3MDkxNX0.jue9gVhQpAXAQ_zZaRYPRlTCbY5tQ6AAFafYduE31Gw
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 189
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Axell Florent","description":"Qarth","body":"Why is it that when one man builds a wall, the next man immediately needs to know what's on the other side?"}}
+
+10:35:15.601 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 280
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:35:15 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"1c9-FMFMps/exeIO5CEjJMRME9UQGHk"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=I0S8ZDnaToFO7aWull%2FGBJI8sJ%2FPZG%2BCvXcQF0cpnnpZ4Zzterxa9FQhvcfZG%2FnqA57rrLd%2BEBYB7oTEAdkXWv52Qn1DBtebuvloP1w0lhy3EIba1fMCHz%2BerLATzvRQYBko"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058de56c10b915-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Axell-Florent-196364","title":"Axell Florent","description":"Qarth","body":"Why is it that when one man builds a wall, the next man immediately needs to know what's on the other side?","tagList":[],"createdAt":"2023-07-02T08:35:15.585Z","updatedAt":"2023-07-02T08:35:15.585Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+10:35:15.878 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature
+10:35:37.711 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags @debug
+10:35:38.020 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+10:35:38.022 [main] INFO  com.intuit.karate.Suite - backed up existing 'target/karate-reports' dir to: target/karate-reports_1688286938021
+10:35:38.024 [main] DEBUG com.intuit.karate.Suite - waiting for 3 features to complete
+10:35:38.366 [pool-1-thread-1] INFO  com.intuit.karate - karate.env system property was: null 
+10:35:38.369 [pool-1-thread-1] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+10:35:38.504 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/users/login
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 57
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"user":{"email":"bassam@dev.com","password":"12345678"}}
+
+10:35:39.130 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 621
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:35:38 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"14c-QP89klJdbxekoseR9rXpyybuw7E"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fYa%2B2L0rUHanNIy6AdOy9ajj5SuykSBIAahCj2ulallZVXLNh02fg5rFGiU%2BaQp3D059fqjirNkiCogjw5Ask%2FetkLLe66OfMaExqYnK9glQqbvv0eBlEqL5ICfeLQX%2B0Qxv"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058e76c989b72b-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"user":{"email":"bassam@dev.com","username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY5MzgsImV4cCI6MTY5MzQ3MDkzOH0.VUHIheGZ9FhqNtJRUUQP7pQigmzTdaCWJgxDizLek0k"}}
+
+10:35:39.137 [pool-1-thread-1] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+10:35:39.223 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 > POST https://api.realworld.io/api/articles
+1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgyODY5MzgsImV4cCI6MTY5MzQ3MDkzOH0.VUHIheGZ9FhqNtJRUUQP7pQigmzTdaCWJgxDizLek0k
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 268
+1 > Host: api.realworld.io
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"article":{"tagList":[],"title":"Lothar Frey","description":"Sunspear","body":"And so he spoke, and so he spoke, that Lord of Castamere, but now the rains weep o'er his hall, with no one there to hear. Yes, now the rains weep o'er his hall, and not a soul to hear."}}
+
+10:35:39.598 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 373
+1 < 200
+1 < Date: Sun, 02 Jul 2023 08:35:39 GMT
+1 < Content-Type: application/json; charset=utf-8
+1 < Transfer-Encoding: chunked
+1 < Connection: keep-alive
+1 < X-Powered-By: Express
+1 < Access-Control-Allow-Origin: *
+1 < Etag: W/"216-4fPitEe2OaekbwOWs/pOnriOyco"
+1 < Via: 1.1 vegur
+1 < CF-Cache-Status: DYNAMIC
+1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BMC6Z35t%2BssBpVFHPm26ynJlmOROr8ZUURnFmHY0nB5iOA35Z%2FIZEMXDCLK6g1jV%2B7Y%2BDKuyBU1XS8uPt5vjP47%2FeTW1V%2BPFCSJz8U9jntQ19Oeccdy2zwhlBB0ohjR1ACHB"}],"group":"cf-nel","max_age":604800}
+1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 < Server: cloudflare
+1 < CF-RAY: 7e058e7adeceb8b4-AMS
+1 < alt-svc: h3=":443"; ma=86400
+{"article":{"slug":"Lothar-Frey-196364","title":"Lothar Frey","description":"Sunspear","body":"And so he spoke, and so he spoke, that Lord of Castamere, but now the rains weep o'er his hall, with no one there to hear. Yes, now the rains weep o'er his hall, and not a soul to hear.","tagList":[],"createdAt":"2023-07-02T08:35:39.485Z","updatedAt":"2023-07-02T08:35:39.485Z","favorited":false,"favoritesCount":0,"author":{"username":"bacharDev","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","following":false}}}
+
+10:35:39.858 [pool-2-thread-1] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 3 (2 remaining) classpath:conduitApp/feature/Article.feature

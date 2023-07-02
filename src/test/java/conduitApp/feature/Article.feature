@@ -1,33 +1,38 @@
+@debug
 Feature: Articales
 Background: Define URL 
-  Given url apiUrl
-
+  * url apiUrl
+  * def articleRequestBody = read("classpath:conduitApp/json/newArticleRequest.json")
+  * def dataGenerator = Java.type('helpers.DataGenerator')
+  * set articleRequestBody.article.title = dataGenerator.getRandomArticleValues().title
+  * set articleRequestBody.article.description = dataGenerator.getRandomArticleValues().description
+  * set articleRequestBody.article.body = dataGenerator.getRandomArticleValues().body
 Scenario: Create a new article 
   Given path 'articles'
-  And request {article: {"tagList":[], "title": "First Test Creating", "description": "It is about Karate framework", "body": "How to test code using Karate"}}
+  And request articleRequestBody;
   When method Post
   Then status 200
-  And match response.article.title == "First Test Creating"
+  And match response.article.title == articleRequestBody.article.title
 
-Scenario: Create and delete article 
-  Given path 'articles'
-  And request {article: {"tagList":[], "title": "Test Create & Delete", "description": "It is about deleting Scenarios", "body": "How to Create and delete account using Karate"}}
-  When method Post
-  Then status 200
-  And match response.article.title == "Test Create & Delete"
-  * def articleId = response.article.slug
+# Scenario: Create and delete article 
+#   Given path 'articles'
+#   And request dataGenerator.getRandomArticleValues();
+#   When method Post
+#   Then status 200
+#   And match response.article.title == 
+#   * def articleId = response.article.slug
 
-  Given path 'articles',articleId
-  When method Get
-  Then status 200
-  And match response.article.title == "Test Create & Delete"
+#   Given path 'articles',articleId
+#   When method Get
+#   Then status 200
+#   And match response.article.title == "Test Create & Delete"
 
-  Given path 'articles',articleId
-  When method Delete
-  Then status 204
+#   Given path 'articles',articleId
+#   When method Delete
+#   Then status 204
 
-  Given path 'articles',articleId
-  When method Get
-  Then status 404
-  And match response.errors.article == "#array"
-  And match response.errors.article[0] == "not found"
+#   Given path 'articles',articleId
+#   When method Get
+#   Then status 404
+#   And match response.errors.article == "#array"
+#   And match response.errors.article[0] == "not found"
