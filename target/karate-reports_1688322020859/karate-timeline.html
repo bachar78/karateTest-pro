@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"conduitApp\/feature\/Article[1:10]","start":1688321916065,"end":1688321917323,"title":"conduitApp\/feature\/Article[1:10] 20:18:36.065-20:18:37.323 Create a new article"},{"id":2,"group":1,"content":"conduitApp\/feature\/Article[2:18]","start":1688321917328,"end":1688321919083,"title":"conduitApp\/feature\/Article[2:18] 20:18:37.328-20:18:39.083 Create and delete article"},{"id":3,"group":1,"content":"conduitApp\/feature\/HomePage[1:7]","start":1688321919381,"end":1688321919902,"title":"conduitApp\/feature\/HomePage[1:7] 20:18:39.381-20:18:39.902 Get all tags"},{"id":4,"group":1,"content":"conduitApp\/feature\/HomePage[2:19]","start":1688321919907,"end":1688321921200,"title":"conduitApp\/feature\/HomePage[2:19] 20:18:39.907-20:18:41.200 Get 10 articles from the page","className":"failed"},{"id":5,"group":1,"content":"conduitApp\/feature\/Hooks[1:19]","start":1688321921256,"end":1688321921257,"title":"conduitApp\/feature\/Hooks[1:19] 20:18:41.256-20:18:41.257 First Scenario"},{"id":6,"group":1,"content":"conduitApp\/feature\/Hooks[2:22]","start":1688321921275,"end":1688321921275,"title":"conduitApp\/feature\/Hooks[2:22] 20:18:41.275-20:18:41.275 Second Scenario"},{"id":7,"group":1,"content":"conduitApp\/feature\/SignUp[1:8]","start":1688321921332,"end":1688321921723,"title":"conduitApp\/feature\/SignUp[1:8] 20:18:41.332-20:18:41.723 New User Sign Up"},{"id":8,"group":1,"content":"conduitApp\/feature\/SignUp[2.1:51]","start":1688321921727,"end":1688321922014,"title":"conduitApp\/feature\/SignUp[2.1:51] 20:18:41.727-20:18:42.014 Sign Up Error (UserName or Email is already taken)"},{"id":9,"group":1,"content":"conduitApp\/feature\/SignUp[2.2:52]","start":1688321922018,"end":1688321922287,"title":"conduitApp\/feature\/SignUp[2.2:52] 20:18:42.018-20:18:42.287 Sign Up Error (UserName or Email is already taken)"},{"id":10,"group":1,"content":"conduitApp\/feature\/SignUp[2.3:53]","start":1688321922293,"end":1688321922558,"title":"conduitApp\/feature\/SignUp[2.3:53] 20:18:42.293-20:18:42.558 Sign Up Error (UserName or Email is already taken)"},{"id":11,"group":1,"content":"conduitApp\/feature\/SignUp[2.4:54]","start":1688321922561,"end":1688321923011,"title":"conduitApp\/feature\/SignUp[2.4:54] 20:18:42.561-20:18:43.011 Sign Up Error (UserName or Email is already taken)"},{"id":12,"group":1,"content":"conduitApp\/feature\/SignUp[2.5:55]","start":1688321923017,"end":1688321923283,"title":"conduitApp\/feature\/SignUp[2.5:55] 20:18:43.017-20:18:43.283 Sign Up Error (UserName or Email is already taken)"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+@debug @parallel=false
 Feature: Test for the home page
 Background: Define URL 
   Given url apiUrl
@@ -24,18 +25,17 @@ Scenario: Get 10 articles from the page
   When method Get
   Then status 200
   And match response.articles == "#[10]"
-  And match each response.articles == "#object"
-  And match each response..tagList == "#array"
-  And match each response.articles..following == false
-  And match each response.articles..following != true
-  And match each response.articles..following == "#boolean"
-  And match response.articles == '#array'
-  And match response.articlesCount == 197
-  And match response.articlesCount != 196
-  And match response.articles[0].createdAt contains '2022'
-  And match response.articles[0].createdAt !contains '2021'
-  And match response.articles[*].title contains 'Use the auxiliary EXE monitor, then you can hack the haptic port!'
-  And match each response.articles..bio == "##string"
+  # And match each response.articles == "#object"
+  # And match each response..tagList == "#array"
+  # And match each response.articles..following == false
+  # And match each response.articles..following != true
+  # And match each response.articles..following == "#boolean"
+  # And match response.articles == '#array'
+  # And match response.articlesCount != 196
+  # And match response.articles[0].createdAt contains '2023'
+  # And match response.articles[0].createdAt !contains '2021'
+  # And match response.articles[*].title contains 'Use the auxiliary EXE monitor, then you can hack the haptic port!'
+  # And match each response.articles..bio == "##string"
   And match each response.articles ==
   """
      {

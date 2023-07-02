@@ -1,4 +1,4 @@
-@debug
+
 Feature: Articales
 Background: Define URL 
   * url apiUrl
@@ -10,6 +10,7 @@ Background: Define URL
 Scenario: Create a new article 
   Given path 'articles'
   And request articleRequestBody;
+  * print articleRequestBody
   When method Post
   Then status 200
   And match response.article.title == articleRequestBody.article.title
