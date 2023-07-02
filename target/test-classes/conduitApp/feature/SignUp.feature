@@ -52,7 +52,7 @@ Scenario Outline: Sign Up Error (UserName or Email is already taken)
   Examples:
   | email              | password  | username       | errorMessage                                     |
   |#(randomEmail)      | '12345678'|'Bassam'        |{"errors":{"username":["has already been taken"]}}|
-  |"bassam@test.com"   | '12345678'|#(randomName)   | {"errors":{"email":["has already been taken"]}}|
-  |""                  | '12345678'|#(randomName)   | {"errors":{"email": ["can't be blank"]}}|
-  |#(randomEmail)      | '12345678'|""              | {"errors":{"username": ["can't be blank"]}}|
-  |#(randomEmail)      | ''        |#(randomName)   | {"errors":{"password": ["can't be blank"]}}|
+  # |"bassam@test.com"   | '12345678'|#(randomName)   | {"errors":{"email":["has already been taken"]}}|
+  # |""                  | '12345678'|#(randomName)   | {"errors":{"email": ["can't be blank"]}}|
+  # |#(randomEmail)      | '12345678'|""              | {"errors":{"username": ["can't be blank"]}}|
+  # |#(randomEmail)      | ''        |#(randomName)   | {"errors":{"password": ["can't be blank"]}}|

@@ -38,39 +38,27 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">6</div>
+      <div id="nav-pass" class="bg-success">2</div>
       <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
-    <div></div>
+    <div>dev</div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2023-07-02 09:44:25 PM</div>
+    <div>2023-07-02 10:26:35 PM</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:10]"><span>[1:10]</span> <span>New User Sign Up</span></a>
+            <a href="#[1:11]"><span>[1:11]</span> <span>New User Sign Up</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[2.1:53]"><span>[2.1:53]</span> <span>Sign Up Error (UserName or Email is already taken)</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[2.2:54]"><span>[2.2:54]</span> <span>Sign Up Error (UserName or Email is already taken)</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[2.3:55]"><span>[2.3:55]</span> <span>Sign Up Error (UserName or Email is already taken)</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[2.4:56]"><span>[2.4:56]</span> <span>Sign Up Error (UserName or Email is already taken)</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[2.5:57]"><span>[2.5:57]</span> <span>Sign Up Error (UserName or Email is already taken)</span></a>
+            <a href="#[2.1:54]"><span>[2.1:54]</span> <span>Sign Up Error (UserName or Email is already taken)</span></a>
           </div>
         </div>
       </div>
@@ -84,36 +72,36 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:10]">
+          <div class="scenario-heading" id="[1:11]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">debug</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:10]</span>
+                Scenario: <span>[1:11]</span>
                 <span class="scenario-name">New User Sign Up</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>508</span>
+              <span>ms:</span>&nbsp;<span>451</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:10]bg">
+            <div class="step-container" id="[1:11]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def dataGenerator = Java.type(&#39;helpers.DataGenerator&#39;)</span>
@@ -128,42 +116,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.4">21:44:23.880 karate.env system property was: null 
+  <div class="preformatted" data-parent="0.5">22:26:32.974 karate.env system property was: dev 
 </div>   
 
   
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">93</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
@@ -173,10 +133,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
+        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
       </div>
     </div>
-    <div class="time-cell passed">56</div>
+    <div class="time-cell passed">14</div>
   </div>
 
    
@@ -191,7 +151,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[1:10]bg"><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
@@ -201,10 +161,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiUrl</span>
+        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">18</div>
   </div>
 
    
@@ -219,17 +179,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div><div>
+          <div data-parent="[1:11]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref passed">11</div>
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
+        <span>Given</span>&nbsp;<span>url apiUrl</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -257,6 +217,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
@@ -265,7 +253,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="0.12">{
+  <div class="preformatted" data-parent="0.13">{
   &quot;user&quot;: {
       &quot;email&quot;: #(randomEmail),
       &quot;password&quot;: &quot;12345678&quot;,
@@ -287,14 +275,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.22">
-      <div class="step-ref passed">22</div>
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method Post</span>
       </div>
     </div>
-    <div class="time-cell passed">354</div>
+    <div class="time-cell passed">411</div>
   </div>
 
    
@@ -303,34 +291,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.22">21:44:24.034 request:
+  <div class="preformatted" data-parent="0.23">22:26:33.008 request:
 1 &gt; POST https://api.realworld.io/api/users
-1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjcwNjMsImV4cCI6MTY5MzUxMTA2M30.3Lh8PMfwctgBqTCRYnLK4fYNLdVudKSu3IKLYb2WGcc
+1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjk1OTIsImV4cCI6MTY5MzUxMzU5Mn0.SQtuL7Z13M9RfIjylK5Pm2NtasP5okwuQzcsCHVl-t4
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 77
+1 &gt; Content-Length: 79
 1 &gt; Host: api.realworld.io
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;email&quot;:&quot;hye100@test.com&quot;,&quot;password&quot;:&quot;12345678&quot;,&quot;username&quot;:&quot;Lonny&quot;}}
+{&quot;user&quot;:{&quot;email&quot;:&quot;lacy19@test.com&quot;,&quot;password&quot;:&quot;12345678&quot;,&quot;username&quot;:&quot;Charley&quot;}}
 
-21:44:24.386 response time in milliseconds: 351
+22:26:33.418 response time in milliseconds: 410
 1 &lt; 200
-1 &lt; Date: Sun, 02 Jul 2023 19:44:24 GMT
+1 &lt; Date: Sun, 02 Jul 2023 20:26:33 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
 1 &lt; X-Powered-By: Express
 1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Etag: W/&quot;145-QzvwGYGnh/CIFin1tZuU3kKfYZE&quot;
+1 &lt; Etag: W/&quot;14a-8xTvs7r7NTzR2ruOUae2U2hHB8Y&quot;
 1 &lt; Via: 1.1 vegur
 1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=xAUqdYlIZ93NVCpP0r3HEdYNtKVfKJAkopmzXsCnvGmMiyFjlKUmJwgj7aDZAfWNeSovTqlA62OZu2LkwvBez4fu5hqhyl8MbqzDeUMv%2F4FtpJ4aYQZbV%2BXp8NcwIvA16uwu&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=MQcEsRGSBOzuIaKZSUPa1YkPkaThXL0l6BKoEUP9hWH%2FGlG7Q2aq6zE2pQJFMA%2BftO%2BbVCkUPq7VesXBrHAocOFDhYBVeLW%2BL5Dw52GPi%2FAj6zjxS7%2BFv8pO0YULxNRQTDmr&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 1 &lt; Server: cloudflare
-1 &lt; CF-RAY: 7e0962169d670e37-AMS
+1 &lt; CF-RAY: 7e099fd4cdb606c2-AMS
 1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
-{&quot;user&quot;:{&quot;email&quot;:&quot;hye100@test.com&quot;,&quot;username&quot;:&quot;Lonny&quot;,&quot;bio&quot;:null,&quot;image&quot;:&quot;https://api.realworld.io/images/smiley-cyrus.jpeg&quot;,&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imh5ZTEwMEB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiTG9ubnkiLCJpYXQiOjE2ODgzMjcwNjQsImV4cCI6MTY5MzUxMTA2NH0.R566GEba5SIQyn_CPRsW89jF_CcJaT2k2BFmeWbA6uw&quot;}}
+{&quot;user&quot;:{&quot;email&quot;:&quot;lacy19@test.com&quot;,&quot;username&quot;:&quot;Charley&quot;,&quot;bio&quot;:null,&quot;image&quot;:&quot;https://api.realworld.io/images/smiley-cyrus.jpeg&quot;,&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxhY3kxOUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQ2hhcmxleSIsImlhdCI6MTY4ODMyOTU5MywiZXhwIjoxNjkzNTEzNTkzfQ.5XTn-Jusn7oCAef9bhqqm0pCZMvCIDHUlPvUD11wY50&quot;}}
 
 </div>   
 
@@ -344,8 +332,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.23">
-      <div class="step-ref passed">23</div>
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -372,19 +360,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.24">
-      <div class="step-ref passed">24</div>
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.user ==</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">6</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.24">{
+  <div class="preformatted" data-parent="0.25">{
     &quot;email&quot;: #(randomEmail),
     &quot;username&quot;: #(randomName),
     &quot;bio&quot;: &quot;##string&quot;,
@@ -402,77 +390,41 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2.1:53]">
+          <div class="scenario-heading" id="[2.1:54]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">debug</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2.1:53]</span>
+                Scenario: <span>[2.1:54]</span>
                 <span class="scenario-name">Sign Up Error (UserName or Email is already taken)</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>514</span>
+              <span>ms:</span>&nbsp;<span>481</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2.1:53]bg">
+            <div class="step-container" id="[2.1:54]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2.1:53]bg"><div>
+          <div data-parent="[2.1:54]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="1.4">
-      <div class="step-ref bg-step">4</div>
+    <div class="step-container" id="1.5">
+      <div class="step-ref bg-step">5</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def dataGenerator = Java.type(&#39;helpers.DataGenerator&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.4">21:44:23.875 &lt;&lt; lock released, cached callSingle: classpath:helpers/CreateToken.feature
-</div>   
-
-  <div>
-        
-    <div class="step-row">
-      <div class="step-container" id="1.4.0.call">
-        <div class="step-ref bg-step">&gt;&gt;</div>
-        <div class="step-indent"></div>
-        <div class="step-cell passed">helpers.CreateToken</div>
-      </div>
-      <div class="time-cell passed">1145</div>
-    </div>
-    <div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.4.0.call">
-    <div class="step-container" id="1.4.0.call.0.4">
-      <div class="step-ref bg-step">4</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiUrl</span>
-      </div>
-    </div>
     <div class="time-cell passed">0</div>
   </div>
 
@@ -482,53 +434,24 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="1.4.0.call.0.4">21:44:22.713 karate.env system property was: null 
-21:44:22.716 &gt;&gt; lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+  <div class="preformatted" data-parent="1.5">22:26:33.429 karate.env system property was: dev 
 </div>   
 
   
 
 </div>
 </div>
-      <div><div>
+          <div data-parent="[2.1:54]bg"><div>
   
 
   
 
-  <div class="step-row" data-parent="1.4.0.call">
-    <div class="step-container" id="1.4.0.call.0.5">
-      <div class="step-ref bg-step">5</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users/login&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.4.0.call">
-    <div class="step-container" id="1.4.0.call.0.6">
+  <div class="step-row">
+    <div class="step-container" id="1.6">
       <div class="step-ref bg-step">6</div>
-      <div class="step-indent"></div>
+      
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request { &quot;user&quot;: { &quot;email&quot;: &quot;#(userEmail)&quot;, &quot;password&quot;: &quot;#(userPassword)&quot;}}</span>
+        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
       </div>
     </div>
     <div class="time-cell passed">9</div>
@@ -546,180 +469,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.4.0.call">
-    <div class="step-container" id="1.4.0.call.0.7">
-      <div class="step-ref bg-step">7</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method Post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1133</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.4.0.call.0.7">21:44:22.838 request:
-1 &gt; POST https://api.realworld.io/api/users/login
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 57
-1 &gt; Host: api.realworld.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;email&quot;:&quot;bassam@dev.com&quot;,&quot;password&quot;:&quot;12345678&quot;}}
-
-21:44:23.871 response time in milliseconds: 1031
-1 &lt; 200
-1 &lt; Date: Sun, 02 Jul 2023 19:44:23 GMT
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Connection: keep-alive
-1 &lt; X-Powered-By: Express
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Etag: W/&quot;14c-lBP1ciIbFR0ulwBrZRzfHn+jvto&quot;
-1 &lt; Via: 1.1 vegur
-1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=zwBEadGFvy6eVoLQaEmBCSLgLAvhawVnKcRsS5XBLgTYj%2FwPDvn6qkShF1M86vS4UfScCZPuz2H0BJ5%2BsR89A%2B00iDZPGYWqA659y8471uTriFqwCHqaltfdw0iW4V8CC64j&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Server: cloudflare
-1 &lt; CF-RAY: 7e0962127d5228ac-AMS
-1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
-{&quot;user&quot;:{&quot;email&quot;:&quot;bassam@dev.com&quot;,&quot;username&quot;:&quot;bacharDev&quot;,&quot;bio&quot;:null,&quot;image&quot;:&quot;https://api.realworld.io/images/smiley-cyrus.jpeg&quot;,&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjcwNjMsImV4cCI6MTY5MzUxMTA2M30.3Lh8PMfwctgBqTCRYnLK4fYNLdVudKSu3IKLYb2WGcc&quot;}}
-
-</div>   
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.4.0.call">
-    <div class="step-container" id="1.4.0.call.0.8">
-      <div class="step-ref bg-step">8</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-      <div><div>
-  
-
-  
-
-  <div class="step-row" data-parent="1.4.0.call">
-    <div class="step-container" id="1.4.0.call.0.9">
-      <div class="step-ref bg-step">9</div>
-      <div class="step-indent"></div>
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def authToken = response.user.token</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-    </div>    
-  </div>
-
-</div>
-</div>
-          <div data-parent="[2.1:53]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">96</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.1:53]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">54</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.1:53]bg"><div>
+          <div data-parent="[2.1:54]bg"><div>
   
 
   
@@ -729,10 +479,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiUrl</span>
+        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">8</div>
   </div>
 
    
@@ -747,17 +497,17 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div><div>
+          <div data-parent="[2.1:54]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="1.36">
-      <div class="step-ref passed">36</div>
+    <div class="step-container" id="1.8">
+      <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
+        <span>Given</span>&nbsp;<span>url apiUrl</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -785,6 +535,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">37</div>
       
       <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.38">
+      <div class="step-ref passed">38</div>
+      
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
@@ -793,7 +571,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="1.37">{
+  <div class="preformatted" data-parent="1.38">{
   &quot;user&quot;: {
       &quot;email&quot;: #(randomEmail),
       &quot;password&quot;: &#39;12345678&#39;,
@@ -815,14 +593,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="1.47">
-      <div class="step-ref passed">47</div>
+    <div class="step-container" id="1.48">
+      <div class="step-ref passed">48</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method Post</span>
       </div>
     </div>
-    <div class="time-cell passed">356</div>
+    <div class="time-cell passed">463</div>
   </div>
 
    
@@ -831,20 +609,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="1.47">21:44:24.032 request:
+  <div class="preformatted" data-parent="1.48">22:26:33.448 request:
 1 &gt; POST https://api.realworld.io/api/users
-1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjcwNjMsImV4cCI6MTY5MzUxMTA2M30.3Lh8PMfwctgBqTCRYnLK4fYNLdVudKSu3IKLYb2WGcc
+1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjk1OTIsImV4cCI6MTY5MzUxMzU5Mn0.SQtuL7Z13M9RfIjylK5Pm2NtasP5okwuQzcsCHVl-t4
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 80
 1 &gt; Host: api.realworld.io
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;email&quot;:&quot;darron36@test.com&quot;,&quot;password&quot;:&quot;12345678&quot;,&quot;username&quot;:&quot;Bassam&quot;}}
+{&quot;user&quot;:{&quot;email&quot;:&quot;kassie58@test.com&quot;,&quot;password&quot;:&quot;12345678&quot;,&quot;username&quot;:&quot;Bassam&quot;}}
 
-21:44:24.386 response time in milliseconds: 353
+22:26:33.909 response time in milliseconds: 461
 1 &lt; 422
-1 &lt; Date: Sun, 02 Jul 2023 19:44:24 GMT
+1 &lt; Date: Sun, 02 Jul 2023 20:26:33 GMT
 1 &lt; Content-Type: application/json; charset=utf-8
 1 &lt; Content-Length: 50
 1 &lt; Connection: keep-alive
@@ -853,10 +631,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &lt; Etag: W/&quot;32-JsHJTKwNHW5NSVjFTl5ds7a++54&quot;
 1 &lt; Via: 1.1 vegur
 1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=y2pQj2ZJrgWUSq%2FrxcD4dcTXVlWYuiOLlSEYZk7Y1nrVERtcXxCHdZLMfLtMMFE6FR97DjgEV%2BmAZeI%2Fn4N041lr9ahKn%2Fqxkqf5He1YeurSzuGXJEpuoG%2Fu5Z8rmAcOUNiD&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=uvN4k2Zo5CTpYA%2B9sXFlr0N55zTZ45d11LBjY%2FYZd6lxUH1ntYWM6wG%2Fvb7283hqJ9Htnz58KlvOMO7cEHw4yS4ES%2BcFoB2MdRDnWEvLsh2sRad0AkImF6uF3%2B7F0KyGBMBH&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
 1 &lt; Server: cloudflare
-1 &lt; CF-RAY: 7e096216b8321aff-AMS
+1 &lt; CF-RAY: 7e099fd799ff0ea9-AMS
 1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
 {&quot;errors&quot;:{&quot;username&quot;:[&quot;has already been taken&quot;]}}
 
@@ -872,1287 +650,39 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="1.48">
-      <div class="step-ref passed">48</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 422</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
     <div class="step-container" id="1.49">
       <div class="step-ref passed">49</div>
       
       <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 422</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.50">
+      <div class="step-ref passed">50</div>
+      
+      <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response == {&quot;errors&quot;:{&quot;username&quot;:[&quot;has already been taken&quot;]}}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">5</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2.2:54]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">debug</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2.2:54]</span>
-                <span class="scenario-name">Sign Up Error (UserName or Email is already taken)</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>511</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2.2:54]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2.2:54]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def dataGenerator = Java.type(&#39;helpers.DataGenerator&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="2.4">21:44:23.878 karate.env system property was: null 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.2:54]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">95</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.2:54]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">56</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.2:54]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.36">
-      <div class="step-ref passed">36</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.37">
-      <div class="step-ref passed">37</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="2.37">{
-  &quot;user&quot;: {
-      &quot;email&quot;: &quot;bassam@test.com&quot;,
-      &quot;password&quot;: &#39;12345678&#39;,
-      &quot;username&quot;: #(randomName)
-  }
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.47">
-      <div class="step-ref passed">47</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method Post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">347</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="2.47">21:44:24.033 request:
-1 &gt; POST https://api.realworld.io/api/users
-1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjcwNjMsImV4cCI6MTY5MzUxMTA2M30.3Lh8PMfwctgBqTCRYnLK4fYNLdVudKSu3IKLYb2WGcc
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 79
-1 &gt; Host: api.realworld.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;email&quot;:&quot;bassam@test.com&quot;,&quot;password&quot;:&quot;12345678&quot;,&quot;username&quot;:&quot;Camille&quot;}}
-
-21:44:24.378 response time in milliseconds: 344
-1 &lt; 422
-1 &lt; Date: Sun, 02 Jul 2023 19:44:24 GMT
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 47
-1 &lt; Connection: keep-alive
-1 &lt; X-Powered-By: Express
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Etag: W/&quot;2f-BJEnYqgmLwV4NGkXB9OccFtans4&quot;
-1 &lt; Via: 1.1 vegur
-1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=wDzNSQQyOe%2BC09vjqLHwHgdcobGrfseB7C1Lcb2gw4Pc9Enci6si4aMIc4EUJPV6z%2BslMAeAF%2F4y%2Fh%2FWYm9xAUuoXxDUwR2dridDBFQlbZWyV2Ls65MYXIGIj%2FUNpP0cAUG0&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Server: cloudflare
-1 &lt; CF-RAY: 7e0962169c9bb8d9-AMS
-1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
-{&quot;errors&quot;:{&quot;email&quot;:[&quot;has already been taken&quot;]}}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.48">
-      <div class="step-ref passed">48</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 422</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.49">
-      <div class="step-ref passed">49</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == {&quot;errors&quot;:{&quot;email&quot;:[&quot;has already been taken&quot;]}}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">12</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2.3:55]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">debug</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2.3:55]</span>
-                <span class="scenario-name">Sign Up Error (UserName or Email is already taken)</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>300</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2.3:55]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2.3:55]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def dataGenerator = Java.type(&#39;helpers.DataGenerator&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="3.4">21:44:24.401 karate.env system property was: null 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.3:55]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">29</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.3:55]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">17</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.3:55]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.36">
-      <div class="step-ref passed">36</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.37">
-      <div class="step-ref passed">37</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="3.37">{
-  &quot;user&quot;: {
-      &quot;email&quot;: &quot;&quot;,
-      &quot;password&quot;: &#39;12345678&#39;,
-      &quot;username&quot;: #(randomName)
-  }
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.47">
-      <div class="step-ref passed">47</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method Post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">253</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="3.47">21:44:24.449 request:
-1 &gt; POST https://api.realworld.io/api/users
-1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjcwNjMsImV4cCI6MTY5MzUxMTA2M30.3Lh8PMfwctgBqTCRYnLK4fYNLdVudKSu3IKLYb2WGcc
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 63
-1 &gt; Host: api.realworld.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;email&quot;:&quot;&quot;,&quot;password&quot;:&quot;12345678&quot;,&quot;username&quot;:&quot;Lester&quot;}}
-
-21:44:24.701 response time in milliseconds: 252
-1 &lt; 422
-1 &lt; Date: Sun, 02 Jul 2023 19:44:24 GMT
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 39
-1 &lt; Connection: keep-alive
-1 &lt; X-Powered-By: Express
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Etag: W/&quot;27-t1Jmbh6zWQl9abIACseOZh9CIII&quot;
-1 &lt; Via: 1.1 vegur
-1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=msQs37peVxoGu8qkslQ84%2BWxoZe2daMpJStYHOzuwZ92oNpe9zdoosjyMARGKC1V3u1d00QD55vvaRa6aMu%2FA%2FYyr2QWph3BEdK9NR2yn9Rx94OlA1%2F7o9MJVXPQ0wASTSwx&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Server: cloudflare
-1 &lt; CF-RAY: 7e0962194ec006d0-AMS
-1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
-{&quot;errors&quot;:{&quot;email&quot;:[&quot;can&#39;t be blank&quot;]}}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.48">
-      <div class="step-ref passed">48</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 422</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.49">
-      <div class="step-ref passed">49</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == {&quot;errors&quot;:{&quot;email&quot;: [&quot;can&#39;t be blank&quot;]}}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2.4:56]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">debug</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2.4:56]</span>
-                <span class="scenario-name">Sign Up Error (UserName or Email is already taken)</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>299</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2.4:56]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2.4:56]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def dataGenerator = Java.type(&#39;helpers.DataGenerator&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="4.4">21:44:24.402 karate.env system property was: null 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.4:56]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">28</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.4:56]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">17</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.4:56]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.36">
-      <div class="step-ref passed">36</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.37">
-      <div class="step-ref passed">37</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="4.37">{
-  &quot;user&quot;: {
-      &quot;email&quot;: #(randomEmail),
-      &quot;password&quot;: &#39;12345678&#39;,
-      &quot;username&quot;: &quot;&quot;
-  }
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.47">
-      <div class="step-ref passed">47</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method Post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">253</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="4.47">21:44:24.449 request:
-1 &gt; POST https://api.realworld.io/api/users
-1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjcwNjMsImV4cCI6MTY5MzUxMTA2M30.3Lh8PMfwctgBqTCRYnLK4fYNLdVudKSu3IKLYb2WGcc
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 73
-1 &gt; Host: api.realworld.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;email&quot;:&quot;silas29@test.com&quot;,&quot;password&quot;:&quot;12345678&quot;,&quot;username&quot;:&quot;&quot;}}
-
-21:44:24.701 response time in milliseconds: 252
-1 &lt; 422
-1 &lt; Date: Sun, 02 Jul 2023 19:44:24 GMT
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 42
-1 &lt; Connection: keep-alive
-1 &lt; X-Powered-By: Express
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Etag: W/&quot;2a-AIsgLw77Dx1RWMepi6jZReyj6jg&quot;
-1 &lt; Via: 1.1 vegur
-1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=8oxihVPfq0PgxxDNWa9bGAXSvgLaOIuXp0GCjaM40qTh%2FCLH2wbJYYZzvIvAl%2BrHUA58IZjOJzTOHmDRsrz07fKYhbp%2FH2hnx%2F390rzxiyw886VdD3c0GQfFSuGdgY%2BjdmAv&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Server: cloudflare
-1 &lt; CF-RAY: 7e09621949960eb4-AMS
-1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
-{&quot;errors&quot;:{&quot;username&quot;:[&quot;can&#39;t be blank&quot;]}}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.48">
-      <div class="step-ref passed">48</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 422</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="4.49">
-      <div class="step-ref passed">49</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == {&quot;errors&quot;:{&quot;username&quot;: [&quot;can&#39;t be blank&quot;]}}</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2.5:57]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">debug</a>
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2.5:57]</span>
-                <span class="scenario-name">Sign Up Error (UserName or Email is already taken)</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>284</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2.5:57]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2.5:57]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def dataGenerator = Java.type(&#39;helpers.DataGenerator&#39;)</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="5.4">21:44:24.399 karate.env system property was: null 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.5:57]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.5">
-      <div class="step-ref bg-step">5</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomEmail = dataGenerator.getRandomEmail()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">26</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.5:57]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def randomName = dataGenerator.getRandomUserName()</span>
-      </div>
-    </div>
-    <div class="time-cell passed">16</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div data-parent="[2.5:57]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.7">
-      <div class="step-ref bg-step">7</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url apiUrl</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.36">
-      <div class="step-ref passed">36</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.37">
-      <div class="step-ref passed">37</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  <div class="preformatted" data-parent="5.37">{
-  &quot;user&quot;: {
-      &quot;email&quot;: #(randomEmail),
-      &quot;password&quot;: &#39;&#39;,
-      &quot;username&quot;: #(randomName)
-  }
-}</div>
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.47">
-      <div class="step-ref passed">47</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method Post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">241</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="5.47">21:44:24.444 request:
-1 &gt; POST https://api.realworld.io/api/users
-1 &gt; Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUBkZXYuY29tIiwidXNlcm5hbWUiOiJiYWNoYXJEZXYiLCJpYXQiOjE2ODgzMjcwNjMsImV4cCI6MTY5MzUxMTA2M30.3Lh8PMfwctgBqTCRYnLK4fYNLdVudKSu3IKLYb2WGcc
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 74
-1 &gt; Host: api.realworld.io
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;email&quot;:&quot;tamatha35@test.com&quot;,&quot;password&quot;:&quot;&quot;,&quot;username&quot;:&quot;Rolanda&quot;}}
-
-21:44:24.684 response time in milliseconds: 239
-1 &lt; 422
-1 &lt; Date: Sun, 02 Jul 2023 19:44:24 GMT
-1 &lt; Content-Type: application/json; charset=utf-8
-1 &lt; Content-Length: 42
-1 &lt; Connection: keep-alive
-1 &lt; X-Powered-By: Express
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Etag: W/&quot;2a-qbpXJMY/Kgu11LsJcjS0p5wC5b0&quot;
-1 &lt; Via: 1.1 vegur
-1 &lt; CF-Cache-Status: DYNAMIC
-1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=K9LIIcNsMA8IgUIEANLVE%2BiyaHU6Z6qfYeVvBt5KlbsOaU%2FCfIbkspKWnqlHVTYXgCYrCX%2F5Zb4254W%2BlRbA4bcSd4L1XNR3fIz2kFQSgXOGpkIXs%2FGEqRbJl2Y0v0TXhwj2&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
-1 &lt; Server: cloudflare
-1 &lt; CF-RAY: 7e096219287d06c4-AMS
-1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
-{&quot;errors&quot;:{&quot;password&quot;:[&quot;can&#39;t be blank&quot;]}}
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.48">
-      <div class="step-ref passed">48</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 422</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="5.49">
-      <div class="step-ref passed">49</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response == {&quot;errors&quot;:{&quot;password&quot;: [&quot;can&#39;t be blank&quot;]}}</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
