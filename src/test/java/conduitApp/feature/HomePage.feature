@@ -1,4 +1,4 @@
-@debug @parallel=false
+
 Feature: Test for the home page
 Background: Define URL 
   Given url apiUrl
@@ -56,5 +56,19 @@ Scenario: Get 10 articles from the page
             }
         }
   """
+@debug 
+Scenario: Conditional logic
+    Given params {limit:10, offset: 0}
+    Given path 'articles'
+    When method Get
+    Then status 200
+    * def favoritesCount = response.articles[0].favoritesCount
+    * def article = response.articles[0]
+    # * if(favoritesCount == 0) karate.call('classpath:helpers/Addlikes.feature', article)
+    * def result = favoritesCount == 0 ? karate.call('classpath:helpers/Addlikes.feature', article).likesCount : favoritesCount
 
- 
+    Given params {limit:10, offset: 0}
+    Given path 'articles'
+    When method Get
+    Then status 200
+    And match response.articles[0].favoritesCount == result 

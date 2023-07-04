@@ -8,7 +8,7 @@ function fn() {
     apiUrl: 'https://api.realworld.io/api/'
   }
   if (env == 'dev') {
-    config.userEmail = 'bassam@dev.com'
+    config.userEmail = 'bassam@test.com'
     config.userPassword = '12345678'
   }  
   if (env == 'tst') {
