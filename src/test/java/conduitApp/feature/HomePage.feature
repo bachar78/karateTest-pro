@@ -101,6 +101,6 @@ Scenario: Number to string
 Scenario: Number to string 
   * def foo = "10"
   * def json1 = {"bar": #(foo*1)}
-  * def json2 = {"bar": #(parseInt(foo))}
+  * def json2 = {"bar": #(~~parseInt(foo))}
   * match json1 == {"bar": 10}
   * match json2 == {"bar": 10}
