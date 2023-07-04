@@ -56,7 +56,7 @@ Scenario: Get 10 articles from the page
             }
         }
   """
-@debug 
+ 
 Scenario: Conditional logic
     Given params {limit:10, offset: 0}
     Given path 'articles'
@@ -72,3 +72,35 @@ Scenario: Conditional logic
     When method Get
     Then status 200
     And match response.articles[0].favoritesCount == result 
+
+
+Scenario: Retry Call
+  * configure retry = {count: 10, interval: 5000}
+    Given params {limit:10, offset: 0}
+    Given path 'articles'
+    And retry until response.articles[0].favoritesCount == 1
+    When method Get
+    Then status 200
+
+Scenario: Sleep Call
+  * def sleep = function(pause){java.lang.Thread.sleep(pause)}
+
+    Given params {limit:10, offset: 0}
+    Given path 'articles'
+    When method Get
+    * eval sleep(10000)
+    Then status 200
+
+
+Scenario: Number to string 
+  * def foo = 10
+  * def json = {"bar": #(foo+'')}
+  * match json == {"bar": "10"}
+
+  @debug
+Scenario: Number to string 
+  * def foo = "10"
+  * def json1 = {"bar": #(foo*1)}
+  * def json2 = {"bar": #(parseInt(foo))}
+  * match json1 == {"bar": 10}
+  * match json2 == {"bar": 10}
