@@ -1,0 +1,17 @@
+RUN	performance.perfTest	perftest	1688565878290	 	3.7.4
+USER	create and delete article	START	1688565878331
+REQUEST		POST /api/users/login	1688565878373	1688565878858	OK	 
+REQUEST		POST /api/articles	1688565878939	1688565879207	KO	conduitApp/performance/createArticle.feature:16 status 200
+USER	create and delete article	END	1688565879226
+USER	create and delete article	START	1688565882326
+REQUEST		POST /api/articles	1688565882362	1688565882646	KO	conduitApp/performance/createArticle.feature:16 status 200
+USER	create and delete article	END	1688565882648
+USER	create and delete article	START	1688565883325
+REQUEST		POST /api/articles	1688565883346	1688565883771	KO	conduitApp/performance/createArticle.feature:16 status 200
+USER	create and delete article	END	1688565883777
+USER	create and delete article	START	1688565884325
+REQUEST		POST /api/articles	1688565884345	1688565884632	KO	conduitApp/performance/createArticle.feature:16 status 200
+USER	create and delete article	END	1688565884636
+USER	create and delete article	START	1688565885325
+REQUEST		POST /api/articles	1688565885350	1688565885627	KO	conduitApp/performance/createArticle.feature:16 status 200
+USER	create and delete article	END	1688565885629
