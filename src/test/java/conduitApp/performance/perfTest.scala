@@ -3,6 +3,8 @@ package performance
 import com.intuit.karate.gatling.PreDef._
 import io.gatling.core.Predef._
 import scala.concurrent.duration._
+import conduitApp.performance.createTokens.CreateTokens
+import scala.util.Random
 
 class perfTest extends Simulation {
 
@@ -10,17 +12,25 @@ class perfTest extends Simulation {
     "/api/articles/{articleId}" -> Nil
   )
 
+
+CreateTokens.createAccessTokens();
+
   // protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
   protocol.runner.karateEnv("dev")
 
   val csvFeeder = csv("articles.csv").circular;
-  val createArticle = scenario("create and delete article").feed(csvFeeder).exec(karateFeature("classpath:conduitApp/performance/createArticle.feature"))
+  
+  val tokenFeeder = Iterator.continually {Map("token" -> CreateTokens.getNextToken())};
+  val createArticle = scenario("create and delete article")
+                      .feed(csvFeeder)
+                      .feed(tokenFeeder)
+                      .exec(karateFeature("classpath:conduitApp/performance/createArticle.feature"))
 
   setUp(
     createArticle.inject(
       atOnceUsers(1),
       nothingFor(4),
-      constantUsersPerSec(1).during(2 seconds)
+      constantUsersPerSec(1).during(4 seconds)
       // constantUsersPerSec(2).during(10 seconds),
       // rampUsersPerSec(2).to(10).during(20 seconds),
       // nothingFor(5),
