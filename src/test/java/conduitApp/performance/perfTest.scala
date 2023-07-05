@@ -8,19 +8,17 @@ import scala.util.Random
 
 class perfTest extends Simulation {
 
+CreateTokens.createAccessTokens()
+
   val protocol = karateProtocol(
     "/api/articles/{articleId}" -> Nil
   )
 
+  protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
+  // protocol.runner.karateEnv("dev")
 
-CreateTokens.createAccessTokens();
-
-  // protocol.nameResolver = (req, ctx) => req.getHeader("karate-name")
-  protocol.runner.karateEnv("dev")
-
-  val csvFeeder = csv("articles.csv").circular;
-  
-  val tokenFeeder = Iterator.continually {Map("token" -> CreateTokens.getNextToken())};
+  val csvFeeder = csv("articles.csv").circular
+  val tokenFeeder = Iterator.continually(Map("token" -> CreateTokens.getNextToken))
   val createArticle = scenario("create and delete article")
                       .feed(csvFeeder)
                       .feed(tokenFeeder)
@@ -30,11 +28,11 @@ CreateTokens.createAccessTokens();
     createArticle.inject(
       atOnceUsers(1),
       nothingFor(4),
-      constantUsersPerSec(1).during(4 seconds)
-      // constantUsersPerSec(2).during(10 seconds),
-      // rampUsersPerSec(2).to(10).during(20 seconds),
-      // nothingFor(5),
-      // constantUsersPerSec(1).during(5 seconds)
+      constantUsersPerSec(1).during(4 seconds),
+      constantUsersPerSec(2).during(10 seconds),
+      rampUsersPerSec(2).to(10).during(20 seconds),
+      nothingFor(5),
+      constantUsersPerSec(1).during(5 seconds)
       ).protocols(protocol)
   )
 

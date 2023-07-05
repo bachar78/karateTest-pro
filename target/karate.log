@@ -1,415 +1,840 @@
-16:04:33.886 [main] INFO  i.g.c.config.GatlingConfiguration$ - Gatling will try to load 'gatling.conf' config file as ClassLoader resource.
-16:04:34.043 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
-16:04:34.546 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:34.853 [main] INFO  com.intuit.karate - karate.env system property was: null 
-16:04:34.856 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
-16:04:34.916 [main] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/users/login
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 58
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"user":{"email":"bassam@test.com","password":"12345678"}}
-
-16:04:35.627 [main] DEBUG com.intuit.karate - response time in milliseconds: 708
-1 < 200
-1 < Date: Wed, 05 Jul 2023 14:04:35 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Transfer-Encoding: chunked
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"147-Ks+SV5UOV/+q92s+PAQ8MPW2HPc"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dtEZ9E7pzBq892LaskNb0bytwwVZbdMBc5kYYnhUHOwOsNVMfaLNFgCvNMKUTPuerHkRiNXlql7j2jdNuvuYQSYKj9jZPyH1CpQYPfYV%2Br3quduQdjhS3Pzus4yQORP9bxKZ"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e2028703c0d0df3-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc1LCJleHAiOjE2OTM3NDk4NzV9.iD2d0S4o2WisaeOaaXUtT5E7edvAxiylGdScqFdupd0"}}
-
-16:04:35.632 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
-16:04:35.640 [main] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/users/login
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc1LCJleHAiOjE2OTM3NDk4NzV9.iD2d0S4o2WisaeOaaXUtT5E7edvAxiylGdScqFdupd0
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 58
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"user":{"email":"bassam@test.com","password":"12345678"}}
-
-16:04:36.205 [main] DEBUG com.intuit.karate - response time in milliseconds: 563
-1 < 200
-1 < Date: Wed, 05 Jul 2023 14:04:36 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Transfer-Encoding: chunked
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"147-czgQ6AP5y0dPfRG2R1wXiNR3vkE"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FKALFwctI2P7BWbILb8GTNCOkjHc%2FV%2B%2FKTnqCfjMjt4airqnYPbnIyh2pcTg8qeonERFub%2FsPKXJTp174I19VQGhzDaVDJIJkPXiejWhyKDqsJ6mpKTacqZsJduwhqAGq6s6"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e202873bc8db902-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc2LCJleHAiOjE2OTM3NDk4NzZ9.furD9DplALt9LNIcIJ-atnWDMmMymxkgDWl0SJK7ooY"}}
-
-16:04:36.221 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:36.226 [main] INFO  com.intuit.karate - karate.env system property was: null 
-16:04:36.226 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
-16:04:36.232 [main] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/users/login
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 58
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"user":{"email":"bassam@test.com","password":"12345678"}}
-
-16:04:36.796 [main] DEBUG com.intuit.karate - response time in milliseconds: 562
-1 < 200
-1 < Date: Wed, 05 Jul 2023 14:04:36 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Transfer-Encoding: chunked
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"147-czgQ6AP5y0dPfRG2R1wXiNR3vkE"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=le32m%2FcFh5KkdGKASCAl82phSYKahp3cCNkoZTcBB1P0wO%2BwEvfNyLoho4k5ZsOrEafg1IVABr4ue6F%2Bh8xmKTatcHRgErtmnz%2BjnnJRKpY3qxf7pzr%2BQGZPy4El1v6TQV0s"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e2028779ff40bc5-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc2LCJleHAiOjE2OTM3NDk4NzZ9.furD9DplALt9LNIcIJ-atnWDMmMymxkgDWl0SJK7ooY"}}
-
-16:04:36.801 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
-16:04:36.805 [main] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/users/login
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc2LCJleHAiOjE2OTM3NDk4NzZ9.furD9DplALt9LNIcIJ-atnWDMmMymxkgDWl0SJK7ooY
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 58
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"user":{"email":"bassam@test.com","password":"12345678"}}
-
-16:04:37.286 [main] DEBUG com.intuit.karate - response time in milliseconds: 480
-1 < 200
-1 < Date: Wed, 05 Jul 2023 14:04:37 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Transfer-Encoding: chunked
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"147-JZ6xmXRAW0hRDtBMp8uduQHR84c"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IsdRZHQIUKqti%2FJyq4r4Ngt%2FC78%2Bzy9N%2FYbexmFIKs9X7uPub3iqawIjEWWVfxz7f2stJku32YDX0Fz3P%2FqCOrCvC1mRfFIqwKFc1MqgNFkwTX3rkv3ULVd%2BpHiZU5dhZUVT"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e20287ada5b1ca2-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc3LCJleHAiOjE2OTM3NDk4Nzd9.YZZm274KuRkITP4Ax149K_EY3zY4NPqWg_RHEhueeyo"}}
-
-16:04:37.294 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:37.299 [main] INFO  com.intuit.karate - karate.env system property was: null 
-16:04:37.300 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
-16:04:37.305 [main] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/users/login
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 58
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"user":{"email":"bassam@test.com","password":"12345678"}}
-
-16:04:37.777 [main] DEBUG com.intuit.karate - response time in milliseconds: 470
-1 < 200
-1 < Date: Wed, 05 Jul 2023 14:04:37 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Transfer-Encoding: chunked
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"147-JZ6xmXRAW0hRDtBMp8uduQHR84c"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ew8tIfjskNO%2Bv39prgfL1sfiXCgx2zuQxzX1s5tjzSF29P%2B9xWVHdl%2FyOEd8wJpoAsbkYnBXPnzO8Qe0MlPWbM2nNmD2%2FEv%2BKwPDYisCkUcyVGt1ouesy0PElCemN90zRHeX"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e20287e0871b75b-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc3LCJleHAiOjE2OTM3NDk4Nzd9.YZZm274KuRkITP4Ax149K_EY3zY4NPqWg_RHEhueeyo"}}
-
-16:04:37.781 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
-16:04:37.785 [main] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/users/login
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc3LCJleHAiOjE2OTM3NDk4Nzd9.YZZm274KuRkITP4Ax149K_EY3zY4NPqWg_RHEhueeyo
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 58
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"user":{"email":"bassam@test.com","password":"12345678"}}
-
-16:04:38.269 [main] DEBUG com.intuit.karate - response time in milliseconds: 482
-1 < 200
-1 < Date: Wed, 05 Jul 2023 14:04:38 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Transfer-Encoding: chunked
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"147-BGxX9apXvtIAJaehDBrqc/w0yo4"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aNuYXEMXVR%2FMBVwAXb7Ect3GYJjd6PN5E7sIZfz9Y2fNWFrrKhn9UIAG%2FDGBJ%2B58aYamnlEy6aSje1in8lpcLhcrA7%2BtwI8HEvtWqimA8%2BOYWdGqlgjiLVGo2PpZT25VXGko"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e202880fed20b38-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc4LCJleHAiOjE2OTM3NDk4Nzh9.g5gskTyGpFqFowc2VUJrhj7lzRDm9IQsln9c4DdpdzM"}}
-
-16:04:38.319 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.c.stats.writer.ConsoleDataWriter - Initializing
-16:04:38.319 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  i.g.c.stats.writer.LogFileDataWriter - Initializing
-16:04:38.322 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.c.stats.writer.ConsoleDataWriter - Initialized
-16:04:38.322 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  i.g.c.stats.writer.LogFileDataWriter - Initialized
-16:04:38.336 [gatling-1-1] INFO  com.intuit.karate.Runner - karate.env is: 'dev'
-16:04:38.357 [gatling-1-1] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:38.367 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: dev 
-16:04:38.368 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
-16:04:38.373 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/users/login
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 58
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"user":{"email":"bassam@test.com","password":"12345678"}}
-
-16:04:38.860 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - response time in milliseconds: 485
-1 < 200
-1 < Date: Wed, 05 Jul 2023 14:04:38 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Transfer-Encoding: chunked
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"147-BGxX9apXvtIAJaehDBrqc/w0yo4"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=L%2FZEExOSQh%2BrOnI0DTB7%2Bj4jLVm4wMHwFmaVwmemC5IaQRboYd6jh1VJE23mtSnrQRrmPBZtZt%2BcO7aIbr2T3RvqzODHpqGJnFFAfoaj6YzFxYYdOCFw1LMnbqOdkyfJs6Ud"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e2028848a09b94b-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"user":{"email":"bassam@test.com","username":"Bassam","bio":null,"image":"https://api.realworld.io/images/smiley-cyrus.jpeg","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc4LCJleHAiOjE2OTM3NDk4Nzh9.g5gskTyGpFqFowc2VUJrhj7lzRDm9IQsln9c4DdpdzM"}}
-
-16:04:38.867 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
-16:04:38.939 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/articles
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc2LCJleHAiOjE2OTM3NDk4NzZ9.furD9DplALt9LNIcIJ-atnWDMmMymxkgDWl0SJK7ooY
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 134
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"article":{"tagList":[],"title":"title1","description":" description1","body":"Summer will end soon enough, and childhood as well."}}
-
-16:04:39.209 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - response time in milliseconds: 268
-1 < 422
-1 < Date: Wed, 05 Jul 2023 14:04:39 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Content-Length: 39
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BZFsuld5z0gohXed9S8RCY8HW6oRmmSgm2njbd05%2FoBPbYsicks1CWLBH4klQBgZsblrMHrsmzXN47SbbGdcXQ8lU7tiU97vQ3wpSKqCpBU8kiXGz2VlA6MZ1jytScQJOllL"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e2028882f3d1cca-AMS
-1 < alt-svc: h3=":443"; ma=86400
+16:59:55.005 [main] INFO  i.g.c.config.GatlingConfiguration$ - Gatling will try to load 'gatling.conf' config file as ClassLoader resource.
+16:59:55.161 [GatlingSystem-akka.actor.default-dispatcher-5] INFO  akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+16:59:55.951 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:59:55.956 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+16:59:56.411 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+16:59:56.771 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:59:56.772 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+16:59:57.115 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+16:59:57.677 [main] INFO  com.intuit.karate - karate.env system property was: null 
+16:59:57.678 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+16:59:58.147 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+16:59:58.695 [GatlingSystem-akka.actor.default-dispatcher-14] INFO  i.g.c.stats.writer.ConsoleDataWriter - Initializing
+16:59:58.695 [GatlingSystem-akka.actor.default-dispatcher-15] INFO  i.g.c.stats.writer.LogFileDataWriter - Initializing
+16:59:58.698 [GatlingSystem-akka.actor.default-dispatcher-14] INFO  i.g.c.stats.writer.ConsoleDataWriter - Initialized
+16:59:58.698 [GatlingSystem-akka.actor.default-dispatcher-15] INFO  i.g.c.stats.writer.LogFileDataWriter - Initialized
+16:59:58.738 [GatlingSystem-akka.actor.default-dispatcher-23] INFO  com.intuit.karate - karate.env system property was: null 
+16:59:58.738 [GatlingSystem-akka.actor.default-dispatcher-23] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:helpers/CreateToken.feature
+16:59:59.232 [GatlingSystem-akka.actor.default-dispatcher-23] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:helpers/CreateToken.feature
+16:59:59.740 [GatlingSystem-akka.actor.default-dispatcher-23] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:02.735 [GatlingSystem-akka.actor.default-dispatcher-36] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:03.164 [GatlingSystem-akka.actor.default-dispatcher-36] INFO  com.intuit.karate - [print] Chant1-196105 
+17:00:03.732 [GatlingSystem-akka.actor.default-dispatcher-43] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:04.151 [GatlingSystem-akka.actor.default-dispatcher-43] INFO  com.intuit.karate - [print] Guitar1-196105 
+17:00:04.730 [GatlingSystem-akka.actor.default-dispatcher-52] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:05.020 [GatlingSystem-akka.actor.default-dispatcher-52] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 261, url: https://api.realworld.io/api/articles, response: 
 {"errors":{"title":["must be unique"]}}
-
-16:04:39.222 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:16
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:05.726 [GatlingSystem-akka.actor.default-dispatcher-71] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:06.022 [GatlingSystem-akka.actor.default-dispatcher-71] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 278, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:06.725 [GatlingSystem-akka.actor.default-dispatcher-83] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:07.005 [GatlingSystem-akka.actor.default-dispatcher-83] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:07.229 [GatlingSystem-akka.actor.default-dispatcher-95] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:07.687 [GatlingSystem-akka.actor.default-dispatcher-95] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:07.721 [GatlingSystem-akka.actor.default-dispatcher-100] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:08.171 [GatlingSystem-akka.actor.default-dispatcher-100] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 434, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:08.216 [GatlingSystem-akka.actor.default-dispatcher-12] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:08.562 [GatlingSystem-akka.actor.default-dispatcher-12] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 331, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:08.726 [GatlingSystem-akka.actor.default-dispatcher-30] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:09.126 [GatlingSystem-akka.actor.default-dispatcher-30] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 380, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:09.231 [GatlingSystem-akka.actor.default-dispatcher-47] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:09.533 [GatlingSystem-akka.actor.default-dispatcher-47] INFO  com.intuit.karate - [print] Chant1-196105 
+17:00:09.724 [GatlingSystem-akka.actor.default-dispatcher-57] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:10.142 [GatlingSystem-akka.actor.default-dispatcher-57] INFO  com.intuit.karate - [print] Guitar1-196105 
+17:00:10.222 [GatlingSystem-akka.actor.default-dispatcher-65] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:10.630 [GatlingSystem-akka.actor.default-dispatcher-65] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 386, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:10.727 [GatlingSystem-akka.actor.default-dispatcher-75] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:11.119 [GatlingSystem-akka.actor.default-dispatcher-75] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 371, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:11.212 [GatlingSystem-akka.actor.default-dispatcher-83] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:11.612 [GatlingSystem-akka.actor.default-dispatcher-83] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 376, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:11.722 [GatlingSystem-akka.actor.default-dispatcher-97] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:12.201 [GatlingSystem-akka.actor.default-dispatcher-97] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 456, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:12.225 [GatlingSystem-akka.actor.default-dispatcher-9] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:12.500 [GatlingSystem-akka.actor.default-dispatcher-9] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 263, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:12.725 [GatlingSystem-akka.actor.default-dispatcher-13] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:12.997 [GatlingSystem-akka.actor.default-dispatcher-13] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 252, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:13.226 [GatlingSystem-akka.actor.default-dispatcher-39] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:13.683 [GatlingSystem-akka.actor.default-dispatcher-39] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:13.721 [GatlingSystem-akka.actor.default-dispatcher-41] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:14.004 [GatlingSystem-akka.actor.default-dispatcher-41] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 266, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:14.220 [GatlingSystem-akka.actor.default-dispatcher-59] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:14.506 [GatlingSystem-akka.actor.default-dispatcher-59] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 260, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:14.725 [GatlingSystem-akka.actor.default-dispatcher-69] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:15.003 [GatlingSystem-akka.actor.default-dispatcher-69] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 258, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:15.221 [GatlingSystem-akka.actor.default-dispatcher-89] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:15.537 [GatlingSystem-akka.actor.default-dispatcher-89] INFO  com.intuit.karate - [print] Chant1-196105 
+17:00:15.709 [GatlingSystem-akka.actor.default-dispatcher-97] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:16.141 [GatlingSystem-akka.actor.default-dispatcher-97] INFO  com.intuit.karate - [print] Guitar1-196105 
+17:00:16.211 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:16.494 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 272, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:16.709 [GatlingSystem-akka.actor.default-dispatcher-12] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:16.987 [GatlingSystem-akka.actor.default-dispatcher-12] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 259, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:17.217 [GatlingSystem-akka.actor.default-dispatcher-29] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:17.504 [GatlingSystem-akka.actor.default-dispatcher-29] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 270, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:17.722 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:17.986 [GatlingSystem-akka.actor.default-dispatcher-44] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 244, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:18.224 [GatlingSystem-akka.actor.default-dispatcher-55] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:18.505 [GatlingSystem-akka.actor.default-dispatcher-55] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 265, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:18.726 [GatlingSystem-akka.actor.default-dispatcher-64] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:19.005 [GatlingSystem-akka.actor.default-dispatcher-64] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 260, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:19.055 [GatlingSystem-akka.actor.default-dispatcher-85] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:19.357 [GatlingSystem-akka.actor.default-dispatcher-85] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:19.384 [GatlingSystem-akka.actor.default-dispatcher-90] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:19.640 [GatlingSystem-akka.actor.default-dispatcher-90] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 245, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:19.723 [GatlingSystem-akka.actor.default-dispatcher-99] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:19.964 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:19.997 [GatlingSystem-akka.actor.default-dispatcher-99] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:20.222 [GatlingSystem-akka.actor.default-dispatcher-22] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:20.272 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 281, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:20.470 [GatlingSystem-akka.actor.default-dispatcher-27] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:20.506 [GatlingSystem-akka.actor.default-dispatcher-22] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 265, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:20.725 [GatlingSystem-akka.actor.default-dispatcher-40] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:20.746 [GatlingSystem-akka.actor.default-dispatcher-27] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 256, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:20.958 [GatlingSystem-akka.actor.default-dispatcher-60] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:20.996 [GatlingSystem-akka.actor.default-dispatcher-40] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 256, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:21.220 [GatlingSystem-akka.actor.default-dispatcher-73] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:21.261 [GatlingSystem-akka.actor.default-dispatcher-60] INFO  com.intuit.karate - [print] Chant1-196105 
+17:00:21.455 [GatlingSystem-akka.actor.default-dispatcher-76] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:21.510 [GatlingSystem-akka.actor.default-dispatcher-73] INFO  com.intuit.karate - [print] Guitar1-196105 
+17:00:21.723 [GatlingSystem-akka.actor.default-dispatcher-86] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:21.728 [GatlingSystem-akka.actor.default-dispatcher-76] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 261, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:21.960 [GatlingSystem-akka.actor.default-dispatcher-98] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:21.994 [GatlingSystem-akka.actor.default-dispatcher-86] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 253, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:22.221 [GatlingSystem-akka.actor.default-dispatcher-11] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:22.227 [GatlingSystem-akka.actor.default-dispatcher-98] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 258, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:22.464 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:22.494 [GatlingSystem-akka.actor.default-dispatcher-11] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 258, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:22.714 [GatlingSystem-akka.actor.default-dispatcher-22] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:22.736 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 252, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:22.956 [GatlingSystem-akka.actor.default-dispatcher-27] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:22.986 [GatlingSystem-akka.actor.default-dispatcher-22] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 250, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:23.215 [GatlingSystem-akka.actor.default-dispatcher-27] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 250, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:23.217 [GatlingSystem-akka.actor.default-dispatcher-54] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:23.456 [GatlingSystem-akka.actor.default-dispatcher-67] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:23.481 [GatlingSystem-akka.actor.default-dispatcher-54] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 246, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:23.713 [GatlingSystem-akka.actor.default-dispatcher-97] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:23.720 [GatlingSystem-akka.actor.default-dispatcher-67] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 256, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:23.912 [GatlingSystem-akka.actor.default-dispatcher-76] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:24.044 [GatlingSystem-akka.actor.default-dispatcher-97] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 311, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:24.121 [GatlingSystem-akka.actor.default-dispatcher-4] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:24.203 [GatlingSystem-akka.actor.default-dispatcher-76] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 274, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:24.312 [GatlingSystem-akka.actor.default-dispatcher-98] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:24.398 [GatlingSystem-akka.actor.default-dispatcher-4] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 267, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:24.506 [GatlingSystem-akka.actor.default-dispatcher-12] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:24.595 [GatlingSystem-akka.actor.default-dispatcher-98] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 263, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:24.711 [GatlingSystem-akka.actor.default-dispatcher-30] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:24.772 [GatlingSystem-akka.actor.default-dispatcher-12] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:24.877 [GatlingSystem-akka.actor.default-dispatcher-89] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:24.993 [GatlingSystem-akka.actor.default-dispatcher-30] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 265, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:25.050 [GatlingSystem-akka.actor.default-dispatcher-62] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:25.176 [GatlingSystem-akka.actor.default-dispatcher-89] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:25.209 [GatlingSystem-akka.actor.default-dispatcher-54] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:25.306 [GatlingSystem-akka.actor.default-dispatcher-62] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 246, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:25.370 [GatlingSystem-akka.actor.default-dispatcher-64] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:25.487 [GatlingSystem-akka.actor.default-dispatcher-54] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 264, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:25.541 [GatlingSystem-akka.actor.default-dispatcher-84] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:25.626 [GatlingSystem-akka.actor.default-dispatcher-64] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 251, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:25.707 [GatlingSystem-akka.actor.default-dispatcher-101] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:25.795 [GatlingSystem-akka.actor.default-dispatcher-84] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 247, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:25.874 [GatlingSystem-akka.actor.default-dispatcher-9] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:25.963 [GatlingSystem-akka.actor.default-dispatcher-101] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 250, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:26.046 [GatlingSystem-akka.actor.default-dispatcher-25] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:26.149 [GatlingSystem-akka.actor.default-dispatcher-9] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 265, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:26.215 [GatlingSystem-akka.actor.default-dispatcher-85] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:26.325 [GatlingSystem-akka.actor.default-dispatcher-25] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 261, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:26.379 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:26.497 [GatlingSystem-akka.actor.default-dispatcher-85] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 267, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:26.551 [GatlingSystem-akka.actor.default-dispatcher-56] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:26.681 [GatlingSystem-akka.actor.default-dispatcher-44] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 290, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:26.709 [GatlingSystem-akka.actor.default-dispatcher-39] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:26.837 [GatlingSystem-akka.actor.default-dispatcher-56] INFO  com.intuit.karate - [print] Chant1-196105 
+17:00:26.875 [GatlingSystem-akka.actor.default-dispatcher-82] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:26.990 [GatlingSystem-akka.actor.default-dispatcher-39] INFO  com.intuit.karate - [print] Guitar1-196105 
+17:00:27.043 [GatlingSystem-akka.actor.default-dispatcher-64] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:27.147 [GatlingSystem-akka.actor.default-dispatcher-82] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 262, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:27.221 [GatlingSystem-akka.actor.default-dispatcher-102] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:27.328 [GatlingSystem-akka.actor.default-dispatcher-64] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 274, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:27.374 [GatlingSystem-akka.actor.default-dispatcher-10] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:27.476 [GatlingSystem-akka.actor.default-dispatcher-102] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 244, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:27.539 [GatlingSystem-akka.actor.default-dispatcher-9] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:27.639 [GatlingSystem-akka.actor.default-dispatcher-10] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:27.711 [GatlingSystem-akka.actor.default-dispatcher-29] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:27.817 [GatlingSystem-akka.actor.default-dispatcher-9] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
 Then status 200
 status code was: 422, expected: 200, response time in milliseconds: 268, url: https://api.realworld.io/api/articles, response: 
 {"errors":{"title":["must be unique"]}}
-classpath:conduitApp/performance/createArticle.feature:16
-16:04:42.328 [gatling-1-2] INFO  com.intuit.karate.Runner - karate.env is: 'dev'
-16:04:42.329 [gatling-1-2] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:42.339 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: dev 
-16:04:42.362 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/articles
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc3LCJleHAiOjE2OTM3NDk4Nzd9.YZZm274KuRkITP4Ax149K_EY3zY4NPqWg_RHEhueeyo
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 157
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"article":{"tagList":[],"title":"title2","description":" description2","body":"Things are not always as they seemed, much that may seem evil can be good."}}
-
-16:04:42.647 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - response time in milliseconds: 284
-1 < 422
-1 < Date: Wed, 05 Jul 2023 14:04:42 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Content-Length: 39
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=j8EbKZKQr6KxrTXzdP8MtMC8LSi8eT9HPz60YmWsmNsVpNxKnUigW7FCm3vQ25NgW2xFQZS6agRO4iAWRhpTiQcXRdXo0EMQO7wBYVk84wsEj6gjQQFmaqi0I3okTmVfsgfC"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e20289d9c100e08-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"errors":{"title":["must be unique"]}}
-
-16:04:42.648 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:16
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:27.876 [GatlingSystem-akka.actor.default-dispatcher-85] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:27.994 [GatlingSystem-akka.actor.default-dispatcher-29] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
 Then status 200
-status code was: 422, expected: 200, response time in milliseconds: 284, url: https://api.realworld.io/api/articles, response: 
+status code was: 422, expected: 200, response time in milliseconds: 263, url: https://api.realworld.io/api/articles, response: 
 {"errors":{"title":["must be unique"]}}
-classpath:conduitApp/performance/createArticle.feature:16
-16:04:43.326 [gatling-1-3] INFO  com.intuit.karate.Runner - karate.env is: 'dev'
-16:04:43.327 [gatling-1-3] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:43.334 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: dev 
-16:04:43.346 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/articles
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc4LCJleHAiOjE2OTM3NDk4Nzh9.g5gskTyGpFqFowc2VUJrhj7lzRDm9IQsln9c4DdpdzM
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 103
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"article":{"tagList":[],"title":"title3","description":" description3","body":"The North remembers."}}
-
-16:04:43.772 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - response time in milliseconds: 425
-1 < 422
-1 < Date: Wed, 05 Jul 2023 14:04:43 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Content-Length: 39
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WJrJxsQFEqNolPm48CX%2Fn7dv8lMamNNEUcZa4TbIHaDejPp84f3nq1fQLyz1tq4VJkZCV2fgs886luTQghn23T7uxDC7xctHmoZVvT2onaFmhiE%2BX3oEBhIL5lKqdYVFgcP1"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e2028a3b81e0e70-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"errors":{"title":["must be unique"]}}
-
-16:04:43.774 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:16
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:28.049 [GatlingSystem-akka.actor.default-dispatcher-51] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:28.161 [GatlingSystem-akka.actor.default-dispatcher-85] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
 Then status 200
-status code was: 422, expected: 200, response time in milliseconds: 425, url: https://api.realworld.io/api/articles, response: 
+status code was: 422, expected: 200, response time in milliseconds: 265, url: https://api.realworld.io/api/articles, response: 
 {"errors":{"title":["must be unique"]}}
-classpath:conduitApp/performance/createArticle.feature:16
-16:04:44.327 [gatling-1-4] INFO  com.intuit.karate.Runner - karate.env is: 'dev'
-16:04:44.329 [gatling-1-4] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:44.335 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.core.controller.inject.Injector - Scenario create and delete article has finished injecting
-16:04:44.335 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  i.g.core.controller.inject.Injector - Injecting is done
-16:04:44.335 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: dev 
-16:04:44.345 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/articles
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc2LCJleHAiOjE2OTM3NDk4NzZ9.furD9DplALt9LNIcIJ-atnWDMmMymxkgDWl0SJK7ooY
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 108
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"article":{"tagList":[],"title":"title1","description":" description1","body":"The things I do for love."}}
-
-16:04:44.634 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - response time in milliseconds: 287
-1 < 422
-1 < Date: Wed, 05 Jul 2023 14:04:44 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Content-Length: 39
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bxQ5ZCQ8AFynEYnhMY1A%2FTwsZgaZPlIqU8WwJYvVVis%2BXwxrNSyaVPzy2oUUzWa1pX7iAXDKpTAAKWSH%2FPB0oaVv1r2ZwH6N5p2hfoYH7XXe5%2BPz6l8KetG0OeGYfSRaNU8C"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e2028aa18e00eaf-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"errors":{"title":["must be unique"]}}
-
-16:04:44.635 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:16
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:28.203 [GatlingSystem-akka.actor.default-dispatcher-40] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:28.326 [GatlingSystem-akka.actor.default-dispatcher-51] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
 Then status 200
-status code was: 422, expected: 200, response time in milliseconds: 287, url: https://api.realworld.io/api/articles, response: 
+status code was: 422, expected: 200, response time in milliseconds: 258, url: https://api.realworld.io/api/articles, response: 
 {"errors":{"title":["must be unique"]}}
-classpath:conduitApp/performance/createArticle.feature:16
-16:04:45.327 [gatling-1-5] INFO  com.intuit.karate.Runner - karate.env is: 'dev'
-16:04:45.329 [gatling-1-5] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-16:04:45.337 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: dev 
-16:04:45.349 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - request:
-1 > POST https://api.realworld.io/api/articles
-1 > Authorization: Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc3NhbUB0ZXN0LmNvbSIsInVzZXJuYW1lIjoiQmFzc2FtIiwiaWF0IjoxNjg4NTY1ODc3LCJleHAiOjE2OTM3NDk4Nzd9.YZZm274KuRkITP4Ax149K_EY3zY4NPqWg_RHEhueeyo
-1 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 153
-1 > Host: api.realworld.io
-1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
-1 > Accept-Encoding: gzip,deflate
-{"article":{"tagList":[],"title":"title2","description":" description2","body":"Once you\u2019ve accepted your flaws, no one can use them against you."}}
-
-16:04:45.628 [GatlingSystem-akka.actor.default-dispatcher-6] DEBUG com.intuit.karate - response time in milliseconds: 277
-1 < 422
-1 < Date: Wed, 05 Jul 2023 14:04:45 GMT
-1 < Content-Type: application/json; charset=utf-8
-1 < Content-Length: 39
-1 < Connection: keep-alive
-1 < X-Powered-By: Express
-1 < Access-Control-Allow-Origin: *
-1 < Etag: W/"27-BNeuaWQ7DHvW/r+pl+qdJiF06Is"
-1 < Via: 1.1 vegur
-1 < CF-Cache-Status: DYNAMIC
-1 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eJaLaSFFWHkjNLZt%2BRyXMjXwXha6z3eCw07y7MLVDH6H%2BIjjZBpqaYg0%2F31swDzbrKaVNrh8DeV5ZM118bIZ%2B0EFS%2FmkMjImXZ2vdhf7mLel2%2BuCyp6zOVUJdsaX3rb2CtKa"}],"group":"cf-nel","max_age":604800}
-1 < NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
-1 < Server: cloudflare
-1 < CF-RAY: 7e2028b03916b918-AMS
-1 < alt-svc: h3=":443"; ma=86400
-{"errors":{"title":["must be unique"]}}
-
-16:04:45.629 [GatlingSystem-akka.actor.default-dispatcher-6] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:16
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:28.375 [GatlingSystem-akka.actor.default-dispatcher-78] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:28.463 [GatlingSystem-akka.actor.default-dispatcher-40] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
 Then status 200
-status code was: 422, expected: 200, response time in milliseconds: 277, url: https://api.realworld.io/api/articles, response: 
+status code was: 422, expected: 200, response time in milliseconds: 252, url: https://api.realworld.io/api/articles, response: 
 {"errors":{"title":["must be unique"]}}
-classpath:conduitApp/performance/createArticle.feature:16
-16:04:45.630 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  i.g.core.controller.inject.Injector - All users of scenario create and delete article are stopped
-16:04:45.631 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  i.g.core.controller.inject.Injector - Stopping
-16:04:45.631 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  i.gatling.core.controller.Controller - Injector has stopped, initiating graceful stop
-16:04:45.651 [GatlingSystem-akka.actor.default-dispatcher-9] INFO  akka.actor.CoordinatedShutdown - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
-16:04:45.670 [main] INFO  i.gatling.charts.stats.LogFileReader - Collected List(/Users/bachardaowd/Desktop/karateProject/target/gatling/perftest-20230705140438290/simulation.log) from perftest-20230705140438290
-16:04:45.677 [main] INFO  i.gatling.charts.stats.LogFileReader - First pass
-16:04:45.680 [main] INFO  i.gatling.charts.stats.LogFileReader - First pass done: read 17 lines
-16:04:45.685 [main] INFO  i.gatling.charts.stats.LogFileReader - Second pass
-16:04:45.693 [main] INFO  i.gatling.charts.stats.LogFileReader - Second pass: read 17 lines
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:28.537 [GatlingSystem-akka.actor.default-dispatcher-97] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:28.628 [GatlingSystem-akka.actor.default-dispatcher-78] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 248, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:28.716 [GatlingSystem-akka.actor.default-dispatcher-94] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:28.788 [GatlingSystem-akka.actor.default-dispatcher-97] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 243, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:28.851 [GatlingSystem-akka.actor.default-dispatcher-101] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:28.992 [GatlingSystem-akka.actor.default-dispatcher-94] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:29.001 [GatlingSystem-akka.actor.default-dispatcher-36] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.140 [GatlingSystem-akka.actor.default-dispatcher-95] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.157 [GatlingSystem-akka.actor.default-dispatcher-101] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 280, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:29.264 [GatlingSystem-akka.actor.default-dispatcher-36] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 248, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:29.285 [GatlingSystem-akka.actor.default-dispatcher-32] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.407 [GatlingSystem-akka.actor.default-dispatcher-95] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 249, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:29.422 [GatlingSystem-akka.actor.default-dispatcher-53] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.556 [GatlingSystem-akka.actor.default-dispatcher-32] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 253, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:29.568 [GatlingSystem-akka.actor.default-dispatcher-68] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.711 [GatlingSystem-akka.actor.default-dispatcher-65] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.732 [GatlingSystem-akka.actor.default-dispatcher-53] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 303, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:29.835 [GatlingSystem-akka.actor.default-dispatcher-67] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.842 [GatlingSystem-akka.actor.default-dispatcher-68] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 266, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:29.958 [GatlingSystem-akka.actor.default-dispatcher-90] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:29.988 [GatlingSystem-akka.actor.default-dispatcher-65] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:30.089 [GatlingSystem-akka.actor.default-dispatcher-97] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.113 [GatlingSystem-akka.actor.default-dispatcher-67] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 263, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:30.211 [GatlingSystem-akka.actor.default-dispatcher-102] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.227 [GatlingSystem-akka.actor.default-dispatcher-90] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 260, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:30.336 [GatlingSystem-akka.actor.default-dispatcher-10] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.368 [GatlingSystem-akka.actor.default-dispatcher-97] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 255, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:30.462 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.497 [GatlingSystem-akka.actor.default-dispatcher-102] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 265, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:30.585 [GatlingSystem-akka.actor.default-dispatcher-60] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.612 [GatlingSystem-akka.actor.default-dispatcher-10] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 262, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:30.710 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.750 [GatlingSystem-akka.actor.default-dispatcher-6] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:30.831 [GatlingSystem-akka.actor.default-dispatcher-62] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.843 [GatlingSystem-akka.actor.default-dispatcher-60] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 248, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:30.955 [GatlingSystem-akka.actor.default-dispatcher-54] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:30.993 [GatlingSystem-akka.actor.default-dispatcher-44] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 269, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.085 [GatlingSystem-akka.actor.default-dispatcher-62] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 246, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.088 [GatlingSystem-akka.actor.default-dispatcher-87] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.205 [GatlingSystem-akka.actor.default-dispatcher-64] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.206 [GatlingSystem-akka.actor.default-dispatcher-54] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 244, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.343 [GatlingSystem-akka.actor.default-dispatcher-14] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.350 [GatlingSystem-akka.actor.default-dispatcher-87] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 250, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.461 [GatlingSystem-akka.actor.default-dispatcher-98] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.480 [GatlingSystem-akka.actor.default-dispatcher-64] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 266, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.587 [GatlingSystem-akka.actor.default-dispatcher-36] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.621 [GatlingSystem-akka.actor.default-dispatcher-14] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 262, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.710 [GatlingSystem-akka.actor.default-dispatcher-95] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.737 [GatlingSystem-akka.actor.default-dispatcher-98] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.835 [GatlingSystem-akka.actor.default-dispatcher-59] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.858 [GatlingSystem-akka.actor.default-dispatcher-36] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 254, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:31.968 [GatlingSystem-akka.actor.default-dispatcher-66] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:31.983 [GatlingSystem-akka.actor.default-dispatcher-95] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 254, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:32.081 [GatlingSystem-akka.actor.default-dispatcher-73] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.105 [GatlingSystem-akka.actor.default-dispatcher-59] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 258, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:32.212 [GatlingSystem-akka.actor.default-dispatcher-65] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.285 [GatlingSystem-akka.actor.default-dispatcher-66] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 301, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:32.340 [GatlingSystem-akka.actor.default-dispatcher-15] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.368 [GatlingSystem-akka.actor.default-dispatcher-73] INFO  com.intuit.karate - [print] Chant1-196105 
+17:00:32.468 [GatlingSystem-akka.actor.default-dispatcher-21] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.535 [GatlingSystem-akka.actor.default-dispatcher-65] INFO  com.intuit.karate - [print] Guitar1-196105 
+17:00:32.581 [GatlingSystem-akka.actor.default-dispatcher-64] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.599 [GatlingSystem-akka.actor.default-dispatcher-15] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 246, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:32.705 [GatlingSystem-akka.actor.default-dispatcher-89] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.745 [GatlingSystem-akka.actor.default-dispatcher-21] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 259, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:32.829 [GatlingSystem-akka.actor.default-dispatcher-98] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.860 [GatlingSystem-akka.actor.default-dispatcher-64] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 272, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:32.958 [GatlingSystem-akka.actor.default-dispatcher-32] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:32.976 [GatlingSystem-akka.actor.default-dispatcher-89] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 266, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.092 [GatlingSystem-akka.actor.default-dispatcher-61] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.110 [GatlingSystem-akka.actor.default-dispatcher-98] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 274, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.209 [GatlingSystem-akka.actor.default-dispatcher-59] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.263 [GatlingSystem-akka.actor.default-dispatcher-32] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 294, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.340 [GatlingSystem-akka.actor.default-dispatcher-88] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.356 [GatlingSystem-akka.actor.default-dispatcher-61] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 247, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.454 [GatlingSystem-akka.actor.default-dispatcher-76] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.486 [GatlingSystem-akka.actor.default-dispatcher-59] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 260, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.582 [GatlingSystem-akka.actor.default-dispatcher-8] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.599 [GatlingSystem-akka.actor.default-dispatcher-88] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 248, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.707 [GatlingSystem-akka.actor.default-dispatcher-20] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.715 [GatlingSystem-akka.actor.default-dispatcher-76] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 258, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.826 [GatlingSystem-akka.actor.default-dispatcher-35] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.839 [GatlingSystem-akka.actor.default-dispatcher-8] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 251, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:33.933 [GatlingSystem-akka.actor.default-dispatcher-22] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:33.964 [GatlingSystem-akka.actor.default-dispatcher-20] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 249, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.044 [GatlingSystem-akka.actor.default-dispatcher-41] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.098 [GatlingSystem-akka.actor.default-dispatcher-35] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 256, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.156 [GatlingSystem-akka.actor.default-dispatcher-23] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.214 [GatlingSystem-akka.actor.default-dispatcher-22] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 264, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.271 [GatlingSystem-akka.actor.default-dispatcher-74] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.323 [GatlingSystem-akka.actor.default-dispatcher-41] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 260, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.371 [GatlingSystem-akka.actor.default-dispatcher-69] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.431 [GatlingSystem-akka.actor.default-dispatcher-23] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 263, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.486 [GatlingSystem-akka.actor.default-dispatcher-91] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.541 [GatlingSystem-akka.actor.default-dispatcher-74] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 259, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.594 [GatlingSystem-akka.actor.default-dispatcher-5] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.638 [GatlingSystem-akka.actor.default-dispatcher-69] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 261, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.706 [GatlingSystem-akka.actor.default-dispatcher-18] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.759 [GatlingSystem-akka.actor.default-dispatcher-91] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 263, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.806 [GatlingSystem-akka.actor.default-dispatcher-34] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.847 [GatlingSystem-akka.actor.default-dispatcher-5] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 246, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:34.906 [GatlingSystem-akka.actor.default-dispatcher-45] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:34.959 [GatlingSystem-akka.actor.default-dispatcher-18] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 249, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.003 [GatlingSystem-akka.actor.default-dispatcher-10] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.061 [GatlingSystem-akka.actor.default-dispatcher-34] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 247, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.105 [GatlingSystem-akka.actor.default-dispatcher-52] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.154 [GatlingSystem-akka.actor.default-dispatcher-45] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 241, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.205 [GatlingSystem-akka.actor.default-dispatcher-60] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.270 [GatlingSystem-akka.actor.default-dispatcher-10] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 262, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.308 [GatlingSystem-akka.actor.default-dispatcher-78] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.371 [GatlingSystem-akka.actor.default-dispatcher-52] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 256, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.410 [GatlingSystem-akka.actor.default-dispatcher-62] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.476 [GatlingSystem-akka.actor.default-dispatcher-60] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 265, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.508 [GatlingSystem-akka.actor.default-dispatcher-103] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.577 [GatlingSystem-akka.actor.default-dispatcher-78] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 259, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.607 [GatlingSystem-akka.actor.default-dispatcher-17] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.685 [GatlingSystem-akka.actor.default-dispatcher-62] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 256, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.707 [GatlingSystem-akka.actor.default-dispatcher-28] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.760 [GatlingSystem-akka.actor.default-dispatcher-103] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 244, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.806 [GatlingSystem-akka.actor.default-dispatcher-38] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:35.871 [GatlingSystem-akka.actor.default-dispatcher-17] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 257, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:35.904 [GatlingSystem-akka.actor.default-dispatcher-46] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.004 [GatlingSystem-akka.actor.default-dispatcher-34] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.029 [GatlingSystem-akka.actor.default-dispatcher-28] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 314, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.072 [GatlingSystem-akka.actor.default-dispatcher-38] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 260, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.104 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.158 [GatlingSystem-akka.actor.default-dispatcher-46] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 248, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.214 [GatlingSystem-akka.actor.default-dispatcher-81] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.277 [GatlingSystem-akka.actor.default-dispatcher-34] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:36.309 [GatlingSystem-akka.actor.default-dispatcher-57] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.365 [GatlingSystem-akka.actor.default-dispatcher-44] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 253, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.409 [GatlingSystem-akka.actor.default-dispatcher-54] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.486 [GatlingSystem-akka.actor.default-dispatcher-81] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 261, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.505 [GatlingSystem-akka.actor.default-dispatcher-7] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.569 [GatlingSystem-akka.actor.default-dispatcher-57] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 249, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.604 [GatlingSystem-akka.actor.default-dispatcher-91] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:36.668 [GatlingSystem-akka.actor.default-dispatcher-54] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 247, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.754 [GatlingSystem-akka.actor.default-dispatcher-7] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 244, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:36.860 [GatlingSystem-akka.actor.default-dispatcher-91] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 251, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:41.709 [GatlingSystem-akka.actor.default-dispatcher-46] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:42.285 [GatlingSystem-akka.actor.default-dispatcher-46] INFO  com.intuit.karate - [print] Chant1-196105 
+17:00:42.711 [GatlingSystem-akka.actor.default-dispatcher-83] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:43.169 [GatlingSystem-akka.actor.default-dispatcher-83] INFO  com.intuit.karate - [print] Guitar1-196105 
+17:00:43.711 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:44.155 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  com.intuit.karate - [print] Dabke1-196105 
+17:00:44.710 [GatlingSystem-akka.actor.default-dispatcher-67] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:44.712 [GatlingSystem-akka.actor.default-dispatcher-81] INFO  i.g.core.controller.inject.Injector - Scenario create and delete article has finished injecting
+17:00:44.713 [GatlingSystem-akka.actor.default-dispatcher-81] INFO  i.g.core.controller.inject.Injector - Injecting is done
+17:00:44.995 [GatlingSystem-akka.actor.default-dispatcher-67] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 266, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:45.712 [GatlingSystem-akka.actor.default-dispatcher-62] INFO  com.intuit.karate - karate.env system property was: null 
+17:00:45.975 [GatlingSystem-akka.actor.default-dispatcher-62] ERROR com.intuit.karate - classpath:conduitApp/performance/createArticle.feature:17
+Then status 200
+status code was: 422, expected: 200, response time in milliseconds: 245, url: https://api.realworld.io/api/articles, response: 
+{"errors":{"title":["must be unique"]}}
+classpath:conduitApp/performance/createArticle.feature:17
+17:00:49.557 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  i.g.core.controller.inject.Injector - All users of scenario create and delete article are stopped
+17:00:49.560 [GatlingSystem-akka.actor.default-dispatcher-44] INFO  i.g.core.controller.inject.Injector - Stopping
+17:00:49.562 [GatlingSystem-akka.actor.default-dispatcher-48] INFO  i.gatling.core.controller.Controller - Injector has stopped, initiating graceful stop
+17:00:49.600 [GatlingSystem-akka.actor.default-dispatcher-43] INFO  akka.actor.CoordinatedShutdown - Running CoordinatedShutdown with reason [ActorSystemTerminateReason]
+17:00:49.617 [main] INFO  i.gatling.charts.stats.LogFileReader - Collected List(/Users/bachardaowd/Desktop/karateProject/target/gatling/perftest-20230705145958667/simulation.log) from perftest-20230705145958667
+17:00:49.621 [main] INFO  i.gatling.charts.stats.LogFileReader - First pass
+17:00:49.626 [main] INFO  i.gatling.charts.stats.LogFileReader - First pass done: read 474 lines
+17:00:49.631 [main] INFO  i.gatling.charts.stats.LogFileReader - Second pass
+17:00:49.651 [main] INFO  i.gatling.charts.stats.LogFileReader - Second pass: read 474 lines
